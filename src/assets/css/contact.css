@@ -1,0 +1,86 @@
+/* ============= CONTACT FORM ============*/
+
+.lk-contact-form {
+
+}
+
+.lk-contact-form-row {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.lk-contact-field {
+    float: left;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.lk-contact-field input,
+.lk-contact-field textarea {
+    width: 100%;
+    padding: 15px;
+    border: solid 1px #ddd;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.lk-contact-field input:focus,
+.lk-contact-field input:active,
+.lk-contact-field textarea:focus,
+.lk-contact-field textarea:active {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: none;
+}
+
+.lk-contact-field input {
+    line-height: 1;
+}
+
+.lk-contact-form-row .lk-contact-field:first-child {
+    padding-left: 0;
+}
+
+.lk-contact-form-row .lk-contact-field:last-child {
+    padding-right: 0;
+}
+
+.lk-contact-field.half-size {
+    width: 50%;
+}
+
+.lk-contact-style-02{
+    border:solid 1px #ddd;
+}
+.lk-contact-style-02 .lk-contact-info{
+     padding: 30px;
+ }
+.lk-contact-style-02 .lk-contact-title{
+   margin-bottom: 20px;
+}
+.lk-contact-style-02 .lk-contact-info ul{
+   padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.lk-contact-style-02 .lk-contact-info li {
+    padding: 0;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.lk-contact-style-02 .lk-contact-info li .lk-contact-icon {
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: 3px;
+}
+.lk-contact-style-02 .lk-contact-info li .lk-contact-desc {
+    padding-left: 30px;
+    display: block;
+    position: relative;
+}

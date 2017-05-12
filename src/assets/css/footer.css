@@ -1,0 +1,99 @@
+/* ============= FOOTER ============*/
+footer {
+    letter-spacing: 0;
+}
+
+footer .footer-gray {
+    background: #1a1a1a;
+    color: #999;
+}
+
+footer .footer-main {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+footer .footer-dark {
+    background: #000;
+    color: #fff;
+}
+
+footer .footer-bottom {
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+footer .footer-gray a {
+    color: #999;
+}
+
+footer .footer-dark a {
+    color: #fff;
+}
+
+footer .footer-gray a:hover,
+footer .footer-dark a:hover {
+    color: #e74c3c;
+}
+
+footer .lk-social a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer .lk-social a:first-child {
+    padding-left: 0;
+}
+
+footer .lk-social a:last-child {
+    padding-right: 0;
+}
+
+footer .lk-title-heading .lk-title {
+    font-size: 16px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/* ============= FOOTER WIDGET ============*/
+.lk-widget-logo-container .lk-logo-description {
+    margin-top: 25px;
+}
+
+.lk-widget-menu-container .lk-menu,
+.lk-widget-archives-container .lk-archives {
+    display: inline-block;
+    width: 100%;
+}
+
+.lk-widget-menu-container .lk-menu li.half-size,
+.lk-widget-archives-container .lk-archives li.half-size {
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+}
+
+.lk-widget-newsletter-container .lk-newsletter-field {
+    margin-top: 20px;
+    position: relative;
+}
+
+.lk-widget-newsletter-container .lk-newsletter-field input {
+    width: 100%;
+    border: solid 1px #999;
+    background-color: transparent;
+    padding: 10px 30px 10px 15px;
+    line-height: 1;
+}
+
+.lk-widget-newsletter-container .lk-newsletter-field input:focus,
+.lk-widget-newsletter-container .lk-newsletter-field input:active {
+    border-color: #ddd;
+    outline: none;
+}
+
+.lk-newsletter-field-icon {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
