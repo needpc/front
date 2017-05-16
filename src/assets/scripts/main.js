@@ -664,6 +664,8 @@
         $(window).resize(function(){
             initSlider();
         })
-
+        $('#homelink').on('click', function() {
+            init();
+        });
     })
 })(jQuery);
