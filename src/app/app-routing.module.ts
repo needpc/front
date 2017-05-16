@@ -1,27 +1,24 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {SimpleRouteComponent} from './simple-route/simple-route.component';
-import {BundledModule} from './bundled/bundled.module';
-
-export function loadBundledModule() { return BundledModule; }
+import {ContactComponent} from './contact/contact.component';
+import {HomeComponent} from './home/home.component';
+import {AppComponent} from './app.component';
 
 export const routes: Routes = [
+  // {
+  //   path: '',
+  //   pathMatch: 'full',
+  //   // redirectTo: 'home',
+  //   component: AppComponent
+  // },
   {
     path: '',
-    pathMatch: 'full',
-    component: SimpleRouteComponent
+    component: HomeComponent
   },
   {
-    path: 'bundled',
-    loadChildren: loadBundledModule
-    // Comment loadChildren above and uncomment the line below to get non lazy loading working with AoT
-    // Do not delete / comment the  `loadBundledModule` declaration or the module will be lazy loaded
-    // loadChildren: './bundled/bundled.module#BundledModule'
-  },
-  {
-    path: 'lazy',
-    loadChildren: './lazy/lazy.module#LazyModule'
+    path: 'contact',
+    component: ContactComponent
   }
 ];
 

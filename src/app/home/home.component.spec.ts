@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { LazyComponent } from './lazy.component';
+import { HomeComponent } from './home.component';
 
-describe('Component: Lazy', () => {
+describe('Component: Home', () => {
   it('should create an instance', () => {
-    let component = new LazyComponent();
+    let component = new HomeComponent();
     expect(component).toBeTruthy();
   });
 });

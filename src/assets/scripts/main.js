@@ -368,7 +368,7 @@
                 $main_slider = $('.lk-main-slider');
 
             $main_slider_height = $main_slider_height <=700 ? 700 : $main_slider_height;
-            $main_slider_height = $main_slider_height > 900 ? 900: $main_slider_height;
+            $main_slider_height = $main_slider_height > 950 ? 950: $main_slider_height;
             $($main_slider).css('height',$main_slider_height + 'px');
             $('.lk-item-slide',$main_slider).css('height',$main_slider_height + 'px');
         }

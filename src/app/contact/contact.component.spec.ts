@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { SimpleRouteComponent } from './simple-route.component';
+import { ContactComponent } from './contact.component';
 
-describe('Component: SimpleRoute', () => {
+describe('Component: Contact', () => {
   it('should create an instance', () => {
-    let component = new SimpleRouteComponent();
+    let component = new ContactComponent();
     expect(component).toBeTruthy();
   });
 });
