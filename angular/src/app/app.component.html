@@ -20,27 +20,27 @@
 			<mz-modal-header style="margin-left: 0.75rem;">Inscription</mz-modal-header>
 			<mz-modal-content class="row center">
 				<!-- Mot de passe -->
-				<mz-input-container class="col s12 l6">
+				<mz-input-container class="col s12 m6">
 					<input mz-input id="nameRegister" label="Nom" type="text">
 				</mz-input-container>
 				<!-- Confirmation mot de passe -->
-				<mz-input-container class="col s12 l6">
+				<mz-input-container class="col s12 m6">
 					<input mz-input id="surnameRegister" label="Prénom" type="text">
 				</mz-input-container>
 				<!-- Email -->
-				<mz-input-container class="col s12 l6">
+				<mz-input-container class="col s12 m6">
 					<input mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="emailRegister" label="Email" type="email">
 				</mz-input-container>
 				<!-- Confirmation email -->
-				<mz-input-container class="col s12 l6">
+				<mz-input-container class="col s12 m6">
 					<input mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="confirmEmailRegister" label="Confirmer email" type="email">
 				</mz-input-container>
 				<!-- Mot de passe -->
-				<mz-input-container class="col s12 l6">
+				<mz-input-container class="col s12 m6">
 					<input mz-input id="passwordRegister" label="Mot de passe" type="password">
 				</mz-input-container>
 				<!-- Confirmation mot de passe -->
-				<mz-input-container class="col s12 l6">
+				<mz-input-container class="col s12 m6">
 					<input mz-input id="passwordConfirmRegister" label="Confirmer mot de passe" type="password">
 				</mz-input-container>
 				<div class="col s12" style="text-align: left;">
@@ -67,7 +67,7 @@
 				</div>
 			</mz-modal-content>
 		</mz-modal>
-		<h1 class="header center white-text" style="margin-top: calc(100vh - 700px);">{{title}}</h1>
+		<h1 class="header center white-text" style="margin-top: 25vh;">{{title}}</h1>
 		<div class="row center">
 			<h5 class="header col s12 light white-text">La plateforme qui saura trouver ce que vous cherchez</h5>
 		</div>
@@ -84,26 +84,32 @@
 <!-- <div class="container">
 	<div class="section">
 		<div class="row">
-			<div class="col s12 m4">
-				<div class="icon-block">
-					<h2 class="center"><i mz-icon-mdi [icon]="'puzzle'" [size]="'36px'"></i></h2>
-					<h5 class="center">Speeds up development</h5>
-					<p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+			<div class="col s12">
+				<h5 class="center">Trouver le bon PC portable</h5>
+				<h5 class="white-text">Contact</h5>
+				<div class="section col s12">
+					<h6>Quel usage voulez-vous faire de l'ordinateur ?</h6>
+					<mz-checkbox-container class="col s12 m4">
+						<input mz-checkbox [label]="'Bureautique'" [filledIn]="'true'" id="desktop" type="checkbox">
+					</mz-checkbox-container>
+					<mz-checkbox-container class="col s12 m4">
+						<input mz-checkbox [label]="'Multimédia'" [filledIn]="'true'" id="multimedia" type="checkbox">
+					</mz-checkbox-container>
+					<mz-checkbox-container class="col s12 m4">
+						<input mz-checkbox [label]="'Jeu'" [filledIn]="'true'" id="game" type="checkbox">
+					</mz-checkbox-container>
 				</div>
-			</div>
-			<div class="col s12 m4">
-				<div class="icon-block">
-					<h2 class="center"><i mz-icon-mdi [icon]="'puzzle'" [size]="'36px'"></i></h2>
-					<h5 class="center">User Experience Focused</h5>
-					<p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+				<div class="section col s12">
+					<h6>Quel est votre budget ?</h6>
+					<div class="col s12">
+						<p class="range-field">
+							<input type="range" id="price" min="0" max="5000"/>
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="col s12 m4">
-				<div class="icon-block">
-					<h2 class="center"><i mz-icon-mdi [icon]="'puzzle'" [size]="'36px'"></i></h2>
-					<h5 class="center">Easy to work with</h5>
-					<p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-				</div>
+				<mz-input-container class="col s12">
+					<button mz-button class="light-blue darken-1">Envoyer</button>
+				</mz-input-container>
 			</div>
 		</div>
 	</div>
@@ -111,11 +117,11 @@
 <footer class="page-footer grey darken-4">
 	<div class="container">
 		<div class="row">
-			<div class="col l6 s12">
+			<div class="col m6 s12">
 				<h5 class="white-text">Biographie</h5>
 				<p class="grey-text text-lighten-4">Nous sommes une petite équipe de développeurs et nous avons décidé de vous simplifier la vie en vous proposant une plateforme vous permettant de trouver votre bonheur (informatique).</p>
 			</div>
-			<div class="col l6 s12">
+			<div class="col m6 s12">
 				<h5 class="white-text">Contact</h5>
 				<!-- Email -->
 				<mz-input-container>
