@@ -17,7 +17,7 @@
 		<br>
 		<!-- Modal inscription -->
 		<mz-modal #registerModal>
-			<mz-modal-header style="margin-left: 0.75rem;">Inscription</mz-modal-header>
+			<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #0D47A1">Inscription</mz-modal-header>
 			<mz-modal-content class="row center">
 				<!-- Mot de passe -->
 				<mz-input-container class="col s12 m6">
@@ -43,15 +43,26 @@
 				<mz-input-container class="col s12 m6">
 					<input mz-input id="passwordConfirmRegister" label="Confirmer mot de passe" type="password">
 				</mz-input-container>
-				<div class="col s12" style="text-align: left;">
-					<button mz-button class="grey darken-1" mz-modal-close>Annuler</button>
-					<button mz-button class="light-blue darken-1">Inscription</button>
-				</div>
+					<mz-input-container class="col l6 s12">
+						<button mz-button class="grey darken-1" style="width: 100%;" mz-modal-close>Annuler</button>
+					</mz-input-container>
+					<mz-input-container class="col l6 s12" style="margin-bottom: 1em;">
+						<button mz-button class="blue darken-4" style="width: 100%;">Inscription</button>
+					</mz-input-container>
+					<p>
+						OU
+					</p>
+					<mz-input-container class="col s12">
+						<button mz-button class="blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>S'inscrire avec Facebook</button>
+					</mz-input-container>
+					<mz-input-container class="col s12">
+						<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>S'inscrire avec Google</button>
+					</mz-input-container>
 			</mz-modal-content>
 		</mz-modal>
 		<!-- Modal login -->
 		<mz-modal #loginModal>
-			<mz-modal-header style="margin-left: 0.75rem;">Connexion</mz-modal-header>
+			<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #0D47A1">Connexion</mz-modal-header>
 			<mz-modal-content class="row center">
 				<!-- Email -->
 				<mz-input-container class="col s12">
@@ -61,10 +72,18 @@
 				<mz-input-container class="col s12">
 					<input mz-input id="passwordLogin" label="Mot de passe" type="password">
 				</mz-input-container>
-				<div class="col s12" style="text-align: left;">
-					<button mz-button class="grey darken-1" mz-modal-close>Annuler</button>
-					<button mz-button class="light-blue darken-1">Connexion</button>
-				</div>
+					<mz-input-container class="col s12" style="margin-bottom: 1em;">
+						<button mz-button class="blue darken-4" style="width: 100%;">Connexion</button>
+					</mz-input-container>
+				<p>
+					OU
+				</p>
+				<mz-input-container class="col s12">
+					<button mz-button class="blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>Facebook</button>
+				</mz-input-container>
+				<mz-input-container class="col s12">
+					<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>Google</button>
+				</mz-input-container>
 			</mz-modal-content>
 		</mz-modal>
 		<h1 class="header center white-text" style="margin-top: 25vh;">{{title}}</h1>
@@ -102,9 +121,9 @@
 				<div class="section col s12">
 					<h6 class="col s12">Quel est votre budget ?</h6>
 					<div class="col s12">
-						<p class="range-field">
-							<input type="range" id="price" min="0" max="5000"/>
-						</p>
+						<mz-input-container>
+							<input mz-input id="budget-input" label="Budget" type="number">
+						</mz-input-container>
 					</div>
 				</div>
 				<div class="section col s12">
@@ -120,7 +139,7 @@
 					</mz-checkbox-container>
 				</div>
 				<mz-input-container class="col s12">
-					<button mz-button class="light-blue darken-1 col s12">Rechercher</button>
+					<button mz-button class="blue darken-4 col s12">Rechercher</button>
 				</mz-input-container>
 			</div>
 		</div>
@@ -143,7 +162,7 @@
 				<mz-textarea-container>
 					<textarea mz-textarea id="message-input" label="Message"></textarea>
 				</mz-textarea-container>
-				<button mz-button class="light-blue darken-1">Envoyer</button>
+				<button mz-button class="blue darken-4">Envoyer</button>
 			</div>
 		</div>
 	</div>
