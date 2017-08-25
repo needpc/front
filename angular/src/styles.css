@@ -1,7 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 html {
 	font-family: 'Montserrat', sans-serif!important;
+	font-size: 62.5%!important;
 }
 .modal .modal-content {
-	padding: 50px 50px 0px 50px!important;
+	padding: 25px 25px 0px 25px!important;
+}
+.modal {
+	width: 55%!important;
+	max-height: 100%!important;
+}
+@media (max-width: 300px) {
+    html {
+        font-size: 50%!important;
+    }
+}
+
+@media (min-width: 500px) {
+    html {
+        font-size: 60%!important;
+    }
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size: 70%!important;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 80%!important;
+    }
+}
+.modal .modal-footer {
+    padding: 0!important;
+    height: 0px!important;
+}
+.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+    vertical-align: inherit;
 }
