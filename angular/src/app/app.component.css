@@ -9,7 +9,7 @@ nav ul a, nav .brand-logo {
 	color: #444;
 }
 .input-field label {
-	top: 0;
+	top: -10px;
 	left: 5px;
 }
 #search {
