@@ -10,6 +10,7 @@ nav ul a, nav .brand-logo {
 }
 .input-field label {
 	top: 0;
+	left: 5px;
 }
 #search {
 	border-radius: 2px;

@@ -98,7 +98,12 @@
 		<div class="row center">
 			<form>
 				<div class="input-field">
-					<input id="search" type="search" required style="background-color: white;">
+					<mz-input-container>
+						<input mz-input
+						[autocomplete]="autocomplete"
+						id="autocomplete-input"
+						type="search" style="background-color: white;">
+					</mz-input-container>
 					<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
 				</div>
 			</form>
