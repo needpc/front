@@ -1,6 +1,6 @@
 .no-pad-bot {
 	height:calc(100vh - 64px);
-	background-image: url("/assets/img/background.png");
+	background-image: url("/assets/img/backgroundlaptop.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -9,7 +9,7 @@ nav ul a, nav .brand-logo {
 	color: #444;
 }
 .input-field label {
-	top: 0.3rem;
+	top: 0;
 }
 #search {
 	border-radius: 2px;

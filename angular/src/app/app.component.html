@@ -1,23 +1,31 @@
 <nav class="white" role="navigation">
 	<div class="nav-wrapper container">
-		<a id="logo-container" href="#" class="brand-logo">{{title}}</a>
+		<a id="logo-container" href="#" class="brand-logo"><img src="assets/img/logo.png" height="64"/></a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="#" (click)="registerModal.open()">Inscription</a></li>
 			<li><a href="#" (click)="loginModal.open()">Login</a></li>
 		</ul>
-		<ul id="nav-mobile" class="side-nav">
-			<li><a href="#">Inscription</a></li>
-			<li><a href="#">Login</a></li>
-		</ul>
-		<a href="#" data-activates="nav-mobile" class="button-collapse" style="color: #444;"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
+		<a href="#" class="button-collapse" style="color: #444;" [id]="'btn-sidenav'"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
 	</div>
 </nav>
+<mz-sidenav
+[id]="'sidenav'"
+[collapseButtonId]="'btn-sidenav'">
+<mz-sidenav-subheader>Menu</mz-sidenav-subheader>
+<mz-sidenav-link>
+	<a href="#" (click)="loginModal.open()">Login</a>
+</mz-sidenav-link>
+<mz-sidenav-divider></mz-sidenav-divider>
+<mz-sidenav-link>
+	<a href="#" (click)="registerModal.open()">Inscription</a>
+</mz-sidenav-link>
+</mz-sidenav>
 <div class="no-pad-bot">
 	<div class="container">
 		<br>
 		<!-- Modal inscription -->
 		<mz-modal #registerModal>
-			<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #0D47A1">Inscription</mz-modal-header>
+			<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff6f00">Inscription</mz-modal-header>
 			<mz-modal-content class="row center">
 				<!-- Mot de passe -->
 				<mz-input-container class="col s12 m6">
@@ -43,26 +51,23 @@
 				<mz-input-container class="col s12 m6">
 					<input mz-input id="passwordConfirmRegister" label="Confirmer mot de passe" type="password">
 				</mz-input-container>
-					<mz-input-container class="col l6 s12">
-						<button mz-button class="grey darken-1" style="width: 100%;" mz-modal-close>Annuler</button>
-					</mz-input-container>
-					<mz-input-container class="col l6 s12" style="margin-bottom: 1em;">
-						<button mz-button class="blue darken-4" style="width: 100%;">Inscription</button>
-					</mz-input-container>
-					<p>
-						OU
-					</p>
-					<mz-input-container class="col s12">
-						<button mz-button class="blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>S'inscrire avec Facebook</button>
-					</mz-input-container>
-					<mz-input-container class="col s12">
-						<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>S'inscrire avec Google</button>
-					</mz-input-container>
+				<mz-input-container class="col l12 s12" style="margin-bottom: 1em;">
+					<button mz-button class="amber darken-4" style="width: 100%;">Inscription</button>
+				</mz-input-container>
+				<p>
+					OU
+				</p>
+				<mz-input-container class="col s12">
+					<button mz-button class="light-blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>S'inscrire avec Facebook</button>
+				</mz-input-container>
+				<mz-input-container class="col s12">
+					<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>S'inscrire avec Google</button>
+				</mz-input-container>
 			</mz-modal-content>
 		</mz-modal>
 		<!-- Modal login -->
 		<mz-modal #loginModal>
-			<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #0D47A1">Connexion</mz-modal-header>
+			<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff6f00">Connexion</mz-modal-header>
 			<mz-modal-content class="row center">
 				<!-- Email -->
 				<mz-input-container class="col s12">
@@ -72,17 +77,17 @@
 				<mz-input-container class="col s12">
 					<input mz-input id="passwordLogin" label="Mot de passe" type="password">
 				</mz-input-container>
-					<mz-input-container class="col s12" style="margin-bottom: 1em;">
-						<button mz-button class="blue darken-4" style="width: 100%;">Connexion</button>
-					</mz-input-container>
+				<mz-input-container class="col s12" style="margin-bottom: 1em;">
+					<button mz-button class="amber darken-4" style="width: 100%;">Connexion</button>
+				</mz-input-container>
 				<p>
 					OU
 				</p>
 				<mz-input-container class="col s12">
-					<button mz-button class="blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>Facebook</button>
+					<button mz-button class="light-blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>Se connecter avec Facebook</button>
 				</mz-input-container>
 				<mz-input-container class="col s12">
-					<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>Google</button>
+					<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>Se connecter avec Google</button>
 				</mz-input-container>
 			</mz-modal-content>
 		</mz-modal>
@@ -97,11 +102,12 @@
 					<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
 				</div>
 			</form>
+			<button mz-button class="grey lighten-5" style="color: #444; top: 15vh;" scrollTo scrollTargetSelector="#main-section">Accéder au formulaire</button>
 		</div>
 	</div>
 </div>
 <div class="container">
-	<div class="section">
+	<div class="section" id="main-section">
 		<div class="row">
 			<div class="col s12">
 				<h5 class="center">Trouver le bon PC portable</h5>
@@ -139,7 +145,7 @@
 					</mz-checkbox-container>
 				</div>
 				<mz-input-container class="col s12">
-					<button mz-button class="blue darken-4 col s12">Rechercher</button>
+					<button mz-button class="amber darken-4 col s12">Rechercher</button>
 				</mz-input-container>
 			</div>
 		</div>
@@ -156,13 +162,13 @@
 				<h5 class="white-text">Contact</h5>
 				<!-- Email -->
 				<mz-input-container>
-					<input mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="email-input" label="Email" type="email">
+					<input style="color: white;" mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="email-input" label="Email" type="email">
 				</mz-input-container>
 				<!-- Message -->
 				<mz-textarea-container>
-					<textarea mz-textarea id="message-input" label="Message"></textarea>
+					<textarea style="color: white;" mz-textarea id="message-input" label="Message"></textarea>
 				</mz-textarea-container>
-				<button mz-button class="blue darken-4">Envoyer</button>
+				<button mz-button class="amber darken-4">Envoyer</button>
 			</div>
 		</div>
 	</div>
