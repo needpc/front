@@ -1,0 +1,8 @@
+.btn-floating.halfway-fab {
+    position: absolute;
+    right: 24px;
+    bottom: 10px!important;
+}
+.card .card-image .card-title {
+    position: initial!important;
+}

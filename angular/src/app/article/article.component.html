@@ -1,9 +1,45 @@
 <div class="no-pad-bot">
-	<div class="container">
-		<div class="row center">
-			<h5 class="header col s12 light">Lenovo Y900</h5>
-      <img src="http://img1.lesnumeriques.com/news/48/48509/csm_ideapad_y900_cover_651f6c5d29.jpg" />
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <br />
+      <br />
+      <div class="col s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://unlocked.newegg.com/sites/default/files/ces-2016-hardware-review-4.jpg">
+            <span class="card-title" style="color: rgba(0, 0, 0, 0.87);">Lenovo Y900</span>
+            <a class="btn-floating btn-large halfway-fab waves-effect waves-light amber darken-4"><i mz-icon-mdi [icon]="'basket'" [align]="'center'"></i></a>
+          </div>
+          <div class="card-content">
+            <mz-collapsible
+            [mode]="'expandable'"
+            [onClose]="closeFunctionCallback"
+            [onOpen]="openFunctionCallback"
+            [popout]="true">
+            <mz-collapsible-item [active]="true">
+              <mz-collapsible-item-header>
+                Description
+              </mz-collapsible-item-header>
+              <mz-collapsible-item-body>
+                Lenovo est certes numéro 1 sur le marché du "laptop", mais n'en reste pas moins très peu présent sur le créneau de la machine de jeu. L'annonce de ce nouveau PC IdeaPad Y900 au CES 2016 est donc très intéressante. Avec ce produit, le constructeur chinois plonge en effet à pieds joints dans le haut de gamme gamer à 2 000 €.<br /><br />
+                L'IdeaPad Y900 est en effet un PC "transportable" équipé d'un écran IPS de 17,3 pouces (44 cm), proposant au choix une définition Full HD (1 920 x 1 080 px) ou UHD (3 840 x 2 160 px). Il a la particularité de profiter d'un clavier mécanique au rétroéclairage multicolore. Ce type de clavier reste très rare sur les PC portables : seul le GT 80 Titan de MSI en a intégré un l'année dernière.
+              </mz-collapsible-item-body>
+            </mz-collapsible-item>
+            <mz-collapsible-item>
+              <mz-collapsible-item-header>
+                Composants
+              </mz-collapsible-item-header>
+              <mz-collapsible-item-body>
+                Lenovo est certes numéro 1 sur le marché du "laptop", mais n'en reste pas moins très peu présent sur le créneau de la machine de jeu. L'annonce de ce nouveau PC IdeaPad Y900 au CES 2016 est donc très intéressante. Avec ce produit, le constructeur chinois plonge en effet à pieds joints dans le haut de gamme gamer à 2 000 €.<br /><br />
+                L'IdeaPad Y900 est en effet un PC "transportable" équipé d'un écran IPS de 17,3 pouces (44 cm), proposant au choix une définition Full HD (1 920 x 1 080 px) ou UHD (3 840 x 2 160 px). Il a la particularité de profiter d'un clavier mécanique au rétroéclairage multicolore. Ce type de clavier reste très rare sur les PC portables : seul le GT 80 Titan de MSI en a intégré un l'année dernière.
+              </mz-collapsible-item-body>
+            </mz-collapsible-item>
+          </mz-collapsible>
+          <p> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 <router-outlet></router-outlet>
