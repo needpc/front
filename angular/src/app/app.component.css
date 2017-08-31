@@ -21,3 +21,25 @@ form {
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content {
 	margin-left: 0rem;
 }
+.pc-searchbar {
+	background-color: white!important;
+	padding-left: 35px!important;
+	-webkit-box-sizing: border-box!important; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box!important;    /* Firefox, other Gecko */
+	box-sizing: border-box!important;         /* Opera/IE 8+ */
+}
+@media screen and (max-height: 499px) {
+	.pc-top25 {
+		margin-top: 0;
+	}
+}
+@media screen and (min-height: 500px) and (max-width: 599px) {
+	.pc-top25 {
+		margin-top: 10vh;
+	}
+}
+@media screen and (min-height: 600px) {
+	.pc-top25 {
+		margin-top: 25vh;
+	}
+}

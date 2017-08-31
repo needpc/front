@@ -1,3 +1,4 @@
+<!-- Navbar -->
 <nav class="white" role="navigation">
 	<div class="nav-wrapper container">
 		<a id="logo-container" href="#" class="brand-logo"><img src="assets/img/logo.png" height="64"/></a>
@@ -8,6 +9,8 @@
 		<a href="#" class="button-collapse" style="color: #444;" [id]="'btn-sidenav'"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
 	</div>
 </nav>
+
+<!-- Mobile menu -->
 <mz-sidenav
 [id]="'sidenav'"
 [collapseButtonId]="'btn-sidenav'">
@@ -20,6 +23,7 @@
 	<a href="#" (click)="registerModal.open()">Inscription</a>
 </mz-sidenav-link>
 </mz-sidenav>
+
 <div class="no-pad-bot">
 	<div class="container">
 		<br>
@@ -91,7 +95,9 @@
 				</mz-input-container>
 			</mz-modal-content>
 		</mz-modal>
-		<h1 class="header center white-text" style="margin-top: 25vh;">{{title}}</h1>
+
+		<!-- Search section -->
+		<h1 class="header center white-text pc-top25">{{title}}</h1>
 		<div class="row center">
 			<h5 class="header col s12 light white-text">La plateforme qui saura trouver ce que vous cherchez</h5>
 		</div>
@@ -102,7 +108,8 @@
 						<input mz-input
 						[autocomplete]="autocomplete"
 						id="autocomplete-input"
-						type="search" style="background-color: white;"
+						type="search"
+						class="pc-searchbar"
 						id="search">
 					</mz-input-container>
 					<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
@@ -112,6 +119,8 @@
 		</div>
 	</div>
 </div>
+
+<!-- Formulaire section -->
 <div class="container">
 	<div class="section" id="main-section">
 		<div class="row">
@@ -157,6 +166,8 @@
 		</div>
 	</div>
 </div>
+
+<!-- Footer -->
 <footer class="page-footer grey darken-4">
 	<div class="container">
 		<div class="row">
