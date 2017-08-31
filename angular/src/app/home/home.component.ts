@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   setAutocomplete() {
     this.autocomplete = {
       data: {
-        'Lenovo X50': 'assets/img/logo.png',
+        'Lenovo Y900': 'assets/img/logo.png',
         'Macbook pro 2017': 'assets/img/logo.png',
         'Macbook pro 2015': 'assets/img/logo.png',
       },
