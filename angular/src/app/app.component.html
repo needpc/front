@@ -126,7 +126,7 @@
 		<div class="row">
 			<div class="col s12">
 				<h5 class="center">Trouver le bon PC portable</h5>
-				<h5 class="white-text">Contact</h5>
+				<br />
 				<div class="section col s12">
 					<h6 class="col s12">Quel usage voulez-vous faire de l'ordinateur ?</h6>
 					<mz-checkbox-container class="col s12 m4">
@@ -154,28 +154,48 @@
 							<option>1500€ ou plus</option>
 						</select>
 					</mz-select-container>
-					<!-- <mz-input-container>
-					<input mz-input id="budget-input" label="Budget" type="number">
-				</mz-input-container> -->
+				</div>
 			</div>
+			<div class="section col s12">
+				<h6 class="col s12">À quelle fréquence utilisez-vous votre ordinateur ?</h6>
+				<form action="#" style="padding: 0;">
+					<mz-radio-button-container class="col s12 m4 no-padding-left">
+						<input mz-radio-button
+						id="radio-button-peusouvent"
+						formControlName="frequence"
+						name="frequence"
+						type="radio"
+						value="peusouvent"
+						[label]="'Peu souvent'"
+						[withGap]="true">
+					</mz-radio-button-container>
+					<mz-radio-button-container class="col s12 m4 no-padding-left">
+						<input mz-radio-button
+						id="radio-button-souvent"
+						formControlName="frequence"
+						name="frequence"
+						type="radio"
+						value="souvent"
+						[label]="'Souvent'"
+						[withGap]="true">
+					</mz-radio-button-container>
+					<mz-radio-button-container class="col s12 m4 no-padding-left">
+						<input mz-radio-button
+						id="radio-button-tressouvent"
+						formControlName="frequence"
+						name="frequence"
+						type="radio"
+						value="tressouvent"
+						[label]="'Très souvent'"
+						[withGap]="true">
+					</mz-radio-button-container>
+				</form>
+			</div>
+			<mz-input-container class="col s12">
+				<button mz-button class="amber darken-4 col s12">Rechercher</button>
+			</mz-input-container>
 		</div>
-		<div class="section col s12">
-			<h6 class="col s12">À quelle fréquence utilisez-vous votre ordinateur ?</h6>
-			<mz-checkbox-container class="col s12 m4">
-				<input mz-checkbox [label]="'Peu souvent'" [filledIn]="'true'" id="passouvent" type="checkbox">
-			</mz-checkbox-container>
-			<mz-checkbox-container class="col s12 m4">
-				<input mz-checkbox [label]="'Souvent'" [filledIn]="'true'" id="souvent" type="checkbox">
-			</mz-checkbox-container>
-			<mz-checkbox-container class="col s12 m4">
-				<input mz-checkbox [label]="'Très souvent'" [filledIn]="'true'" id="tressouvent" type="checkbox">
-			</mz-checkbox-container>
-		</div>
-		<mz-input-container class="col s12">
-			<button mz-button class="amber darken-4 col s12">Rechercher</button>
-		</mz-input-container>
 	</div>
-</div>
 </div>
 </div>
 
@@ -192,6 +212,10 @@
 				<!-- Email -->
 				<mz-input-container>
 					<input style="color: white;" mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="email-input" label="Email" type="email">
+				</mz-input-container>
+				<!-- Objet -->
+				<mz-input-container>
+					<input style="color: white;" mz-input id="object-input" label="Objet" type="text">
 				</mz-input-container>
 				<!-- Message -->
 				<mz-textarea-container>
