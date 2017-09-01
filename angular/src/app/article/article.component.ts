@@ -11,5 +11,12 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
+
+$(document).ready(function(){
+  $('.carousel').carousel();
+  $('.carousel').height($('.card-image').width());
+});
+$(window).resize(function(){
+  $('.carousel').height($('.card-image').width());
+});
