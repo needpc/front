@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ROUTES } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { ArticleListComponent } from './article-list/article-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
-    HomeComponent
+    HomeComponent,
+    ArticleListComponent
   ],
   imports: [
     MaterializeModule.forRoot(),
