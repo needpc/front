@@ -3,8 +3,8 @@
 	<div class="nav-wrapper container">
 		<a id="logo-container" [routerLink]="'/home'" class="brand-logo"><img src="assets/img/logo.png" height="64"/></a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="#" (click)="registerModal.open()">Inscription</a></li>
-			<li><a href="#" (click)="loginModal.open()">Login</a></li>
+			<li><a (click)="registerModal.open()">Inscription</a></li>
+			<li><a (click)="loginModal.open()">Login</a></li>
 		</ul>
 		<a href="#" class="button-collapse" style="color: #444;" [id]="'btn-sidenav'"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
 	</div>
@@ -16,13 +16,83 @@
 [collapseButtonId]="'btn-sidenav'">
 <mz-sidenav-subheader>Menu</mz-sidenav-subheader>
 <mz-sidenav-link>
-	<a href="#" (click)="loginModal.open()">Login</a>
+	<a (click)="loginModal.open()">Login</a>
 </mz-sidenav-link>
 <mz-sidenav-divider></mz-sidenav-divider>
 <mz-sidenav-link>
-	<a href="#" (click)="registerModal.open()">Inscription</a>
+	<a (click)="registerModal.open()">Inscription</a>
 </mz-sidenav-link>
 </mz-sidenav>
+
+<!-- Modal login -->
+<mz-modal #loginModal>
+	<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff6f00">Connexion</mz-modal-header>
+	<mz-modal-content class="row center">
+		<!-- Email -->
+		<mz-input-container class="col s12">
+			<input mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="emailLogin" label="Email" type="email">
+		</mz-input-container>
+		<!-- Mot de passe -->
+		<mz-input-container class="col s12">
+			<input mz-input id="passwordLogin" label="Mot de passe" type="password">
+		</mz-input-container>
+		<mz-input-container class="col s12" style="margin-bottom: 1em;">
+			<button mz-button class="amber darken-4" style="width: 100%;">Connexion</button>
+		</mz-input-container>
+		<p>
+			OU
+		</p>
+		<mz-input-container class="col s12">
+			<button mz-button class="light-blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>Se connecter avec Facebook</button>
+		</mz-input-container>
+		<mz-input-container class="col s12">
+			<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>Se connecter avec Google</button>
+		</mz-input-container>
+	</mz-modal-content>
+</mz-modal>
+
+<!-- Modal inscription -->
+<mz-modal #registerModal>
+	<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff6f00">Inscription</mz-modal-header>
+	<mz-modal-content class="row center">
+		<!-- Mot de passe -->
+		<mz-input-container class="col s12 m6">
+			<input mz-input id="nameRegister" label="Nom" type="text">
+		</mz-input-container>
+		<!-- Confirmation mot de passe -->
+		<mz-input-container class="col s12 m6">
+			<input mz-input id="surnameRegister" label="Prénom" type="text">
+		</mz-input-container>
+		<!-- Email -->
+		<mz-input-container class="col s12 m6">
+			<input mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="emailRegister" label="Email" type="email">
+		</mz-input-container>
+		<!-- Confirmation email -->
+		<mz-input-container class="col s12 m6">
+			<input mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="confirmEmailRegister" label="Confirmer email" type="email">
+		</mz-input-container>
+		<!-- Mot de passe -->
+		<mz-input-container class="col s12 m6">
+			<input mz-input id="passwordRegister" label="Mot de passe" type="password">
+		</mz-input-container>
+		<!-- Confirmation mot de passe -->
+		<mz-input-container class="col s12 m6">
+			<input mz-input id="passwordConfirmRegister" label="Confirmer mot de passe" type="password">
+		</mz-input-container>
+		<mz-input-container class="col l12 s12" style="margin-bottom: 1em;">
+			<button mz-button class="amber darken-4" style="width: 100%;">Inscription</button>
+		</mz-input-container>
+		<p>
+			OU
+		</p>
+		<mz-input-container class="col s12">
+			<button mz-button class="light-blue darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'facebook'" [align]="'center'"></i>S'inscrire avec Facebook</button>
+		</mz-input-container>
+		<mz-input-container class="col s12">
+			<button mz-button class="red darken-4" style="width: 100%;"><i mz-icon-mdi [icon]="'google-plus'" [align]="'center'"></i>S'inscrire avec Google</button>
+		</mz-input-container>
+	</mz-modal-content>
+</mz-modal>
 
 <!-- Routes -->
 <router-outlet></router-outlet>

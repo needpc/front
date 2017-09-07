@@ -6,28 +6,26 @@
         <i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i> 0 avis
         <div class="card horizontal">
           <div class="row" style="width: 100%;">
-            <div class="col l4 s12">
+            <div class="col l6 s12">
               <div class="card-image">
                 <img src="http://media.ldlc.com/ld/products/00/04/22/27/LD0004222726_2.jpg" style="max-height: 350px;">
               </div>
             </div>
-            <div class="col l8 s12">
-              <div class="carousel">
-                <a class="carousel-item" href="#one!"><img src="http://media.ldlc.com/ld/products/00/04/20/04/LD0004200464_2.jpg"></a>
-                <a class="carousel-item" href="#two!"><img src="http://media.ldlc.com/ld/products/00/04/55/55/LD0004555550_2.jpg"></a>
-                <a class="carousel-item" href="#three!"><img src="http://media.ldlc.com/ld/products/00/04/13/97/LD0004139737_2_0004187178_0004329357.jpg"></a>
+            <div class="col l6 s12">
+              <div style="width: 100%; height: 350px">
+                <carousel [sources]="imageSources" [config]="config"></carousel>
               </div>
             </div>
             <div class="col s12">
               <div class="row" style="max-width: 350px; padding-left: 45px; padding-right: 45px;">
                 <div class="col s4">
-                  <a href="#"><img src="http://media.ldlc.com/ld/products/00/04/22/27/LD0004222726_2.jpg" style="max-height: 100px; width: 100%;"></a>
+                  <a><img src="http://media.ldlc.com/ld/products/00/04/22/27/LD0004222726_2.jpg" style="max-height: 100px; width: 100%;"></a>
                 </div>
                 <div class="col s4">
-                  <a href="#"><img src="http://media.ldlc.com/ld/products/00/04/22/27/LD0004222721_1.jpg" style="max-height: 100px; width: 100%; opacity: 0.7;"></a>
+                  <a><img src="http://media.ldlc.com/ld/products/00/04/22/27/LD0004222721_1.jpg" style="max-height: 100px; width: 100%; opacity: 0.7;"></a>
                 </div>
                 <div class="col s4">
-                  <a href="#"><img src="http://media.ldlc.com/ld/products/00/04/22/27/LD0004222731_1.jpg" style="max-height: 100px; width: 100%; opacity: 0.7;"></a>
+                  <a><img src="http://media.ldlc.com/ld/products/00/04/22/27/LD0004222731_1.jpg" style="max-height: 100px; width: 100%; opacity: 0.7;"></a>
                 </div>
               </div>
 

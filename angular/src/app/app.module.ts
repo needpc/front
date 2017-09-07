@@ -4,17 +4,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ScrollToModule} from 'ng2-scroll-to';
 import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'angular4-carousel';
 
+import { ROUTES } from './app.routing';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
-import { ROUTES } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { ArticleListComponent } from './article-list/article-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
-    HomeComponent
+    HomeComponent,
+    ArticleListComponent
   ],
   imports: [
     MaterializeModule.forRoot(),
@@ -22,6 +25,7 @@ import { HomeComponent } from './home/home.component';
     ScrollToModule.forRoot(),
     RouterModule.forRoot(ROUTES),
     BrowserModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
