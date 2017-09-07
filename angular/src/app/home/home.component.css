@@ -2,14 +2,11 @@
     display: none!important;
 }
 .no-pad-bot {
-	height:calc(100vh - 64px);
+	height: calc(100vh - 64px);
 	background-image: url("/assets/img/backgroundlaptop.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-}
-nav ul a, nav .brand-logo {
-	color: #444;
 }
 .input-field label {
 	top: -10px;
@@ -33,7 +30,7 @@ form {
 }
 @media screen and (max-height: 499px) {
 	.pc-top25 {
-		margin-top: 0;
+		margin-top: calc((100vh / 4) - 64px);
 	}
 }
 @media screen and (min-height: 500px) and (max-width: 599px) {
@@ -43,6 +40,6 @@ form {
 }
 @media screen and (min-height: 600px) {
 	.pc-top25 {
-		margin-top: 25vh;
+		margin-top: calc((100vh / 4) - 32px);
 	}
 }
