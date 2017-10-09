@@ -66,17 +66,3 @@ nav .button-collapse i {
 .text-orange {
 	color: #ff6f00 !important;
 }
-input[type=search]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid #9e9e9e!important;
-}
-.slide {
-    width: auto!important;
-    max-height: 350px!important;
-		min-height: 100px!important;
-}
-.carousel-nav-list__item {
-	background-color: #444!important;
-}
-.carousel-nav-list__item.carousel-nav-list__item--current {
-	background-color: #ff6f00!important;
-}
