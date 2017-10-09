@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as data from '../computer.json';
 
 @Component({
   selector: 'app-article-list',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
+  computers: Object[];
+  jsondata = (<any>data);
+  count = this.jsondata.length;
 
-  constructor() { }
+  constructor() {
+    this.computers = this.jsondata;
+  }
 
   ngOnInit() {
   }

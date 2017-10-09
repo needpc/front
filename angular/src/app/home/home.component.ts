@@ -1,4 +1,7 @@
+import {Http} from '@angular/http';
 import { Component, OnInit } from '@angular/core';
+import * as data from '../computer.json';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -41,6 +44,13 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  constructor() {
+    const jsondata = (<any>data);
+    for (var i = 0; i < jsondata.length; i++) {
+      console.log(jsondata[i].model);
+    }
+  }
+
   // Initialisation du autocomplete
   ngOnInit() {
     this.setAutocomplete();
@@ -50,9 +60,10 @@ export class HomeComponent implements OnInit {
   setAutocomplete() {
     this.autocomplete = {
       data: {
-        'Lenovo Y900': 'assets/img/logo.png',
-        'Macbook pro 2017': 'assets/img/logo.png',
-        'Macbook pro 2015': 'assets/img/logo.png',
+
+        // 'Lenovo Y900': 'assets/img/logo.png',
+        // 'Macbook pro 2017': 'assets/img/logo.png',
+        // 'Macbook pro 2015': 'assets/img/logo.png',
       },
     };
   }
