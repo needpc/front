@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import {ScrollToModule} from 'ng2-scroll-to';
 import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'angular4-carousel';
+import { HttpModule } from '@angular/http';
 
 import { ROUTES } from './app.routing';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
     RouterModule.forRoot(ROUTES),
     BrowserModule,
     CarouselModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
