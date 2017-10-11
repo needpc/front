@@ -44,11 +44,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  computers: Object[];
+  jsondata = (<any>data);
+  count = this.jsondata.length;
+
   constructor() {
-    const jsondata = (<any>data);
-    for (var i = 0; i < jsondata.length; i++) {
-      console.log(jsondata[i].model);
-    }
+    this.computers = this.jsondata;
   }
 
   // Initialisation du autocomplete
@@ -60,10 +61,9 @@ export class HomeComponent implements OnInit {
   setAutocomplete() {
     this.autocomplete = {
       data: {
-
-        // 'Lenovo Y900': 'assets/img/logo.png',
-        // 'Macbook pro 2017': 'assets/img/logo.png',
-        // 'Macbook pro 2015': 'assets/img/logo.png',
+        'Lenovo Y900': 'assets/img/logo.png',
+        'Macbook pro 2017': 'assets/img/logo.png',
+        'Macbook pro 2015': 'assets/img/logo.png',
       },
     };
   }

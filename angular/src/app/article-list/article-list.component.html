@@ -13,7 +13,7 @@
                 <span class="card-title" style="background: white; width: 100%;">{{computer.model}}</span>
               </div>
               <div class="card-action">
-                <a [routerLink]="'/article'" mz-button class="amber darken-4">Voir</a>
+                <a [routerLink]="['/article', computer.id]" mz-button class="amber darken-4">Voir</a>
               </div>
             </div>
           </div>

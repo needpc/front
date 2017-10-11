@@ -80,3 +80,6 @@ input[type=search]:not(.browser-default):focus:not([readonly]) {
 .carousel-nav-list__item.carousel-nav-list__item--current {
 	background-color: #ff6f00!important;
 }
+.collapsible-body {
+  background: white!important;
+}

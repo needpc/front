@@ -1,45 +1,49 @@
 [hidden], template {
-    display: none!important;
+  display: none!important;
 }
 .no-pad-bot {
-	height: calc(100vh - 64px);
-	background-image: url("/assets/img/backgroundlaptop.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+  height: calc(100vh - 64px);
+  background-image: url("/assets/img/backgroundlaptop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .input-field label {
-	top: -10px;
-	left: 5px;
+  top: -10px;
+  left: 5px;
 }
 #search {
-	border-radius: 2px;
+  border-radius: 2px;
 }
 form {
-	padding: 0 2rem 0 2rem;
+  padding: 0 2rem 0 2rem;
 }
 .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content {
-	margin-left: 0rem;
+  margin-left: 0rem;
 }
 .pc-searchbar {
-	background-color: white!important;
-	padding-left: 35px!important;
-	-webkit-box-sizing: border-box!important; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box!important;    /* Firefox, other Gecko */
-	box-sizing: border-box!important;         /* Opera/IE 8+ */
+  background-color: white!important;
+  padding-left: 35px!important;
+  -webkit-box-sizing: border-box!important; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box!important;    /* Firefox, other Gecko */
+  box-sizing: border-box!important;         /* Opera/IE 8+ */
 }
 @media screen and (max-height: 499px) {
-	.pc-top25 {
-		margin-top: calc((100vh / 4) - 64px);
-	}
+  .pc-top25 {
+    margin-top: calc((100vh / 4) - 64px);
+  }
 }
 @media screen and (min-height: 500px) and (max-width: 599px) {
-	.pc-top25 {
-		margin-top: 10vh;
-	}
+  .pc-top25 {
+    margin-top: 10vh;
+  }
 }
 @media screen and (min-height: 600px) {
-	.pc-top25 {
-		margin-top: calc((100vh / 4) - 32px);
-	}
+  .pc-top25 {
+    margin-top: calc((100vh / 4) - 32px);
+  }
+}
+#rowSearch {
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
