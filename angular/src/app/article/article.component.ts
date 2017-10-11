@@ -28,7 +28,7 @@ export class ArticleComponent implements OnInit {
 
   public imageSources: string[] = [
     'http://media.ldlc.com/ld/products/00/04/20/04/LD0004200464_2.jpg',
-    'http://media.ldlc.com/ld/products/00/04/55/55/LD0004555550_2.jpg',
+    'http://media.ldlc.com/ld/products/00/04/13/97/LD0004139737_2_0004187178_0004329357.jpg',
     'http://media.ldlc.com/ld/products/00/04/13/97/LD0004139737_2_0004187178_0004329357.jpg'
   ];
 

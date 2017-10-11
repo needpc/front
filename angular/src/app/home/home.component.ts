@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
   count = this.jsondata.length;
 
   constructor() {
-    this.computers = this.jsondata;
+
   }
 
   // Initialisation du autocomplete
