@@ -1,6 +1,7 @@
 import {Http} from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import * as data from '../computer.json';
+import * as choiceData from '../choice.json';
 
 @Component({
   selector: 'app-home',
@@ -8,63 +9,55 @@ import * as data from '../computer.json';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  computers: Object[];
+  choices: Object[];
+  options = [];
+  finalArray = [];
+  i = 0;
+  jsondata = (<any>data);
+  jsonChoiceData = (<any>choiceData);
+  count = this.jsondata.length;
+
   hideElement = false;
   hideButton = true;
   // Titre du site
   title = 'NEED PC';
 
-  // Autocomplete
-  autocomplete: { data: { [key: string]: string } };
-
   // Phrase de résumé
   recap = '';
   // Question de base form dynamique
-  question = 'Quel utilisation faites-vous de votre PC portable ?';
-  // Options de base form dynamique
-  options = ['Naviguer sur internet', 'Traitement de texte', 'Jouer'];
+  question = this.jsonChoiceData[0].question;
+
   // Fonction update questions réponses
   nextOption(value) {
-    if (value == 'Jouer') {
-      this.question = 'Vous aimez jouer aux jeux du genre';
-      this.options = ['Pineball', 'Minecraft', 'Assassin\'s Creed Origin'];
+    this.finalArray.push(value);
+    console.log(this.finalArray);
+    this.i = this.i + 1;
+    if (this.jsonChoiceData[this.i] != undefined) {
+      this.options = this.jsonChoiceData[this.i].response;
+      var obj = this.options;
+      this.options = Object.keys(obj).map(function (key) { return obj[key]; });
     }
-    if (value == 'Assassin\'s Creed Origin') {
-      this.question = 'Quel est votre budget ?';
-      this.options = ['0€ à 400€', '400€ à 800€', '800€ à 1500€', '1500€ ou plus'];
-    }
-    if (value == '1500€ ou plus') {
-      this.question = 'Quel taille d\'écran désirez-vous ?';
-      this.options = ['11 pouces', '13 pouces', '15 pouces', '17 pouces'];
-    }
-    if (value == '17 pouces') {
+    else {
       this.hideElement = true;
       this.hideButton = false;
-      this.question = 'Résumé';
-      this.recap = 'Vous êtes un gamer, vous aimez jouer à Assassin\'s Creed Origin, vous avez un budget de 1500€ ou plus et vous désirez un ordinateur portable doté d\'un écran 17 pouces';
+      this.question = "Résumé";
+      this.recap = "Vous vous servez de votre ordinateur pour "+this.finalArray[0]+", vous aimez jouer à "+this.finalArray[1]+", vous avez un budget de "+this.finalArray[2]+" et vous désirez un ordinateur portable doté d'un écran "+this.finalArray[3]+".";
     }
   }
 
+  // Initialise les options par défaut
+  initOptions() {
+    this.options = this.jsonChoiceData[this.i].response;
+    var obj = this.options;
+    this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+  }
+
   constructor() {
-    const jsondata = (<any>data);
-    for (var i = 0; i < jsondata.length; i++) {
-      console.log(jsondata[i].model);
-    }
   }
 
   // Initialisation du autocomplete
   ngOnInit() {
-    this.setAutocomplete();
-  }
-
-  // Set du autocomplete
-  setAutocomplete() {
-    this.autocomplete = {
-      data: {
-
-        // 'Lenovo Y900': 'assets/img/logo.png',
-        // 'Macbook pro 2017': 'assets/img/logo.png',
-        // 'Macbook pro 2015': 'assets/img/logo.png',
-      },
-    };
+    this.initOptions();
   }
 }
