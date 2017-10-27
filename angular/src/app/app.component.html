@@ -3,6 +3,21 @@
 	<div class="nav-wrapper container">
 		<a id="logo-container" [routerLink]="'/home'" class="brand-logo"><img src="assets/img/logo.png" height="64"/></a>
 		<ul class="right hide-on-med-and-down">
+			<li>
+				<form style="margin-top: 5px;">
+					<div class="input-field">
+						<mz-input-container>
+							<input autocomplete="off" mz-input
+							[autocomplete]="autocomplete"
+							id="autocomplete-input"
+							type="search"
+							class="pc-searchbar"
+							id="search">
+						</mz-input-container>
+						<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
+					</div>
+				</form>
+			</li>
 			<li><a (click)="registerModal.open()">Inscription</a></li>
 			<li><a (click)="loginModal.open()">Login</a></li>
 		</ul>
@@ -22,11 +37,27 @@
 <mz-sidenav-link>
 	<a (click)="registerModal.open()">Inscription</a>
 </mz-sidenav-link>
+<mz-sidenav-divider></mz-sidenav-divider>
+<mz-sidenav-link>
+	<form style="margin-top: 5px;">
+		<div class="input-field">
+			<mz-input-container>
+				<input autocomplete="off" mz-input
+				[autocomplete]="autocomplete"
+				id="autocomplete-input"
+				type="search"
+				class="pc-searchbar"
+				id="search">
+			</mz-input-container>
+			<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
+		</div>
+	</form>
+</mz-sidenav-link>
 </mz-sidenav>
 
 <!-- Modal login -->
 <mz-modal #loginModal>
-	<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff6f00">Connexion</mz-modal-header>
+	<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff512f">Connexion</mz-modal-header>
 	<mz-modal-content class="row center">
 		<!-- Email -->
 		<mz-input-container class="col s12">
@@ -53,7 +84,7 @@
 
 <!-- Modal inscription -->
 <mz-modal #registerModal>
-	<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff6f00">Inscription</mz-modal-header>
+	<mz-modal-header style="margin-left: 0.75rem; text-transform: uppercase; color: #ff512f">Inscription</mz-modal-header>
 	<mz-modal-content class="row center">
 		<!-- Mot de passe -->
 		<mz-input-container class="col s12 m6">

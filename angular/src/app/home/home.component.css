@@ -3,7 +3,7 @@
 }
 .no-pad-bot {
   height: calc(100vh - 64px);
-  background-image: url("/assets/img/backgroundlaptop.png");
+  background-image: url("/assets/img/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

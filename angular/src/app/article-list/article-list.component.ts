@@ -13,6 +13,15 @@ export class ArticleListComponent implements OnInit {
 
   constructor() {
     this.computers = this.jsondata;
+    if (this.count == 1) {
+      this.count = this.count + ' résultat correspond à vos critères :';
+    }
+    else if (this.count > 1) {
+      this.count = this.count + ' résultats correspondent à vos critères :';
+    }
+    else if (this.count == 0) {
+      this.count = 'Aucun résultat pour vos critères.';
+    }
   }
 
   ngOnInit() {

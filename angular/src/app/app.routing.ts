@@ -5,9 +5,8 @@ import { ArticleListComponent } from './article-list/article-list.component';
 
 export const ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
-  // { path: 'article', component: ArticleComponent },
   { path: 'article/:id', component: ArticleComponent },
   { path: 'articleList', component: ArticleListComponent },
   // redirect to home when route does not exists (must be last route)
-  //{ path: '**', redirectTo: 'home' },
+  { path: '**', redirectTo: 'home' },
 ];
