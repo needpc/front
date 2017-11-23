@@ -4,17 +4,24 @@
       <div class="col s12">
         <h4 class="header text-orange">{{count}}</h4>
         <div class="chip">
-          Jouer<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i>
+          <a class="handCursor">Jouer<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
         </div>
         <div class="chip">
-          Assassin's Creed Origin<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i>
+          <a class="handCursor">Assassin's Creed Origin<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
         </div>
         <div class="chip">
-          1500€ ou plus<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i>
+          <a class="handCursor">1500€ ou plus<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
         </div>
         <div class="chip">
-          17 pouces<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i>
+          <a class="handCursor">17 pouces<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
         </div>
+        <mz-select-container>
+          <select multiple mz-select id="filter" [label]="'Filtres'" [placeholder]="'Affinez votre recherche'">
+            <optgroup *ngFor="let filter of filters" label="{{filter.filterName}}">
+              <option *ngFor="let item of filter.option">{{item.title}}</option>
+            </optgroup>
+          </select>
+        </mz-select-container>
       </div>
       <div class="col s12">
         <div class="row">

@@ -29,35 +29,50 @@ export class HomeComponent implements OnInit {
   question = this.jsonChoiceData[0].question;
 
   // Fonction update questions réponses
-  nextOption(value) {
+  nextOption(value, param) {
+  if (param == 'previous') {
+    if (this.i > 0) {
+      this.i = this.i - 1;
+      this.finalArray.splice(this.i, 1);
+      if (this.jsonChoiceData[this.i] != undefined) {
+        this.question = this.jsonChoiceData[this.i].question;
+        this.options = this.jsonChoiceData[this.i].response;
+        var obj = this.options;
+        this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+      }
+    }
+  }
+  else {
     this.finalArray.push(value);
-    console.log(this.finalArray);
     this.i = this.i + 1;
     if (this.jsonChoiceData[this.i] != undefined) {
+      this.question = this.jsonChoiceData[this.i].question;
       this.options = this.jsonChoiceData[this.i].response;
       var obj = this.options;
       this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+      console.log(this.finalArray);
     }
     else {
       this.hideElement = true;
       this.hideButton = false;
       this.question = "Résumé";
-      this.recap = "Vous vous servez de votre ordinateur pour "+this.finalArray[0]+", vous aimez jouer à "+this.finalArray[1]+", vous avez un budget de "+this.finalArray[2]+" et vous désirez un ordinateur portable doté d'un écran "+this.finalArray[3]+".";
+      this.recap = "Vous vous servez de votre ordinateur pour "+this.finalArray[0].toLowerCase()+", vous aimez jouer à "+this.finalArray[1]+", vous avez un budget de "+this.finalArray[2]+" et vous désirez un ordinateur portable doté d'un écran "+this.finalArray[3]+".";
     }
   }
+}
 
-  // Initialise les options par défaut
-  initOptions() {
-    this.options = this.jsonChoiceData[this.i].response;
-    var obj = this.options;
-    this.options = Object.keys(obj).map(function (key) { return obj[key]; });
-  }
+// Initialise les options par défaut
+initOptions() {
+this.options = this.jsonChoiceData[this.i].response;
+var obj = this.options;
+this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+}
 
-  constructor() {
-  }
+constructor() {
+}
 
-  // Initialisation du autocomplete
-  ngOnInit() {
-    this.initOptions();
-  }
+// Initialisation du autocomplete
+ngOnInit() {
+this.initOptions();
+}
 }
