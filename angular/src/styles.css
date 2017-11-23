@@ -89,12 +89,6 @@ input[type=search]:not(.browser-default):focus:not([readonly]) {
 .collapsible-body {
 	background: white!important;
 }
-.collapsible-body {
-	border-radius: 0px 0px 2px 2px;
-}
-.collapsible-header {
-	border-radius: 2px 2px 0px 0px;
-}
 nav .input-field label i {
 	color: rgba(0, 0, 0, 0.7)!important;
 	margin-top: -20px;

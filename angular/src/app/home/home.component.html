@@ -24,7 +24,8 @@
 							</mz-select-container>
 							<p [innerHTML]="recap"></p>
 							<a [routerLink]="'/articleList'" class="waves-effect waves-light btn amber darken-4" [hidden]="hideButton"><i mz-icon-mdi [icon]="'chevron-right'"></i> Lancer la recherce</a>
-							<button class="waves-effect waves-light btn amber darken-4" (click)="nextOption(reponses.value)" [hidden]="hideElement"><i mz-icon-mdi [icon]="'chevron-right'"></i> Suivant</button>
+							<button class="waves-effect waves-light btn amber darken-4" (click)="nextOption(reponses.value, 'previous')" [hidden]="hideElement"><i mz-icon-mdi [icon]="'chevron-right'"></i> Retour</button>
+							<button class="waves-effect waves-light btn amber darken-4" (click)="nextOption(reponses.value, 'next')" [hidden]="hideElement"><i mz-icon-mdi [icon]="'chevron-right'"></i> Suivant</button>
 						</mz-collapsible-item-body>
 					</mz-collapsible-item>
 				</mz-collapsible>

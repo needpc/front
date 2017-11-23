@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "question": "Quel utilisation faites-vous de votre PC portable ?",
+    "question": "Quelle utilisation faites-vous de votre PC portable ?",
     "response": {
-      "0": "naviguer sur internet",
-      "1": "traiter du texte",
-      "2": "jouer"
+      "0": "Naviguer sur internet",
+      "1": "Traiter du texte",
+      "2": "Jouer"
     }
   },
   {
