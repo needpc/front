@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as data from '../computer.json';
+import * as filter from '../filter.json';
 
 @Component({
   selector: 'app-article-list',
@@ -8,11 +9,14 @@ import * as data from '../computer.json';
 })
 export class ArticleListComponent implements OnInit {
   computers: Object[];
-  jsondata = (<any>data);
-  count = this.jsondata.length;
+  filters: Object[];
+  jsonData = (<any>data);
+  jsonFilter = (<any>filter);
+  count = this.jsonData.length;
 
   constructor() {
-    this.computers = this.jsondata;
+    this.computers = this.jsonData;
+    this.filters = this.jsonFilter;
     if (this.count == 1) {
       this.count = this.count + ' résultat correspond à vos critères :';
     }

@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "filterName": "Taille d'écran",
+    "option": [
+      {"title": "11 pouces"},
+      {"title": "13 pouces"},
+      {"title": "15 pouces"},
+      {"title": "17 pouces"}
+    ]
+  },
+  {
+    "id": 2,
+    "filterName": "Jeux",
+    "option": [
+      {"title": "Pineball"},
+      {"title": "Minecraft"},
+      {"title": "Assassin's Creed Origin"}
+    ]
+  },
+  {
+    "id": 3,
+    "filterName": "Budget",
+    "option": [
+      {"title": "0€ à 400€"},
+      {"title": "400€ à 800€"},
+      {"title": "800€ à 1500€"},
+      {"title": "1500€ ou plus"}
+    ]
+  },
+  {
+    "id": 4,
+    "filterName": "Utilisation",
+    "option": [
+      {"title": "Naviguer sur internet"},
+      {"title": "Traiter du texte"},
+      {"title": "Jouer"}
+    ]
+  }
+]
