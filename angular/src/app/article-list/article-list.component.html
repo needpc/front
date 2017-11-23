@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <h4 class="header text-orange">{{count}}</h4>
-        <div class="chip">
+        <h4 class="header text-orange bot30">{{count}}</h4>
+        <!-- <div class="chip">
           <a class="handCursor">Jouer<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
         </div>
         <div class="chip">
@@ -14,8 +14,8 @@
         </div>
         <div class="chip">
           <a class="handCursor">17 pouces<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
-        </div>
-        <mz-select-container>
+        </div> -->
+        <mz-select-container class="top15">
           <select multiple mz-select id="filter" [label]="'Filtres'" [placeholder]="'Affinez votre recherche'">
             <optgroup *ngFor="let filter of filters" label="{{filter.filterName}}">
               <option *ngFor="let item of filter.option">{{item.title}}</option>
