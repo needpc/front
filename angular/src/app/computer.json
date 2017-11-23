@@ -1,1098 +1,870 @@
-[{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
+[
+  {
+    "id": 1,
+    "price": 1500,
+    "model": "ASUS EeeBook X206HA-FD0077T",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "networks": {
-    "name": "10/100/1000"
+  {
+    "id": 2,
+    "price": 1800,
+    "model": "MSI GL62M 7RDX-1629XFR",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
+  {
+    "id": 1,
+    "price": 1500,
+    "model": "ASUS EeeBook X206HA-FD0077T",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
+  {
+    "id": 2,
+    "price": 1800,
+    "model": "MSI GL62M 7RDX-1629XFR",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
+  {
+    "id": 1,
+    "price": 1500,
+    "model": "ASUS EeeBook X206HA-FD0077T",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
+  {
+    "id": 2,
+    "price": 1800,
+    "model": "MSI GL62M 7RDX-1629XFR",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
+  {
+    "id": 1,
+    "price": 1500,
+    "model": "ASUS EeeBook X206HA-FD0077T",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "colors": {
-    "name": "black",
-    "picker": null
+  {
+    "id": 2,
+    "price": 1800,
+    "model": "MSI GL62M 7RDX-1629XFR",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "chipsets": {
-    "name": "CTE"
+  {
+    "id": 1,
+    "price": 1500,
+    "model": "ASUS EeeBook X206HA-FD0077T",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "brands": {
-    "name": "Asus"
+  {
+    "id": 2,
+    "price": 1800,
+    "model": "MSI GL62M 7RDX-1629XFR",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   },
-  "activity": {
-    "name": "Games"
+  {
+    "id": 1,
+    "price": 1500,
+    "model": "ASUS EeeBook X206HA-FD0077T",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
+  },
+  {
+    "id": 2,
+    "price": 1800,
+    "model": "MSI GL62M 7RDX-1629XFR",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
+  },
+  {
+    "id": 1,
+    "price": 1500,
+    "model": "ASUS EeeBook X206HA-FD0077T",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
+  },
+  {
+    "id": 2,
+    "price": 1800,
+    "model": "MSI GL62M 7RDX-1629XFR",
+    "designation": "GET",
+    "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
+    "connector_avalaible": "HDMI x 1, VGA x 1",
+    "size_width": 100,
+    "size_height": 100,
+    "is_os_included": true,
+    "is_webcam_included": false,
+    "is_wifi_included": false,
+    "is_vr_ready": false,
+    "garanty_year": 2,
+    "updatedAt": "2017-09-04T22:00:00.000Z",
+    "createdAt": "2017-09-03T22:00:00.000Z",
+    "os": {
+      "name": "Windows 7"
+    },
+    "networks": {
+      "name": "10/100/1000"
+    },
+    "keyboards": {
+      "language_iso": "FR_fr",
+      "type": "AZERTY"
+    },
+    "graphics": {
+      "name": "Nvidia GTX 1070",
+      "vram_giga": 16,
+      "memory_capacities": null,
+      "frequency": 2000
+    },
+    "display": {
+      "type": "LCD",
+      "resolution": "1920x1080",
+      "refresh_rate": 120,
+      "size": 120,
+      "format": "16:10"
+    },
+    "disks": {
+      "disk_main": "512 SSD",
+      "disk_secondary": "1To HDD"
+    },
+    "cpus": {
+      "name": "i7 6700K",
+      "brand": "Intel",
+      "frequency": 3.7
+    },
+    "colors": {
+      "name": "black",
+      "picker": null
+    },
+    "chipsets": {
+      "name": "CTE"
+    },
+    "brands": {
+      "name": "Asus"
+    },
+    "activity": {
+      "name": "Games"
+    }
   }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 1,
-  "model": "ASUS EeeBook X206HA-FD0077T",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/03/62/32/LD0003623288_2_0003960073.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-},
-{
-  "id": 2,
-  "model": "MSI GL62M 7RDX-1629XFR",
-  "designation": "GET",
-  "picture": "https://media.ldlc.com/ld/products/00/04/50/00/LD0004500021_2.jpg",
-  "connector_avalaible": "HDMI x 1, VGA x 1",
-  "size_width": 100,
-  "size_height": 100,
-  "is_os_included": true,
-  "is_webcam_included": false,
-  "is_wifi_included": false,
-  "is_vr_ready": false,
-  "garanty_year": 2,
-  "updatedAt": "2017-09-04T22:00:00.000Z",
-  "createdAt": "2017-09-03T22:00:00.000Z",
-  "os": {
-    "name": "Windows 7"
-  },
-  "networks": {
-    "name": "10/100/1000"
-  },
-  "keyboards": {
-    "language_iso": "FR_fr",
-    "type": "AZERTY"
-  },
-  "graphics": {
-    "name": "Nvidia GTX 1070",
-    "vram_giga": 16,
-    "memory_capacities": null,
-    "frequency": 2000
-  },
-  "display": {
-    "type": "LCD",
-    "resolution": "1920x1080",
-    "refresh_rate": 120,
-    "size": 120,
-    "format": "16:10"
-  },
-  "disks": {
-    "disk_main": "512 SSD",
-    "disk_secondary": "1To HDD"
-  },
-  "cpus": {
-    "name": "i7 6700K",
-    "brand": "Intel",
-    "frequency": 3.7
-  },
-  "colors": {
-    "name": "black",
-    "picker": null
-  },
-  "chipsets": {
-    "name": "CTE"
-  },
-  "brands": {
-    "name": "Asus"
-  },
-  "activity": {
-    "name": "Games"
-  }
-}]
+]

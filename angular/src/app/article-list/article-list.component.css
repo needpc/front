@@ -4,7 +4,11 @@
 .card-title {
   color: rgba(0, 0, 0, 0.87)!important;
   font-size: 1rem!important;
+  font-weight: 500;
 }
 .handCursor {
   cursor: pointer;
+}
+.card .card-image .card-title {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
 }

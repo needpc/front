@@ -30,6 +30,9 @@
               <div class="card-image">
                 <img src={{computer.picture}}>
                 <span class="card-title" style="background: white; width: 100%;">{{computer.model}}</span>
+                <p style="padding-left: 24px; font-weight: bold; font-size: 1.2px; color: #ff512f;">
+                  {{computer.price}} €
+                </p>
               </div>
               <div class="card-action">
                 <a [routerLink]="['/article', computer.id]" mz-button class="amber darken-4">Voir</a>
