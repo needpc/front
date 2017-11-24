@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../computer.json';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import * as filter from '../filter.json';
 
 @Component({
@@ -8,15 +9,13 @@ import * as filter from '../filter.json';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-  computers: Object[];
   filters: Object[];
-  jsonData = (<any>data);
   jsonFilter = (<any>filter);
-  count = this.jsonData.length;
+  count: any;
+  results: string[];
+  noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
 
-  constructor() {
-    this.computers = this.jsonData;
-    this.filters = this.jsonFilter;
+  countComputers() {
     if (this.count == 1) {
       this.count = this.count + ' résultat correspond à vos critères :';
     }
@@ -28,7 +27,20 @@ export class ArticleListComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
+  getAllComputers() {
+    this.http.get('https://127.0.0.1:4433/api/v1/search/computers/').subscribe(data => {
+    // Read the result field from the JSON response.
+    this.results = data['data'];
+    this.count = this.results.length;
+    this.countComputers();
+  });
+}
 
+constructor(private http: HttpClient) {
+  this.getAllComputers();
+  this.filters = this.jsonFilter;
+}
+
+ngOnInit() {
+}
 }

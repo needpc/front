@@ -3,18 +3,6 @@
     <div class="row">
       <div class="col s12">
         <h4 class="header text-orange bot30">{{count}}</h4>
-        <!-- <div class="chip">
-          <a class="handCursor">Jouer<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
-        </div>
-        <div class="chip">
-          <a class="handCursor">Assassin's Creed Origin<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
-        </div>
-        <div class="chip">
-          <a class="handCursor">1500€ ou plus<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
-        </div>
-        <div class="chip">
-          <a class="handCursor">17 pouces<i mz-icon-mdi [icon]="'close'" [size]="'13px'"></i></a>
-        </div> -->
         <mz-select-container class="top15">
           <select multiple mz-select id="filter" [label]="'Filtres'" [placeholder]="'Affinez votre recherche'">
             <optgroup *ngFor="let filter of filters" label="{{filter.filterName}}">
@@ -25,10 +13,10 @@
       </div>
       <div class="col s12">
         <div class="row">
-          <div *ngFor="let computer of computers" class="col l4 s12">
+          <div *ngFor="let computer of results" class="col l4 s12">
             <div class="card">
               <div class="card-image">
-                <img src={{computer.picture}}>
+                <img [src]="computer.picture != null ? computer.picture : noImg">
                 <span class="card-title" style="background: white; width: 100%;">{{computer.model}}</span>
                 <p style="padding-left: 24px; font-weight: bold; font-size: 1.2px; color: #ff512f;">
                   {{computer.price}} €

@@ -1,6 +1,5 @@
 import {Http} from '@angular/http';
 import { Component, OnInit } from '@angular/core';
-import * as data from '../computer.json';
 import * as choiceData from '../choice.json';
 
 @Component({
@@ -9,14 +8,11 @@ import * as choiceData from '../choice.json';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  computers: Object[];
   choices: Object[];
   options = [];
   finalArray = [];
   i = 0;
-  jsondata = (<any>data);
   jsonChoiceData = (<any>choiceData);
-  count = this.jsondata.length;
 
   hideElement = false;
   hideButton = true;
