@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleListComponent } from './article-list/article-list.component';
+import { myService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
     HttpClientModule,
     HttpModule
   ],
-  providers: [],
+  providers: [myService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

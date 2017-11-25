@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { myService } from '../data.service';
 
 import * as filter from '../filter.json';
 
@@ -13,6 +14,7 @@ export class ArticleListComponent implements OnInit {
   jsonFilter = (<any>filter);
   count: any;
   results: string[];
+  SharedDatatest: Object[];
   noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
 
   countComputers() {
@@ -29,18 +31,28 @@ export class ArticleListComponent implements OnInit {
 
   getAllComputers() {
     this.http.get('https://127.0.0.1:4433/api/v1/search/computers/').subscribe(data => {
-    // Read the result field from the JSON response.
-    this.results = data['data'];
-    this.count = this.results.length;
-    this.countComputers();
-  });
-}
+      // Read the result field from the JSON response.
+      this.results = data['data'];
+      this.count = this.results.length;
+      this.countComputers();
+    });
+  }
 
-constructor(private http: HttpClient) {
-  this.getAllComputers();
-  this.filters = this.jsonFilter;
-}
+  constructor(private http: HttpClient, private _myService: myService) {
+    this.getAllComputers();
+    this.filters = this.jsonFilter;
 
-ngOnInit() {
-}
+    this.SharedDatatest = this._myService.getData();
+
+    // Choix
+    for (var i = 0; i < this.SharedDatatest.length; i++) {
+      // Chaque groupe
+      for (var j = 0; j < this.jsonFilter.length; j++) {
+        
+      }
+    }
+  }
+
+  ngOnInit() {
+  }
 }

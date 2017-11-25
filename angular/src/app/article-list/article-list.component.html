@@ -6,7 +6,7 @@
         <mz-select-container class="top15">
           <select multiple mz-select id="filter" [label]="'Filtres'" [placeholder]="'Affinez votre recherche'">
             <optgroup *ngFor="let filter of filters" label="{{filter.filterName}}">
-              <option *ngFor="let item of filter.option">{{item.title}}</option>
+              <option *ngFor="let item of filter.option" value="{{item.title}}">{{item.title}}</option>
             </optgroup>
           </select>
         </mz-select-container>
