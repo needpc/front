@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../computer.json';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { myService } from '../data.service';
+
 import * as filter from '../filter.json';
+
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-article-list',
@@ -8,15 +13,14 @@ import * as filter from '../filter.json';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-  computers: Object[];
   filters: Object[];
-  jsonData = (<any>data);
   jsonFilter = (<any>filter);
-  count = this.jsonData.length;
+  count: any;
+  results: string[];
+  SharedDatatest: Object[];
+  noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
 
-  constructor() {
-    this.computers = this.jsonData;
-    this.filters = this.jsonFilter;
+  countComputers() {
     if (this.count == 1) {
       this.count = this.count + ' résultat correspond à vos critères :';
     }
@@ -28,7 +32,32 @@ export class ArticleListComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
+  getAllComputers() {
+    this.http.get('https://127.0.0.1:4433/api/v1/search/computers/').subscribe(data => {
+      // Read the result field from the JSON response.
+      this.results = data['data'];
+      this.count = this.results.length;
+      this.countComputers();
+      var array;
+      for(var i = 0; i < this.SharedDatatest.length; i++) {
+        array = this.SharedDatatest[i];
+        $('.optgroup-option').each(function(index) {
+          if($(this).text() == array) {
+            $(this).click();
+            $('.dropdown-content').click();
+          }
+        });
+      }
+    });
   }
 
+  constructor(private http: HttpClient, private _myService: myService) {
+
+  }
+
+  async ngOnInit() {
+    this.SharedDatatest = await this._myService.getData();
+    this.getAllComputers();
+    this.filters = this.jsonFilter;
+  }
 }

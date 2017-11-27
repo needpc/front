@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICarouselConfig, AnimationConfig } from 'angular4-carousel';
-import * as data from '../computer.json';
+// import * as data from '../computer.json';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,20 +10,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ArticleComponent implements OnInit {
   computers: Object[];
-  jsondata = (<any>data);
+  // jsondata = (<any>data);
 
   constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      for (var i = 0; this.jsondata.length; i++) {
-        if (this.jsondata[i].id == params['id']) {
-            this.computers = this.jsondata[i];
-            break;
-        }
-      }
-    });
+    // this.route.params.subscribe(params => {
+    //   for (var i = 0; this.jsondata.length; i++) {
+    //     if (this.jsondata[i].id == params['id']) {
+    //         this.computers = this.jsondata[i];
+    //         break;
+    //     }
+    //   }
+    // });
   }
 
   public imageSources: string[] = [

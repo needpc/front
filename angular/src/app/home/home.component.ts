@@ -1,7 +1,7 @@
 import {Http} from '@angular/http';
 import { Component, OnInit } from '@angular/core';
-import * as data from '../computer.json';
 import * as choiceData from '../choice.json';
+import { myService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +9,12 @@ import * as choiceData from '../choice.json';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  computers: Object[];
   choices: Object[];
   options = [];
   finalArray = [];
+  SharedData: Object[];
   i = 0;
-  jsondata = (<any>data);
   jsonChoiceData = (<any>choiceData);
-  count = this.jsondata.length;
 
   hideElement = false;
   hideButton = true;
@@ -50,12 +48,12 @@ export class HomeComponent implements OnInit {
       this.options = this.jsonChoiceData[this.i].response;
       var obj = this.options;
       this.options = Object.keys(obj).map(function (key) { return obj[key]; });
-      console.log(this.finalArray);
     }
     else {
       this.hideElement = true;
       this.hideButton = false;
       this.question = "Résumé";
+      this._myService.setData(this.finalArray);
       this.recap = "Vous vous servez de votre ordinateur pour "+this.finalArray[0].toLowerCase()+", vous aimez jouer à "+this.finalArray[1]+", vous avez un budget de "+this.finalArray[2]+" et vous désirez un ordinateur portable doté d'un écran "+this.finalArray[3]+".";
     }
   }
@@ -68,7 +66,8 @@ var obj = this.options;
 this.options = Object.keys(obj).map(function (key) { return obj[key]; });
 }
 
-constructor() {
+constructor(private _myService: myService) {
+  console.log(this._myService.getData());
 }
 
 // Initialisation du autocomplete

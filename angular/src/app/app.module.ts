@@ -6,12 +6,14 @@ import {ScrollToModule} from 'ng2-scroll-to';
 import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'angular4-carousel';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ROUTES } from './app.routing';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleListComponent } from './article-list/article-list.component';
+import { myService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { ArticleListComponent } from './article-list/article-list.component';
     RouterModule.forRoot(ROUTES),
     BrowserModule,
     CarouselModule,
+    HttpClientModule,
     HttpModule
   ],
-  providers: [],
+  providers: [myService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
