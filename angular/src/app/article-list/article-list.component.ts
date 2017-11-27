@@ -4,6 +4,9 @@ import { myService } from '../data.service';
 
 import * as filter from '../filter.json';
 
+declare var jquery:any;
+declare var $ :any;
+
 @Component({
   selector: 'app-article-list',
   templateUrl: './article-list.component.html',
@@ -35,24 +38,26 @@ export class ArticleListComponent implements OnInit {
       this.results = data['data'];
       this.count = this.results.length;
       this.countComputers();
+      var array;
+      for(var i = 0; i < this.SharedDatatest.length; i++) {
+        array = this.SharedDatatest[i];
+        $('.optgroup-option').each(function(index) {
+          if($(this).text() == array) {
+            $(this).click();
+            $('.dropdown-content').click();
+          }
+        });
+      }
     });
   }
 
   constructor(private http: HttpClient, private _myService: myService) {
-    this.getAllComputers();
-    this.filters = this.jsonFilter;
 
-    this.SharedDatatest = this._myService.getData();
-
-    // Choix
-    for (var i = 0; i < this.SharedDatatest.length; i++) {
-      // Chaque groupe
-      for (var j = 0; j < this.jsonFilter.length; j++) {
-        
-      }
-    }
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.SharedDatatest = await this._myService.getData();
+    this.getAllComputers();
+    this.filters = this.jsonFilter;
   }
 }

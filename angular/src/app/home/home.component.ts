@@ -48,7 +48,6 @@ export class HomeComponent implements OnInit {
       this.options = this.jsonChoiceData[this.i].response;
       var obj = this.options;
       this.options = Object.keys(obj).map(function (key) { return obj[key]; });
-      console.log(this.finalArray);
     }
     else {
       this.hideElement = true;
