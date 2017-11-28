@@ -19,6 +19,7 @@ export class ArticleListComponent implements OnInit {
   preResults: any;
   results: string[];
   SharedDatatest: Object[];
+  filter1: any;
   noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
 
   countComputers() {
@@ -38,8 +39,16 @@ export class ArticleListComponent implements OnInit {
       // Read the result field from the JSON response.
       this.preResults = data['data'];
       this.results = [];
+
+      if (this.SharedDatatest[2] == 'Traiter du texte' || this.SharedDatatest[2] == 'Naviguer sur internet') {
+        this.filter1 = 'navigation';
+      }
+      else if (this.SharedDatatest[2] == 'Jouer') {
+        this.filter1 = 'gaming';
+      }
+
       for(var i = 0; i < this.preResults.length; i++) {
-        if (this.preResults[i].activity.name == this.SharedDatatest[0] && this.preResults[i].display.size == this.SharedDatatest[2]) {
+        if (this.preResults[i].display.size == String(this.SharedDatatest[1]).replace(/[^0-9]+/, '') && this.preResults[i].activity.name == this.filter1) {
           this.results.push(this.preResults[i]);
         }
       }

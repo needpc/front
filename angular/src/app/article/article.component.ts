@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ICarouselConfig, AnimationConfig } from 'angular4-carousel';
-// import * as data from '../computer.json';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,18 +9,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  computers: Object[];
-  // jsondata = (<any>data);
+  computers: any;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
   }
 
-  ngOnInit() {
+  getAll() {
+    this.http.get('https://127.0.0.1:4433/api/v1/computers/3').subscribe(data => {
+      // Read the result field from the JSON response.
+      this.computers = data['data'][0];
+    });
+  }
+
+  async ngOnInit() {
+    await this.getAll();
     // this.route.params.subscribe(params => {
-    //   for (var i = 0; this.jsondata.length; i++) {
-    //     if (this.jsondata[i].id == params['id']) {
-    //         this.computers = this.jsondata[i];
-    //         break;
+    //   for (var i = 0; this.computers.length; i++) {
+    //     if (this.computers[i].id == params['id']) {
+    //       this.computers = this.computers[i];
+    //       break;
     //     }
     //   }
     // });
