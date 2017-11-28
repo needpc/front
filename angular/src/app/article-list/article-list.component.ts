@@ -16,6 +16,7 @@ export class ArticleListComponent implements OnInit {
   filters: Object[];
   jsonFilter = (<any>filter);
   count: any;
+  preResults: any;
   results: string[];
   SharedDatatest: Object[];
   noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
@@ -35,7 +36,14 @@ export class ArticleListComponent implements OnInit {
   getAllComputers() {
     this.http.get('https://127.0.0.1:4433/api/v1/search/computers/').subscribe(data => {
       // Read the result field from the JSON response.
-      this.results = data['data'];
+      this.preResults = data['data'];
+      this.results = [];
+      for(var i = 0; i < this.preResults.length; i++) {
+        if (this.preResults[i].activity.name == this.SharedDatatest[0] && this.preResults[i].display.size == this.SharedDatatest[2]) {
+          this.results.push(this.preResults[i]);
+        }
+      }
+      console.log(this.results);
       this.count = this.results.length;
       this.countComputers();
       var array;
@@ -52,12 +60,11 @@ export class ArticleListComponent implements OnInit {
   }
 
   constructor(private http: HttpClient, private _myService: myService) {
-
   }
 
   async ngOnInit() {
     this.SharedDatatest = await this._myService.getData();
-    this.getAllComputers();
     this.filters = this.jsonFilter;
+    this.getAllComputers();
   }
 }
