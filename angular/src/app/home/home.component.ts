@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
         this.options = this.jsonChoiceData[this.i].reponses;
         var obj = this.options;
         this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+        this.options.sort();
       }
     }
   }
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit {
       this.options = this.jsonChoiceData[this.i].reponses;
       var obj = this.options;
       this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+      this.options.sort();
     }
     else {
       this.hideElement = true;
@@ -64,6 +66,7 @@ this.http.get('https://127.0.0.1:4433/api/v1/ask').subscribe(data => {
   this.options = this.jsonChoiceData[this.i].reponses;
   var obj = this.options;
   this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+  this.options.sort();
   // Question de base form dynamique
   this.question = this.jsonChoiceData[0].question;
 });

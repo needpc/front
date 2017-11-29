@@ -9,28 +9,24 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  computers: any;
+  computer: any;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
   }
 
   getAll() {
-    this.http.get('https://127.0.0.1:4433/api/v1/computers/3').subscribe(data => {
-      // Read the result field from the JSON response.
-      this.computers = data['data'][0];
+    this.computer = [];
+    this.route.params.subscribe(params => {
+      this.http.get('https://127.0.0.1:4433/api/v1/computers/'+params['id']).subscribe(data => {
+        // Read the result field from the JSON response.
+        this.computer = data['data'][0];
+        console.log(this.computer);
+      });
     });
   }
 
-  async ngOnInit() {
-    await this.getAll();
-    // this.route.params.subscribe(params => {
-    //   for (var i = 0; this.computers.length; i++) {
-    //     if (this.computers[i].id == params['id']) {
-    //       this.computers = this.computers[i];
-    //       break;
-    //     }
-    //   }
-    // });
+  ngOnInit() {
+    this.getAll();
   }
 
   public imageSources: string[] = [

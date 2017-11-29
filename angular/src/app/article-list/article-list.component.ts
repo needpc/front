@@ -41,7 +41,7 @@ export class ArticleListComponent implements OnInit {
       this.results = [];
 
       if (this.SharedDatatest[2] == 'Traiter du texte' || this.SharedDatatest[2] == 'Naviguer sur internet') {
-        this.filter1 = 'navigation';
+        this.filter1 = 'bureautique';
       }
       else if (this.SharedDatatest[2] == 'Jouer') {
         this.filter1 = 'gaming';
@@ -52,7 +52,6 @@ export class ArticleListComponent implements OnInit {
           this.results.push(this.preResults[i]);
         }
       }
-      console.log(this.results);
       this.count = this.results.length;
       this.countComputers();
       var array;

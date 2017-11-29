@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AppComponent {
   // Autocomplete
   autocomplete: { data: { [key: string]: string } };
-  computers: any;
+  computersList: any;
   results: any;
   array: any;
   // Initialisation du autocomplete
@@ -25,15 +25,15 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.getComputerList();
-    this.computers = {'Aurore Ci5P-8-S5': 'https://media.ldlc.com/ld/products/00/04/45/56/LD0004455603_2.jpg'};
+    // this.getComputerList();
+    this.computersList = {'Aurore Ci5P-8-S5': 'https://media.ldlc.com/ld/products/00/04/45/56/LD0004455603_2.jpg'};
     this.setAutocomplete();
   }
 
   // Set du autocomplete
   setAutocomplete() {
   this.autocomplete = {
-    data: this.computers,
+    data: this.computersList,
   };
 }
 }
