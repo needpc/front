@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ICarouselConfig, AnimationConfig } from 'angular4-carousel';
-// import * as data from '../computer.json';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,21 +9,24 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  computers: Object[];
-  // jsondata = (<any>data);
+  computer: any;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
+  }
+
+  getAll() {
+    this.computer = [];
+    this.route.params.subscribe(params => {
+      this.http.get('https://127.0.0.1:4433/api/v1/computers/'+params['id']).subscribe(data => {
+        // Read the result field from the JSON response.
+        this.computer = data['data'][0];
+        console.log(this.computer);
+      });
+    });
   }
 
   ngOnInit() {
-    // this.route.params.subscribe(params => {
-    //   for (var i = 0; this.jsondata.length; i++) {
-    //     if (this.jsondata[i].id == params['id']) {
-    //         this.computers = this.jsondata[i];
-    //         break;
-    //     }
-    //   }
-    // });
+    this.getAll();
   }
 
   public imageSources: string[] = [

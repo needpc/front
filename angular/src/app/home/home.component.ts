@@ -1,6 +1,6 @@
 import {Http} from '@angular/http';
 import { Component, OnInit } from '@angular/core';
-import * as choiceData from '../choice.json';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { myService } from '../data.service';
 
 @Component({
@@ -9,22 +9,18 @@ import { myService } from '../data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  choices: Object[];
   options = [];
   finalArray = [];
   SharedData: Object[];
   i = 0;
-  jsonChoiceData = (<any>choiceData);
-
+  jsonChoiceData: any;
   hideElement = false;
   hideButton = true;
   // Titre du site
   title = 'NEED PC';
-
   // Phrase de résumé
   recap = '';
-  // Question de base form dynamique
-  question = this.jsonChoiceData[0].question;
+  question: any;
 
   // Fonction update questions réponses
   nextOption(value, param) {
@@ -34,9 +30,10 @@ export class HomeComponent implements OnInit {
       this.finalArray.splice(this.i, 1);
       if (this.jsonChoiceData[this.i] != undefined) {
         this.question = this.jsonChoiceData[this.i].question;
-        this.options = this.jsonChoiceData[this.i].response;
+        this.options = this.jsonChoiceData[this.i].reponses;
         var obj = this.options;
         this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+        this.options.sort();
       }
     }
   }
@@ -45,29 +42,37 @@ export class HomeComponent implements OnInit {
     this.i = this.i + 1;
     if (this.jsonChoiceData[this.i] != undefined) {
       this.question = this.jsonChoiceData[this.i].question;
-      this.options = this.jsonChoiceData[this.i].response;
+      this.options = this.jsonChoiceData[this.i].reponses;
       var obj = this.options;
       this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+      this.options.sort();
     }
     else {
       this.hideElement = true;
       this.hideButton = false;
       this.question = "Résumé";
       this._myService.setData(this.finalArray);
-      this.recap = "Vous vous servez de votre ordinateur pour "+this.finalArray[0].toLowerCase()+", vous aimez jouer à "+this.finalArray[1]+", vous avez un budget de "+this.finalArray[2]+" et vous désirez un ordinateur portable doté d'un écran "+this.finalArray[3]+".";
+      this.recap = "Vous avez un budget allant de "+this.finalArray[0].toLowerCase()+", vous désirez un ordinateur portable doté d'un écran "+this.finalArray[1]+" et vous vous servez de votre ordinateur pour "+this.finalArray[2]+".";
     }
   }
 }
 
 // Initialise les options par défaut
 initOptions() {
-this.options = this.jsonChoiceData[this.i].response;
-var obj = this.options;
-this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+this.http.get('https://127.0.0.1:4433/api/v1/ask').subscribe(data => {
+  // Read the result field from the JSON response.
+  this.jsonChoiceData = data['data'];
+  console.log(this.jsonChoiceData);
+  this.options = this.jsonChoiceData[this.i].reponses;
+  var obj = this.options;
+  this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+  this.options.sort();
+  // Question de base form dynamique
+  this.question = this.jsonChoiceData[0].question;
+});
 }
 
-constructor(private _myService: myService) {
-  console.log(this._myService.getData());
+constructor(private http: HttpClient, private _myService: myService) {
 }
 
 // Initialisation du autocomplete

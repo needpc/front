@@ -11,15 +11,6 @@
   },
   {
     "id": 2,
-    "filterName": "Jeux",
-    "option": [
-      {"title": "Pineball"},
-      {"title": "Minecraft"},
-      {"title": "Assassin's Creed Origin"}
-    ]
-  },
-  {
-    "id": 3,
     "filterName": "Budget",
     "option": [
       {"title": "0€ à 400€"},
@@ -29,7 +20,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 3,
     "filterName": "Utilisation",
     "option": [
       {"title": "Naviguer sur internet"},
