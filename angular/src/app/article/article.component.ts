@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ICarouselConfig, AnimationConfig } from 'angular4-carousel';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -34,14 +33,4 @@ export class ArticleComponent implements OnInit {
     'http://media.ldlc.com/ld/products/00/04/13/97/LD0004139737_2_0004187178_0004329357.jpg',
     'http://media.ldlc.com/ld/products/00/04/13/97/LD0004139737_2_0004187178_0004329357.jpg'
   ];
-
-  public config: ICarouselConfig = {
-    verifyBeforeLoad: true,
-    log: false,
-    animation: true,
-    animationType: AnimationConfig.SLIDE,
-    autoplay: true,
-    autoplayDelay: 5000,
-    stopAutoplayMinWidth: 768
-  };
 }
