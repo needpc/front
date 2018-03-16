@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ScrollToModule} from 'ng2-scroll-to';
 import { RouterModule } from '@angular/router';
-import { CarouselModule } from 'angular4-carousel';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -28,7 +27,6 @@ import { myService } from './data.service';
     ScrollToModule.forRoot(),
     RouterModule.forRoot(ROUTES),
     BrowserModule,
-    CarouselModule,
     HttpClientModule,
     HttpModule
   ],

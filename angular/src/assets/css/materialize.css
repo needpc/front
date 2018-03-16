@@ -1,8 +1,8 @@
 /*!
-* Materialize v0.100.2 (http://materializecss.com)
-* Copyright 2014-2017 Materialize
-* MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
-*/
+ * Materialize v0.100.2 (http://materializecss.com)
+ * Copyright 2014-2017 Materialize
+ * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+ */
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -1020,11 +1020,11 @@
 }
 
 .teal.lighten-1 {
-  background-color: #ff512f !important;
+  background-color: #26a69a !important;
 }
 
 .teal-text.text-lighten-1 {
-  color: #ff512f !important;
+  color: #26a69a !important;
 }
 
 .teal.darken-1 {
@@ -1612,11 +1612,11 @@
 }
 
 .amber.darken-4 {
-  background-color: #ff512f !important;
+  background-color: #ff6f00 !important;
 }
 
 .amber-text.text-darken-4 {
-  color: #ff512f !important;
+  color: #ff6f00 !important;
 }
 
 .amber.accent-1 {
@@ -2141,10 +2141,10 @@
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
-* 1. Set default font family to sans-serif.
-* 2. Prevent iOS and IE text size adjust after device orientation change,
-*    without disabling user zoom.
-*/
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -2155,20 +2155,20 @@ html {
 }
 
 /**
-* Remove default margin.
-*/
+ * Remove default margin.
+ */
 body {
   margin: 0;
 }
 
 /* HTML5 display definitions
-========================================================================== */
+   ========================================================================== */
 /**
-* Correct `block` display not defined for any HTML5 element in IE 8/9.
-* Correct `block` display not defined for `details` or `summary` in IE 10/11
-* and Firefox.
-* Correct `block` display not defined for `main` in IE 11.
-*/
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
 article,
 aside,
 details,
@@ -2186,9 +2186,9 @@ summary {
 }
 
 /**
-* 1. Correct `inline-block` display not defined in IE 8/9.
-* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
-*/
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
 audio,
 canvas,
 progress,
@@ -2200,92 +2200,92 @@ video {
 }
 
 /**
-* Prevent modern browsers from displaying `audio` without controls.
-* Remove excess height in iOS 5 devices.
-*/
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
 /**
-* Address `[hidden]` styling not present in IE 8/9/10.
-* Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
-*/
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
 [hidden],
 template {
   display: none;
 }
 
 /* Links
-========================================================================== */
+   ========================================================================== */
 /**
-* Remove the gray background color from active links in IE 10.
-*/
+ * Remove the gray background color from active links in IE 10.
+ */
 a {
   background-color: transparent;
 }
 
 /**
-* Improve readability of focused elements when they are also in an
-* active/hover state.
-*/
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
 a:active,
 a:hover {
   outline: 0;
 }
 
 /* Text-level semantics
-========================================================================== */
+   ========================================================================== */
 /**
-* Address styling not present in IE 8/9/10/11, Safari, and Chrome.
-*/
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
 /**
-* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
-*/
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
 b,
 strong {
   font-weight: bold;
 }
 
 /**
-* Address styling not present in Safari and Chrome.
-*/
+ * Address styling not present in Safari and Chrome.
+ */
 dfn {
   font-style: italic;
 }
 
 /**
-* Address variable `h1` font-size and margin within `section` and `article`
-* contexts in Firefox 4+, Safari, and Chrome.
-*/
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
 /**
-* Address styling not present in IE 8/9.
-*/
+ * Address styling not present in IE 8/9.
+ */
 mark {
   background: #ff0;
   color: #000;
 }
 
 /**
-* Address inconsistent and variable font size in all browsers.
-*/
+ * Address inconsistent and variable font size in all browsers.
+ */
 small {
   font-size: 80%;
 }
 
 /**
-* Prevent `sub` and `sup` affecting `line-height` in all browsers.
-*/
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
 sub,
 sup {
   font-size: 75%;
@@ -2303,49 +2303,49 @@ sub {
 }
 
 /* Embedded content
-========================================================================== */
+   ========================================================================== */
 /**
-* Remove border when inside `a` element in IE 8/9/10.
-*/
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
 img {
   border: 0;
 }
 
 /**
-* Correct overflow not hidden in IE 9/10/11.
-*/
+ * Correct overflow not hidden in IE 9/10/11.
+ */
 svg:not(:root) {
   overflow: hidden;
 }
 
 /* Grouping content
-========================================================================== */
+   ========================================================================== */
 /**
-* Address margin not present in IE 8/9 and Safari.
-*/
+ * Address margin not present in IE 8/9 and Safari.
+ */
 figure {
   margin: 1em 40px;
 }
 
 /**
-* Address differences between Firefox and other browsers.
-*/
+ * Address differences between Firefox and other browsers.
+ */
 hr {
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
 /**
-* Contain overflow in all browsers.
-*/
+ * Contain overflow in all browsers.
+ */
 pre {
   overflow: auto;
 }
 
 /**
-* Address odd `em`-unit font size rendering in all browsers.
-*/
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
 code,
 kbd,
 pre,
@@ -2355,17 +2355,17 @@ samp {
 }
 
 /* Forms
-========================================================================== */
+   ========================================================================== */
 /**
-* Known limitation: by default, Chrome and Safari on OS X allow very limited
-* styling of `select`, unless a `border` property is set.
-*/
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
 /**
-* 1. Correct color not being inherited.
-*    Known issue: affects color of disabled elements.
-* 2. Correct font properties not being inherited.
-* 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
-*/
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
 button,
 input,
 optgroup,
@@ -2380,30 +2380,30 @@ textarea {
 }
 
 /**
-* Address `overflow` set to `hidden` in IE 8/9/10/11.
-*/
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
 button {
   overflow: visible;
 }
 
 /**
-* Address inconsistent `text-transform` inheritance for `button` and `select`.
-* All other form control elements do not inherit `text-transform` values.
-* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
-* Correct `select` style inheritance in Firefox.
-*/
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
 button,
 select {
   text-transform: none;
 }
 
 /**
-* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-*    and `video` controls.
-* 2. Correct inability to style clickable `input` types in iOS.
-* 3. Improve usability and consistency of cursor style between image-type
-*    `input` and others.
-*/
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -2415,16 +2415,16 @@ input[type="submit"] {
 }
 
 /**
-* Re-set default cursor for disabled elements.
-*/
+ * Re-set default cursor for disabled elements.
+ */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
 /**
-* Remove inner padding and border in Firefox 4+.
-*/
+ * Remove inner padding and border in Firefox 4+.
+ */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -2432,64 +2432,64 @@ input::-moz-focus-inner {
 }
 
 /**
-* Address Firefox 4+ setting `line-height` on `input` using `!important` in
-* the UA stylesheet.
-*/
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
 input {
   line-height: normal;
 }
 
 /**
-* It's recommended that you don't attempt to style these elements.
-* Firefox's implementation doesn't respect box-sizing, padding, or width.
-*
-* 1. Address box sizing set to `content-box` in IE 8/9/10.
-* 2. Remove excess padding in IE 8/9/10.
-*/
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
 }
 
 /**
-* Fix the cursor style for Chrome's increment/decrement buttons. For certain
-* `font-size` values of the `input`, it causes the cursor style of the
-* decrement button to change from `default` to `text`.
-*/
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
 /**
-* 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-* 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
-*/
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   /* 2 */
 }
 
 /**
-* Remove inner padding and search cancel button in Safari and Chrome on OS X.
-* Safari (but not Chrome) clips the cancel button when the search input has
-* padding (and `textfield` appearance).
-*/
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /**
-* Define consistent border, margin, and padding.
-*/
+ * Define consistent border, margin, and padding.
+ */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -2497,9 +2497,9 @@ fieldset {
 }
 
 /**
-* 1. Correct `color` not being inherited in IE 8/9/10/11.
-* 2. Remove padding so people aren't caught out if they zero out fieldsets.
-*/
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
 legend {
   border: 0;
   /* 1 */
@@ -2508,25 +2508,25 @@ legend {
 }
 
 /**
-* Remove default vertical scrollbar in IE 8/9/10/11.
-*/
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
 textarea {
   overflow: auto;
 }
 
 /**
-* Don't inherit the `font-weight` (applied by a rule above).
-* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
-*/
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
 optgroup {
   font-weight: bold;
 }
 
 /* Tables
-========================================================================== */
+   ========================================================================== */
 /**
-* Remove most spacing between table cells.
-*/
+ * Remove most spacing between table cells.
+ */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -2539,12 +2539,12 @@ th {
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 ul:not(.browser-default) {
@@ -2569,8 +2569,8 @@ a {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .clearfix {
@@ -2579,37 +2579,37 @@ a {
 
 .z-depth-0 {
   -webkit-box-shadow: none !important;
-  box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
 .z-depth-2 {
   -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
 .z-depth-3 {
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
 
 .z-depth-4, .modal {
   -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
 }
 
 .z-depth-5 {
   -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 .hoverable {
@@ -2621,7 +2621,7 @@ a {
 
 .hoverable:hover {
   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .divider {
@@ -2782,9 +2782,9 @@ video.responsive-video {
   min-width: 100%;
   min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .pin-top, .pin-bottom {
@@ -2796,7 +2796,7 @@ video.responsive-video {
 }
 
 /*********************
-Transition Classes
+  Transition Classes
 **********************/
 ul.staggered-list li {
   opacity: 0;
@@ -2805,11 +2805,11 @@ ul.staggered-list li {
 .fade-in {
   opacity: 0;
   -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
+          transform-origin: 0 50%;
 }
 
 /*********************
-Media Query Classes
+  Media Query Classes
 **********************/
 @media only screen and (max-width: 600px) {
   .hide-on-small-only, .hide-on-small-and-down {
@@ -2892,8 +2892,8 @@ Media Query Classes
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 0px;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(51, 51, 51, 0.08);
@@ -3081,7 +3081,7 @@ td, th {
 }
 
 .collection .collection-item.active {
-  background-color: #ff512f;
+  background-color: #26a69a;
   color: #eafaf9;
 }
 
@@ -3093,7 +3093,7 @@ td, th {
   display: block;
   -webkit-transition: .25s;
   transition: .25s;
-  color: #ff512f;
+  color: #26a69a;
 }
 
 .collection a.collection-item:not(.active):hover {
@@ -3116,7 +3116,7 @@ td, th {
 
 .secondary-content {
   float: right;
-  color: #ff512f;
+  color: #26a69a;
 }
 
 .collapsible .collection {
@@ -3155,13 +3155,13 @@ td, th {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #ff512f;
+  background-color: #26a69a;
   -webkit-transition: width .3s linear;
   transition: width .3s linear;
 }
 
 .progress .indeterminate {
-  background-color: #ff512f;
+  background-color: #26a69a;
 }
 
 .progress .indeterminate:before {
@@ -3173,7 +3173,7 @@ td, th {
   bottom: 0;
   will-change: left, right;
   -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-  animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+          animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
 }
 
 .progress .indeterminate:after {
@@ -3185,9 +3185,9 @@ td, th {
   bottom: 0;
   will-change: left, right;
   -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-  animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+          animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
   -webkit-animation-delay: 1.15s;
-  animation-delay: 1.15s;
+          animation-delay: 1.15s;
 }
 
 @-webkit-keyframes indeterminate {
@@ -3251,7 +3251,7 @@ td, th {
 }
 
 /*******************
-Utility Classes
+  Utility Classes
 *******************/
 .hide {
   display: none !important;
@@ -3280,9 +3280,9 @@ Utility Classes
 .no-select, input[type=range],
 input[type=range] + .thumb {
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .circle {
@@ -3317,14 +3317,14 @@ span.badge {
   color: #757575;
   float: right;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 span.badge.new {
   font-weight: 300;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #ff512f;
+  background-color: #26a69a;
   border-radius: 2px;
 }
 
@@ -3361,8 +3361,8 @@ nav ul a span.badge {
 .material-icons {
   text-rendering: optimizeLegibility;
   -webkit-font-feature-settings: 'liga';
-  -moz-font-feature-settings: 'liga';
-  font-feature-settings: 'liga';
+     -moz-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
 }
 
 .container {
@@ -3420,7 +3420,7 @@ nav ul a span.badge {
 .row .col {
   float: left;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 0.75rem;
   min-height: 1px;
 }
@@ -4276,19 +4276,19 @@ nav .brand-logo {
 nav .brand-logo.center {
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 992px) {
   nav .brand-logo {
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   nav .brand-logo.left, nav .brand-logo.right {
     padding: 0;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
   nav .brand-logo.left {
     left: 0.5rem;
@@ -4380,7 +4380,7 @@ nav .input-field input {
 nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=password]:valid, nav .input-field input[type=email]:valid, nav .input-field input[type=url]:valid, nav .input-field input[type=date]:valid {
   border: none;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 nav .input-field label {
@@ -4690,7 +4690,7 @@ small {
 
 .scale-transition.scale-out {
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   -webkit-transition: -webkit-transform .2s !important;
   transition: -webkit-transform .2s !important;
   transition: transform .2s !important;
@@ -4699,7 +4699,7 @@ small {
 
 .scale-transition.scale-in {
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
 }
 
 .card-panel {
@@ -4805,20 +4805,20 @@ small {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
 }
 
 .card.horizontal .card-stacked .card-content {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .card.sticky-action .card-action {
@@ -4966,12 +4966,12 @@ small {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: default;
 }
 
@@ -5033,8 +5033,8 @@ small {
 .tabs.tabs-fixed-width .tab {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .tabs .tab {
@@ -5089,8 +5089,8 @@ small {
   .tabs .tab {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .tabs .tab a {
     padding: 0 12px;
@@ -5126,7 +5126,7 @@ small {
   background-color: #323232;
   z-index: -1;
   -webkit-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
   visibility: hidden;
 }
 
@@ -5160,7 +5160,7 @@ small {
   pointer-events: none;
   background-color: #DFDFDF !important;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   color: #9F9F9F !important;
   cursor: default;
 }
@@ -5207,7 +5207,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #ff512f;
+  background-color: #26a69a;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -5229,7 +5229,7 @@ small {
   height: 40px;
   line-height: 40px;
   padding: 0;
-  background-color: #ff512f;
+  background-color: #26a69a;
   border-radius: 50%;
   -webkit-transition: .3s;
   transition: .3s;
@@ -5238,7 +5238,7 @@ small {
 }
 
 .btn-floating:hover {
-  background-color: #ff512f;
+  background-color: #26a69a;
 }
 
 .btn-floating:before {
@@ -5304,7 +5304,7 @@ button.btn-floating {
   right: 64px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   height: 100%;
   left: auto;
   width: 500px;
@@ -5338,8 +5338,8 @@ button.btn-floating {
 .fixed-action-btn.toolbar ul li {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: inline-block;
   margin: 0;
   height: 100%;
@@ -5355,7 +5355,7 @@ button.btn-floating {
   height: 100%;
   background-color: transparent;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   color: #fff;
   line-height: 56px;
   z-index: 1;
@@ -5390,15 +5390,15 @@ button.btn-floating {
   z-index: -1;
   width: 40px;
   height: 40px;
-  background-color: #ff512f;
+  background-color: #26a69a;
   border-radius: 50%;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
 }
 
 .btn-flat {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   color: #343434;
   cursor: pointer;
@@ -5408,7 +5408,7 @@ button.btn-floating {
 
 .btn-flat:focus, .btn-flat:hover {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .btn-flat:focus {
@@ -5473,7 +5473,7 @@ button.btn-floating {
 
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 16px;
-  color: #ff512f;
+  color: #26a69a;
   display: block;
   line-height: 22px;
   padding: 14px 16px;
@@ -5500,22 +5500,22 @@ button.btn-floating {
 }
 
 /*!
-* Waves v0.6.0
-* http://fian.my.id/Waves
-*
-* Copyright 2014 Alfiana E. Sibuea and other contributors
-* Released under the MIT license
-* https://github.com/fians/Waves/blob/master/LICENSE
-*/
+ * Waves v0.6.0
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
+ */
 .waves-effect {
   position: relative;
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-tap-highlight-color: transparent;
   vertical-align: middle;
   z-index: 1;
@@ -5539,7 +5539,7 @@ button.btn-floating {
   transition-property: transform, opacity;
   transition-property: transform, opacity, -webkit-transform;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   pointer-events: none;
 }
 
@@ -5591,7 +5591,7 @@ button.btn-floating {
 
 .waves-circle {
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+          transform: translateZ(0);
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
@@ -5746,7 +5746,7 @@ button.btn-floating {
   display: none;
   border-bottom: 1px solid #ddd;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2rem;
 }
 
@@ -5754,7 +5754,7 @@ button.btn-floating {
 .side-nav.fixed .collapsible {
   border: none;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .side-nav .collapsible li,
@@ -5795,12 +5795,12 @@ button.btn-floating {
 .collapsible.popout {
   border: none;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .collapsible.popout > li {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin: 0 24px;
   -webkit-transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -5808,7 +5808,7 @@ button.btn-floating {
 
 .collapsible.popout > li.active {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   margin: 16px 0;
 }
 
@@ -5846,7 +5846,7 @@ button.btn-floating {
   border: none;
   border-bottom: 1px solid #9e9e9e;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   margin: 0 0 20px 0;
   min-height: 45px;
   outline: none;
@@ -5855,9 +5855,9 @@ button.btn-floating {
 }
 
 .chips.focus {
-  border-bottom: 1px solid #ff512f;
-  -webkit-box-shadow: 0 1px 0 0 #ff512f;
-  box-shadow: 0 1px 0 0 #ff512f;
+  border-bottom: 1px solid #26a69a;
+  -webkit-box-shadow: 0 1px 0 0 #26a69a;
+          box-shadow: 0 1px 0 0 #26a69a;
 }
 
 .chips:hover {
@@ -5865,7 +5865,7 @@ button.btn-floating {
 }
 
 .chips .chip.selected {
-  background-color: #ff512f;
+  background-color: #26a69a;
   color: #fff;
 }
 
@@ -5886,7 +5886,7 @@ button.btn-floating {
 .chips .input:focus {
   border: 0 !important;
   -webkit-box-shadow: none !important;
-  box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .chips .autocomplete-content {
@@ -5903,7 +5903,7 @@ button.btn-floating {
 .chips:empty ~ label {
   font-size: 0.8rem;
   -webkit-transform: translateY(-140%);
-  transform: translateY(-140%);
+          transform: translateY(-140%);
 }
 
 .materialboxed {
@@ -5966,7 +5966,7 @@ label {
 }
 
 /* Text Inputs + Textarea
-========================================================================== */
+   ========================================================================== */
 /* Style Placeholders */
 ::-webkit-input-placeholder {
   color: #d1d1d1;
@@ -6000,15 +6000,15 @@ textarea.materialize-textarea {
   border-bottom: 1px solid #9e9e9e;
   border-radius: 0;
   outline: none;
-  height: 36px;
+  height: 3rem;
   width: 100%;
   font-size: 1rem;
   margin: 0 0 20px 0;
   padding: 0;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -6084,9 +6084,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #ff512f;
-  -webkit-box-shadow: 0 1px 0 0 #ff512f;
-  box-shadow: 0 1px 0 0 #ff512f;
+  border-bottom: 1px solid #26a69a;
+  -webkit-box-shadow: 0 1px 0 0 #26a69a;
+          box-shadow: 0 1px 0 0 #26a69a;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -6102,7 +6102,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #ff512f;
+  color: #26a69a;
 }
 
 input:not([type]).validate + label,
@@ -6207,7 +6207,7 @@ textarea.materialize-textarea.valid,
 textarea.materialize-textarea.valid:focus, .select-wrapper.valid > input.select-dropdown {
   border-bottom: 1px solid #4CAF50;
   -webkit-box-shadow: 0 1px 0 0 #4CAF50;
-  box-shadow: 0 1px 0 0 #4CAF50;
+          box-shadow: 0 1px 0 0 #4CAF50;
 }
 
 input.invalid:not([type]), input.invalid:not([type]):focus,
@@ -6237,7 +6237,7 @@ textarea.materialize-textarea.invalid,
 textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.select-dropdown {
   border-bottom: 1px solid #F44336;
   -webkit-box-shadow: 0 1px 0 0 #F44336;
-  box-shadow: 0 1px 0 0 #F44336;
+          box-shadow: 0 1px 0 0 #F44336;
 }
 
 input:not([type]).valid + label:after,
@@ -6270,7 +6270,7 @@ textarea.materialize-textarea:focus.valid + label:after, .select-wrapper.valid +
   color: #4CAF50;
   opacity: 1;
   -webkit-transform: translateY(9px);
-  transform: translateY(9px);
+          transform: translateY(9px);
 }
 
 input:not([type]).invalid + label:after,
@@ -6303,7 +6303,7 @@ textarea.materialize-textarea:focus.invalid + label:after, .select-wrapper.inval
   color: #F44336;
   opacity: 1;
   -webkit-transform: translateY(9px);
-  transform: translateY(9px);
+          transform: translateY(9px);
 }
 
 input:not([type]) + label:after,
@@ -6367,18 +6367,18 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   transition: transform .2s ease-out;
   transition: transform .2s ease-out, -webkit-transform .2s ease-out;
   -webkit-transform-origin: 0% 100%;
-  transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
   text-align: initial;
   -webkit-transform: translateY(12px);
-  transform: translateY(12px);
+          transform: translateY(12px);
   pointer-events: none;
 }
 
 .input-field label:not(.label-icon).active {
   -webkit-transform: translateY(-14px) scale(0.8);
-  transform: translateY(-14px) scale(0.8);
+          transform: translateY(-14px) scale(0.8);
   -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
+          transform-origin: 0 0;
 }
 
 .input-field .prefix {
@@ -6390,7 +6390,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field .prefix.active {
-  color: #ff512f;
+  color: #26a69a;
 }
 
 .input-field .prefix ~ input,
@@ -6433,14 +6433,14 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   width: calc(100% - 4rem);
   border: 0;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .input-field input[type=search]:focus {
   background-color: #fff;
   border: 0;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   color: #444;
 }
 
@@ -6492,7 +6492,7 @@ textarea.materialize-textarea.validate + label::after {
 
 textarea.materialize-textarea.validate + label:not(.label-icon).active {
   -webkit-transform: translateY(-25px);
-  transform: translateY(-25px);
+          transform: translateY(-25px);
 }
 
 .hiddendiv {
@@ -6527,7 +6527,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 }
 
 /* Radio Buttons
-========================================================================== */
+   ========================================================================== */
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
@@ -6547,9 +6547,9 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
   -webkit-transition: .28s ease;
   transition: .28s ease;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 [type="radio"] + label:before,
@@ -6583,7 +6583,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 
 [type="radio"]:not(:checked) + label:after {
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
 }
 
 /* Checked styles */
@@ -6594,29 +6594,29 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
 [type="radio"].with-gap:checked + label:after {
-  border: 2px solid #ff512f;
+  border: 2px solid #26a69a;
 }
 
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
-  background-color: #ff512f;
+  background-color: #26a69a;
 }
 
 [type="radio"]:checked + label:after {
   -webkit-transform: scale(1.02);
-  transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 /* Radio With gap */
 [type="radio"].with-gap:checked + label:after {
   -webkit-transform: scale(0.5);
-  transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 /* Focused styles */
 [type="radio"].tabbed:focus + label:before {
   -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Disabled Radio With gap */
@@ -6650,7 +6650,7 @@ textarea.materialize-textarea.validate + label:not(.label-icon).active {
 }
 
 /* Checkboxes
-========================================================================== */
+   ========================================================================== */
 /* CUSTOM CSS CHECKBOXES */
 form p {
   margin-bottom: 10px;
@@ -6682,9 +6682,9 @@ form p:last-child {
   line-height: 25px;
   font-size: 1rem;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 [type="checkbox"] + label:before,
@@ -6706,7 +6706,7 @@ form p:last-child {
 [type="checkbox"]:not(.filled-in) + label:after {
   border: 0;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
 }
 
 [type="checkbox"]:not(:checked):disabled + label:before {
@@ -6716,11 +6716,11 @@ form p:last-child {
 
 [type="checkbox"].tabbed:focus + label:after {
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
   border: 0;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -6731,14 +6731,14 @@ form p:last-child {
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #ff512f;
-  border-bottom: 2px solid #ff512f;
+  border-right: 2px solid #26a69a;
+  border-bottom: 2px solid #26a69a;
   -webkit-transform: rotate(40deg);
-  transform: rotate(40deg);
+          transform: rotate(40deg);
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 [type="checkbox"]:checked:disabled + label:before {
@@ -6754,14 +6754,14 @@ form p:last-child {
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #ff512f;
+  border-right: 2px solid #26a69a;
   border-bottom: none;
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+          transform: rotate(90deg);
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 [type="checkbox"]:indeterminate:disabled + label:before {
@@ -6791,9 +6791,9 @@ form p:last-child {
   left: 6px;
   top: 10px;
   -webkit-transform: rotateZ(37deg);
-  transform: rotateZ(37deg);
+          transform: rotateZ(37deg);
   -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 [type="checkbox"].filled-in:not(:checked) + label:after {
@@ -6815,17 +6815,17 @@ form p:last-child {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
   -webkit-transform: rotateZ(37deg);
-  transform: rotateZ(37deg);
+          transform: rotateZ(37deg);
   -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 [type="checkbox"].filled-in:checked + label:after {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #ff512f;
-  background-color: #ff512f;
+  border: 2px solid #26a69a;
+  background-color: #26a69a;
   z-index: 0;
 }
 
@@ -6837,8 +6837,8 @@ form p:last-child {
 
 [type="checkbox"].filled-in.tabbed:checked:focus + label:after {
   border-radius: 2px;
-  background-color: #ff512f;
-  border-color: #ff512f;
+  background-color: #26a69a;
+  border-color: #26a69a;
 }
 
 [type="checkbox"].filled-in:disabled:not(:checked) + label:before {
@@ -6861,14 +6861,14 @@ form p:last-child {
 }
 
 /* Switch
-========================================================================== */
+   ========================================================================== */
 .switch,
 .switch * {
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .switch label {
@@ -6890,7 +6890,7 @@ form p:last-child {
 }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-  background-color: #ff512f;
+  background-color: #26a69a;
 }
 
 .switch label .lever {
@@ -6930,20 +6930,20 @@ form p:last-child {
 .switch label .lever:after {
   background-color: #F1F1F1;
   -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
   -webkit-transform: scale(2.4);
-  transform: scale(2.4);
+          transform: scale(2.4);
   background-color: rgba(38, 166, 154, 0.15);
 }
 
 input[type=checkbox]:not(:disabled) ~ .lever:active:before,
 input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
   -webkit-transform: scale(2.4);
-  transform: scale(2.4);
+          transform: scale(2.4);
   background-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -6958,7 +6958,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
 }
 
 /* Select Field
-========================================================================== */
+   ========================================================================== */
 select {
   display: none;
 }
@@ -7016,9 +7016,9 @@ select {
   padding: 0;
   display: block;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .select-wrapper span.caret {
@@ -7052,9 +7052,9 @@ select:disabled {
   color: rgba(0, 0, 0, 0.42);
   cursor: default;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .select-wrapper i {
@@ -7114,7 +7114,7 @@ select:disabled {
 }
 
 /* File Input
-========================================================================== */
+   ========================================================================== */
 .file-field {
   position: relative;
 }
@@ -7158,7 +7158,7 @@ select:disabled {
 }
 
 /* Range
-========================================================================== */
+   ========================================================================== */
 .range-field {
   position: relative;
 }
@@ -7190,22 +7190,22 @@ input[type=range] + .thumb {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #ff512f;
+  background-color: #26a69a;
   margin-left: 7px;
   -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 input[type=range] + .thumb .value {
   display: block;
   width: 30px;
   text-align: center;
-  color: #ff512f;
+  color: #26a69a;
   font-size: 0;
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 input[type=range] + .thumb.active {
@@ -7235,9 +7235,9 @@ input[type=range]::-webkit-slider-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background-color: #ff512f;
+  background-color: #26a69a;
   -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   margin: -5px 0 0 0;
   -webkit-transition: .3s;
   transition: .3s;
@@ -7264,7 +7264,7 @@ input[type=range]::-moz-range-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #ff512f;
+  background: #26a69a;
   margin-top: -5px;
 }
 
@@ -7299,7 +7299,7 @@ input[type=range]::-ms-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #ff512f;
+  background: #26a69a;
 }
 
 input[type=range]:focus::-ms-fill-lower {
@@ -7311,7 +7311,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 /***************
-Nav List
+    Nav List
 ***************/
 .table-of-contents.fixed {
   position: fixed;
@@ -7351,7 +7351,7 @@ Nav List
   top: 0;
   margin: 0;
   -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+          transform: translateX(-100%);
   height: 100%;
   height: calc(100% + 60px);
   height: -moz-calc(100%);
@@ -7361,18 +7361,18 @@ Nav List
   overflow-y: auto;
   will-change: transform;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);
+          transform: translateX(-105%);
 }
 
 .side-nav.right-aligned {
   right: 0;
   -webkit-transform: translateX(105%);
-  transform: translateX(105%);
+          transform: translateX(105%);
   left: auto;
   -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .side-nav .collapsible {
@@ -7419,7 +7419,7 @@ Nav List
 }
 
 .side-nav li > a.btn-floating:hover {
-  background-color: #ff512f;
+  background-color: #26a69a;
 }
 
 .side-nav li > a > i,
@@ -7523,7 +7523,7 @@ Nav List
 .side-nav.fixed {
   left: 0;
   -webkit-transform: translateX(0);
-  transform: translateX(0);
+          transform: translateX(0);
   position: fixed;
 }
 
@@ -7535,11 +7535,11 @@ Nav List
 @media only screen and (max-width: 992px) {
   .side-nav.fixed {
     -webkit-transform: translateX(-105%);
-    transform: translateX(-105%);
+            transform: translateX(-105%);
   }
   .side-nav.fixed.right-aligned {
     -webkit-transform: translateX(105%);
-    transform: translateX(105%);
+            transform: translateX(105%);
   }
   .side-nav a {
     padding: 0 16px;
@@ -7576,30 +7576,30 @@ Nav List
 }
 
 /*
-@license
-Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ */
 /**************************/
 /* STYLES FOR THE SPINNER */
 /**************************/
 /*
-* Constants:
-*      STROKEWIDTH = 3px
-*      ARCSIZE     = 270 degrees (amount of circle the arc takes up)
-*      ARCTIME     = 1333ms (time it takes to expand and contract arc)
-*      ARCSTARTROT = 216 degrees (how much the start location of the arc
-*                                should rotate each time, 216 gives us a
-*                                5 pointed star shape (it's 360/5 * 3).
-*                                For a 7 pointed star, we might do
-*                                360/7 * 3 = 154.286)
-*      CONTAINERWIDTH = 28px
-*      SHRINK_TIME = 400ms
-*/
+ * Constants:
+ *      STROKEWIDTH = 3px
+ *      ARCSIZE     = 270 degrees (amount of circle the arc takes up)
+ *      ARCTIME     = 1333ms (time it takes to expand and contract arc)
+ *      ARCSTARTROT = 216 degrees (how much the start location of the arc
+ *                                should rotate each time, 216 gives us a
+ *                                5 pointed star shape (it's 360/5 * 3).
+ *                                For a 7 pointed star, we might do
+ *                                360/7 * 3 = 154.286)
+ *      CONTAINERWIDTH = 28px
+ *      SHRINK_TIME = 400ms
+ */
 .preloader-wrapper {
   display: inline-block;
   position: relative;
@@ -7632,7 +7632,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 @keyframes container-rotate {
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -7641,7 +7641,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   width: 100%;
   height: 100%;
   opacity: 0;
-  border-color: #ff512f;
+  border-color: #26a69a;
 }
 
 .spinner-blue,
@@ -7665,18 +7665,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 }
 
 /**
-* IMPORTANT NOTE ABOUT CSS ANIMATION PROPERTIES (keanulee):
-*
-* iOS Safari (tested on iOS 8.1) does not handle animation-delay very well - it doesn't
-* guarantee that the animation will start _exactly_ after that value. So we avoid using
-* animation-delay and instead set custom keyframes for each color (as redundant as it
-* seems).
-*
-* We write out each animation in full (instead of separating animation-name,
-* animation-duration, etc.) because under the polyfill, Safari does not recognize those
-* specific properties properly, treats them as -webkit-animation, and overrides the
-* other animation rules. See https://github.com/Polymer/platform/issues/53.
-*/
+ * IMPORTANT NOTE ABOUT CSS ANIMATION PROPERTIES (keanulee):
+ *
+ * iOS Safari (tested on iOS 8.1) does not handle animation-delay very well - it doesn't
+ * guarantee that the animation will start _exactly_ after that value. So we avoid using
+ * animation-delay and instead set custom keyframes for each color (as redundant as it
+ * seems).
+ *
+ * We write out each animation in full (instead of separating animation-name,
+ * animation-duration, etc.) because under the polyfill, Safari does not recognize those
+ * specific properties properly, treats them as -webkit-animation, and overrides the
+ * other animation rules. See https://github.com/Polymer/platform/issues/53.
+ */
 .active .spinner-layer.spinner-blue {
   /* durations: 4 * ARCTIME */
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, blue-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
@@ -7750,42 +7750,42 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 @keyframes fill-unfill-rotate {
   12.5% {
     -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+            transform: rotate(135deg);
   }
   /* 0.5 * ARCSIZE */
   25% {
     -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+            transform: rotate(270deg);
   }
   /* 1   * ARCSIZE */
   37.5% {
     -webkit-transform: rotate(405deg);
-    transform: rotate(405deg);
+            transform: rotate(405deg);
   }
   /* 1.5 * ARCSIZE */
   50% {
     -webkit-transform: rotate(540deg);
-    transform: rotate(540deg);
+            transform: rotate(540deg);
   }
   /* 2   * ARCSIZE */
   62.5% {
     -webkit-transform: rotate(675deg);
-    transform: rotate(675deg);
+            transform: rotate(675deg);
   }
   /* 2.5 * ARCSIZE */
   75% {
     -webkit-transform: rotate(810deg);
-    transform: rotate(810deg);
+            transform: rotate(810deg);
   }
   /* 3   * ARCSIZE */
   87.5% {
     -webkit-transform: rotate(945deg);
-    transform: rotate(945deg);
+            transform: rotate(945deg);
   }
   /* 3.5 * ARCSIZE */
   to {
     -webkit-transform: rotate(1080deg);
-    transform: rotate(1080deg);
+            transform: rotate(1080deg);
   }
   /* 4   * ARCSIZE */
 }
@@ -7941,9 +7941,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 }
 
 /**
-* Patch the gap that appear between the two adjacent div.circle-clipper while the
-* spinner is rotating (appears on Chrome 38, Safari 7.1, and IE 11).
-*/
+ * Patch the gap that appear between the two adjacent div.circle-clipper while the
+ * spinner is rotating (appears on Chrome 38, Safari 7.1, and IE 11).
+ */
 .gap-patch {
   position: absolute;
   top: 0;
@@ -8026,15 +8026,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 @keyframes left-spin {
   from {
     -webkit-transform: rotate(130deg);
-    transform: rotate(130deg);
+            transform: rotate(130deg);
   }
   50% {
     -webkit-transform: rotate(-5deg);
-    transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
   to {
     -webkit-transform: rotate(130deg);
-    transform: rotate(130deg);
+            transform: rotate(130deg);
   }
 }
 
@@ -8053,15 +8053,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 @keyframes right-spin {
   from {
     -webkit-transform: rotate(-130deg);
-    transform: rotate(-130deg);
+            transform: rotate(-130deg);
   }
   50% {
     -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   to {
     -webkit-transform: rotate(-130deg);
-    transform: rotate(-130deg);
+            transform: rotate(-130deg);
   }
 }
 
@@ -8187,11 +8187,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   width: 100%;
   height: 400px;
   -webkit-perspective: 500px;
-  perspective: 500px;
+          perspective: 500px;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
 }
 
 .carousel.carousel-slider {
@@ -8292,7 +8292,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 .tap-target-wrapper.open .tap-target {
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
   opacity: .95;
   -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -8302,13 +8302,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 .tap-target-wrapper.open .tap-target-wave::before {
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
 }
 
 .tap-target-wrapper.open .tap-target-wave::after {
   visibility: visible;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+          animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
   -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
   transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
   transition: opacity .3s, transform .3s, visibility 0s 1s;
@@ -8321,12 +8321,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   border-radius: 50%;
   background-color: #ee6e73;
   -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
   opacity: 0;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1), opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -8356,7 +8356,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 .tap-target-wave::before {
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
@@ -8376,7 +8376,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 10002;
   position: absolute !important;
 }
@@ -8412,7 +8412,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   transition: opacity .3s, transform .3s;
   transition: opacity .3s, transform .3s, -webkit-transform .3s;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+          animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
   z-index: -1;
 }
 
@@ -8420,17 +8420,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
   50% {
     opacity: 0;
     -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+            transform: scale(1.5);
   }
   100% {
     opacity: 0;
     -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
@@ -8438,26 +8438,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
   50% {
     opacity: 0;
     -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+            transform: scale(1.5);
   }
   100% {
     opacity: 0;
     -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
 /* ==========================================================================
-$BASE-PICKER
-========================================================================== */
+   $BASE-PICKER
+   ========================================================================== */
 /**
-* Note: the root picker element should *NOT* be styled more than what's here.
-*/
+ * Note: the root picker element should *NOT* be styled more than what's here.
+ */
 .picker {
   font-size: 16px;
   text-align: left;
@@ -8473,22 +8473,22 @@ $BASE-PICKER
 }
 
 /**
-* The picker input element.
-*/
+ * The picker input element.
+ */
 .picker__input {
   cursor: default;
 }
 
 /**
-* When the picker is opened, the input element is "activated".
-*/
+ * When the picker is opened, the input element is "activated".
+ */
 .picker__input.picker__input--active {
   border-color: #0089ec;
 }
 
 /**
-* The holder is the only "scrollable" top-level container element.
-*/
+ * The holder is the only "scrollable" top-level container element.
+ */
 .picker__holder {
   width: 100%;
   overflow-y: auto;
@@ -8496,15 +8496,15 @@ $BASE-PICKER
 }
 
 /*!
-* Default mobile-first, responsive styling for pickadate.js
-* Demo: http://amsul.github.io/pickadate.js
-*/
+ * Default mobile-first, responsive styling for pickadate.js
+ * Demo: http://amsul.github.io/pickadate.js
+ */
 /**
-* Note: the root picker element should *NOT* be styled more than what's here.
-*/
+ * Note: the root picker element should *NOT* be styled more than what's here.
+ */
 /**
-* Make the holder and frame fullscreen.
-*/
+ * Make the holder and frame fullscreen.
+ */
 .picker__holder,
 .picker__frame {
   bottom: 0;
@@ -8514,8 +8514,8 @@ $BASE-PICKER
 }
 
 /**
-* The holder should overlay the entire screen.
-*/
+ * The holder should overlay the entire screen.
+ */
 .picker__holder {
   position: fixed;
   -webkit-transition: background 0.15s ease-out, top 0s 0.15s;
@@ -8524,8 +8524,8 @@ $BASE-PICKER
 }
 
 /**
-* The frame that bounds the box contents of the picker.
-*/
+ * The frame that bounds the box contents of the picker.
+ */
 .picker__frame {
   position: absolute;
   margin: 0 auto;
@@ -8556,8 +8556,8 @@ $BASE-PICKER
 }
 
 /**
-* The wrapper sets the stage to vertically align the box contents.
-*/
+ * The wrapper sets the stage to vertically align the box contents.
+ */
 .picker__wrap {
   display: table;
   width: 100%;
@@ -8571,8 +8571,8 @@ $BASE-PICKER
 }
 
 /**
-* The box contains all the picker contents.
-*/
+ * The box contains all the picker contents.
+ */
 .picker__box {
   background: #ffffff;
   display: table-cell;
@@ -8592,8 +8592,8 @@ $BASE-PICKER
 }
 
 /**
-* When the picker opens...
-*/
+ * When the picker opens...
+ */
 .picker--opened .picker__holder {
   top: 0;
   background: transparent;
@@ -8620,11 +8620,11 @@ $BASE-PICKER
 }
 
 /**
-* For `large` screens, transform into an inline picker.
-*/
+ * For `large` screens, transform into an inline picker.
+ */
 /* ==========================================================================
-CUSTOM MATERIALIZE STYLES
-========================================================================== */
+   CUSTOM MATERIALIZE STYLES
+   ========================================================================== */
 .picker__input.picker__input--active {
   border-color: #E3F2FD;
 }
@@ -8655,11 +8655,11 @@ CUSTOM MATERIALIZE STYLES
 }
 
 /* ==========================================================================
-$BASE-DATE-PICKER
-========================================================================== */
+   $BASE-DATE-PICKER
+   ========================================================================== */
 /**
-* The picker box.
-*/
+ * The picker box.
+ */
 .picker__box {
   padding: 0;
   border-radius: 2px;
@@ -8667,8 +8667,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The header containing the month and year stuff.
-*/
+ * The header containing the month and year stuff.
+ */
 .picker__header {
   text-align: center;
   position: relative;
@@ -8676,8 +8676,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The month and year labels.
-*/
+ * The month and year labels.
+ */
 .picker__month,
 .picker__year {
   display: inline-block;
@@ -8686,8 +8686,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The month and year selectors.
-*/
+ * The month and year selectors.
+ */
 .picker__select--month,
 .picker__select--year {
   height: 2em;
@@ -8714,8 +8714,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The month navigation buttons.
-*/
+ * The month navigation buttons.
+ */
 .picker__nav--prev,
 .picker__nav--next {
   position: absolute;
@@ -8723,7 +8723,7 @@ $BASE-DATE-PICKER
   width: 1em;
   height: 1em;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   top: -0.25em;
 }
 
@@ -8748,8 +8748,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The calendar table of dates
-*/
+ * The calendar table of dates
+ */
 .picker__table {
   text-align: center;
   border-collapse: collapse;
@@ -8771,8 +8771,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The weekday labels
-*/
+ * The weekday labels
+ */
 .picker__weekday {
   width: 14.285714286%;
   font-size: .75em;
@@ -8789,8 +8789,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The days on the calendar
-*/
+ * The days on the calendar
+ */
 .picker__day--today {
   position: relative;
   color: #595959;
@@ -8832,7 +8832,7 @@ $BASE-DATE-PICKER
 .picker--focused .picker__day--selected {
   border-radius: 50%;
   -webkit-transform: scale(0.75);
-  transform: scale(0.75);
+          transform: scale(0.75);
   background: #0089ec;
   color: #ffffff;
 }
@@ -8852,8 +8852,8 @@ $BASE-DATE-PICKER
 }
 
 /**
-* The footer containing the "today", "clear", and "close" buttons.
-*/
+ * The footer containing the "today", "clear", and "close" buttons.
+ */
 .picker__footer {
   text-align: right;
 }
@@ -8937,15 +8937,15 @@ $BASE-DATE-PICKER
 }
 
 /* ==========================================================================
-CUSTOM MATERIALIZE STYLES
-========================================================================== */
+   CUSTOM MATERIALIZE STYLES
+   ========================================================================== */
 /*.picker__box {
-border-radius: 2px;
-overflow: hidden;
+  border-radius: 2px;
+  overflow: hidden;
 }*/
 .picker__date-display {
   text-align: left;
-  background-color: #ff512f;
+  background-color: #26a69a;
   color: #fff;
   padding: 18px;
   font-weight: 300;
@@ -8955,8 +8955,8 @@ overflow: hidden;
   .picker__date-display {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   .picker__weekday-display {
     display: block;
@@ -8964,8 +8964,8 @@ overflow: hidden;
   .picker__container__wrapper {
     -webkit-box-flex: 2;
     -webkit-flex: 2;
-    -ms-flex: 2;
-    flex: 2;
+        -ms-flex: 2;
+            flex: 2;
   }
 }
 
@@ -9001,7 +9001,7 @@ overflow: hidden;
 }
 
 /*.picker__box {
-padding: 0;
+  padding: 0;
 }*/
 .picker__calendar-container {
   padding: 0 1rem;
@@ -9031,7 +9031,7 @@ padding: 0;
 }
 
 .picker__day.picker__day--today {
-  color: #ff512f;
+  color: #26a69a;
 }
 
 .picker__day.picker__day--today.picker__day--selected {
@@ -9047,8 +9047,8 @@ padding: 0;
 .picker--focused .picker__day--selected {
   border-radius: 50%;
   -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-  background-color: #ff512f;
+          transform: scale(0.9);
+  background-color: #26a69a;
   color: #ffffff;
 }
 
@@ -9066,7 +9066,7 @@ padding: 0;
 .picker__close, .picker__today, .picker__clear {
   font-size: 1.1rem;
   padding: 0 1rem;
-  color: #ff512f;
+  color: #26a69a;
 }
 
 .picker__clear {
@@ -9096,11 +9096,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 
 /* ==========================================================================
-$BASE-TIME-PICKER
-========================================================================== */
+   $BASE-TIME-PICKER
+   ========================================================================== */
 /**
-* The list of times.
-*/
+ * The list of times.
+ */
 .picker__list {
   list-style: none;
   padding: 0.75em 0 4.2em;
@@ -9108,8 +9108,8 @@ $BASE-TIME-PICKER
 }
 
 /**
-* The times on the clock.
-*/
+ * The times on the clock.
+ */
 .picker__list-item {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
@@ -9169,8 +9169,8 @@ $BASE-TIME-PICKER
 }
 
 /**
-* The clear button
-*/
+ * The clear button
+ */
 .picker--time .picker__button--clear {
   display: block;
   width: 80%;
@@ -9209,19 +9209,19 @@ $BASE-TIME-PICKER
 }
 
 /* ==========================================================================
-$DEFAULT-TIME-PICKER
-========================================================================== */
+   $DEFAULT-TIME-PICKER
+   ========================================================================== */
 /**
-* The frame the bounds the time picker.
-*/
+ * The frame the bounds the time picker.
+ */
 .picker--time .picker__frame {
   min-width: 256px;
   max-width: 320px;
 }
 
 /**
-* The picker box.
-*/
+ * The picker box.
+ */
 .picker--time .picker__box {
   font-size: 1em;
   background: #f2f2f2;
@@ -9235,8 +9235,8 @@ $DEFAULT-TIME-PICKER
 }
 
 /* ==========================================================================
-$DEFAULT-TIME-PICKER
-========================================================================== */
+   $DEFAULT-TIME-PICKER
+   ========================================================================== */
 .clockpicker-display {
   font-size: 4rem;
   font-weight: bold;
@@ -9302,9 +9302,9 @@ $DEFAULT-TIME-PICKER
   margin-top: 25px;
   margin-bottom: 5px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .clockpicker-canvas,
@@ -9369,20 +9369,20 @@ $DEFAULT-TIME-PICKER
 
 .clockpicker-canvas-bearing {
   stroke: none;
-  fill: #ff512f;
+  fill: #26a69a;
 }
 
 .clockpicker-canvas-bg {
   stroke: none;
-  fill: #ff512f;
+  fill: #26a69a;
 }
 
 .clockpicker-canvas-bg-trans {
-  fill: #ff512f;
+  fill: #26a69a;
 }
 
 .clockpicker-canvas line {
-  stroke: #ff512f;
+  stroke: #26a69a;
   stroke-width: 4;
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/
