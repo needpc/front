@@ -2,312 +2,314 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <h4 class="header text-orange">{{computer.designation}}</h4>
+        <h4 class="header text-orange">{{computer.model}}</h4>
         <i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i> 0 avis
         <div class="card horizontal">
           <div class="row" style="width: 100%;">
-            <div class="col l6 s12">
+            <div class="col l4 s12">
               <div class="card-image">
-                <img src="{{computer.picture}}" style="max-height: 350px;">
+                <img src="https://media.ldlc.com/ld/products/00/04/45/52/LD0004455252_2.jpg" style="max-height: 350px;">
               </div>
             </div>
-            <div class="col l6 s12">
-              <div style="padding-right: 25px;">
-                <h4 class="header text-orange" style="margin-top: 50px;">Description</h4>
-                <p>
-                  Profitez de bonnes performances et gagnez en confort avec le PC portable {{computer.designation}} ! Équipé d'un grand écran mat de {{computer.display?.size}} pouces, ce PC portable vous offre un excellent confort visuel, pour travailler confortablement ou profiter agréablement du divertissement numérique mobile.
-                </p>
-                <!-- <div style="width: 100%; height: 350px">
-                <carousel [sources]="imageSources" [config]="config"></carousel>
-              </div> -->
+            <div class="col l8 s12">
+              <h4 class="header text-orange">Description</h4>
+              <p>
+                Profitez de bonnes performances et gagnez en confort avec le PC portable {{computer.model}} ! Équipé d'un grand écran mat de {{computer.display?.size}} pouces, ce PC portable vous offre un excellent confort visuel, pour travailler confortablement ou profiter agréablement du divertissement numérique mobile.
+              </p>
+              <button mz-button class="amber darken-4" id="modeToggle" (click)="toggleMode($event)"><i mz-icon-mdi [icon]="'ninja'" [align]="'center'"></i> {{textMode}}</button>
             </div>
-          </div>
-          <div class="col s12">
-            <div class="row" style="max-width: 350px; padding-left: 45px; padding-right: 45px;">
-              <div class="col s4">
-                <a><img src="{{computer.picture}}" style="max-height: 100px; width: 100%;"></a>
-              </div>
-              <div class="col s4">
-                <a><img src="{{computer.picture}}" style="max-height: 100px; width: 100%; opacity: 0.7;"></a>
-              </div>
-              <div class="col s4">
-                <a><img src="{{computer.picture}}" style="max-height: 100px; width: 100%; opacity: 0.7;"></a>
-              </div>
-            </div>
-
             <div class="col s12">
-              <div class="card-stacked">
-                <div class="card-content">
-                  <mz-collapsible
-                  [mode]="'expandable'"
-                  [onClose]="closeFunctionCallback"
-                  [onOpen]="openFunctionCallback">
-                  <mz-collapsible-item [active]="true">
-                    <mz-collapsible-item-header>
-                      <i mz-icon-mdi [icon]="'laptop'"></i>Composants
-                    </mz-collapsible-item-header>
-                    <mz-collapsible-item-body>
-                      <table class="responsive-table bordered striped" style="border: 1px solid #d0d0d0;">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div><h5>Informations générales</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Désignation</div>
-                            </td>
-                            <td>
-                              <div>{{computer.designation}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Marque</div>
-                            </td>
-                            <td>
-                              <div>{{computer.brands?.name}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Modèle</div>
-                            </td>
-                            <td>
-                              <div><span>{{computer.model}}</span></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div><h5>Système d'exploitation</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Système d'exploitation</div>
-                            </td>
-                            <td>
-                              <div>{{computer.os?.name}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Système d'exploitation fourni</div>
-                            </td>
-                            <td>
-                              <div>{{computer.is_os_included}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div><h5>Processeur et chipset</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Processeur</div>
-                            </td>
-                            <td>
-                              <div>{{computer.cpus?.name}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Chipset</div>
-                            </td>
-                            <td>
-                              <div>{{computer.chipsets?.name}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div><h5>Graphismes</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Chipset graphique</div>
-                            </td>
-                            <td>
-                              <div>{{computer.graphics?.model}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div><h5>Affichage</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Type de dalle</div>
-                            </td>
-                            <td>
-                              <div>{{computer.display?.type}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Taille d'écran</div>
-                            </td>
-                            <td>
-                              <div>{{computer.display?.size}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Résolution</div>
-                            </td>
-                            <td>
-                              <div>{{computer.display?.resolution}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Taux de rafraichissement</div>
-                            </td>
-                            <td>
-                              <div>{{computer.display?.refresh_rate}}</div>
-                            </td>
-                          </tr>
-
-
-                          <tr>
-                            <td>
-                              <div><h5>Stockage</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Disque dur</div>
-                            </td>
-                            <td>
-                              <div>{{computer.disks?.model}}</div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <div><h5>Communication</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Wi-Fi</div>
-                            </td>
-                            <td>
-                              <div>{{computer.is_wifi_included}}</div>
-                            </td>
-                          </tr>
-
-
-                          <tr>
-                            <td>
-                              <div><h5>Multimédia</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Webcam</div>
-                            </td>
-                            <td>
-                              <div>{{computer.is_webcam_included}}</div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <div><h5>Equipement</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Type d'activité</div>
-                            </td>
-                            <td>
-                              <div>{{computer.activity?.name}}</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Norme du clavier</div>
-                            </td>
-                            <td>
-                              <div>{{computer.keyboards?.type}}</div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <div><h5>Connectique</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Connecteur(s) disponible(s)</div>
-                            </td>
-                            <td>
-                              <div>{{computer.connector_avalaible}}</div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <div><h5>Garanties</h5></div>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div>Garantie commerciale</div>
-                            </td>
-                            <td>
-                              <div>{{computer.garanty_year}} an(s)</div>
-                            </td>
-                          </tr>
-                        </tbody></table>
-                      </mz-collapsible-item-body>
-                    </mz-collapsible-item>
-                    <mz-collapsible-item>
+              <div class="col s12">
+                <div id="simpleMode" [hidden]="simpleMode">
+                  <div class="col s12 l4">
+                    <div *ngIf="chart">
+                      <canvas id="canvas">{{chart}}</canvas>
+                    </div>
+                  </div>
+                  <div class="col s12 l4">
+                    <div *ngIf="chart2">
+                      <canvas id="canvas2">{{chart2}}</canvas>
+                    </div>
+                  </div>
+                  <div class="col s12 l4">
+                    <div *ngIf="chart3">
+                      <canvas id="canvas3">{{chart3}}</canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-stacked" id="expertMode" [hidden]="expertMode">
+                  <div class="card-content">
+                    <mz-collapsible
+                    [mode]="'expandable'"
+                    [onClose]="closeFunctionCallback"
+                    [onOpen]="openFunctionCallback">
+                    <mz-collapsible-item [active]="true">
                       <mz-collapsible-item-header>
-                        <i mz-icon-mdi [icon]="'star-outline'"></i>Avis
-                      </mz-collapsible-item-header>
-                      <mz-collapsible-item-body>
-                        Aucun avis pour le moment. Soyez le premier à donner votre avis sur ce produit.
-                      </mz-collapsible-item-body>
-                    </mz-collapsible-item>
-                    <mz-collapsible-item>
-                      <mz-collapsible-item-header>
-                        <i mz-icon-mdi [icon]="'basket'"></i>Prix
+                        <i mz-icon-mdi [icon]="'laptop'"></i>Composants
                       </mz-collapsible-item-header>
                       <mz-collapsible-item-body>
                         <table class="responsive-table bordered striped" style="border: 1px solid #d0d0d0;">
-                          <tr>
-                            <td style="text-align: center;">
-                              <img src="http://www.ldlc.com/v3/img/general/logo-ldlc-anim.gif" style="max-height: 64px;"/>
-                            </td>
-                            <td style="text-align: center;">
-                              <h5 class="header" style="display: inline;">2 099,95€</h5>
-                              <a class="waves-effect waves-light btn amber darken-4">Voir l'offre</a>
-                            </td>
-                          </tr>
-                        </table>
-                      </mz-collapsible-item-body>
-                    </mz-collapsible-item>
-                  </mz-collapsible>
-                </div>
-                <div class="card-action">
-                  <a class="waves-effect waves-light btn amber darken-4"><i mz-icon-mdi [icon]="'star-outline'"></i> Donner votre avis</a>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div><h5>Informations générales</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Désignation</div>
+                              </td>
+                              <td>
+                                <div>{{computer.model}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Marque</div>
+                              </td>
+                              <td>
+                                <div>{{computer.brands?.name}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Modèle</div>
+                              </td>
+                              <td>
+                                <div><span>{{computer.model}}</span></div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Système d'exploitation</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Système d'exploitation</div>
+                              </td>
+                              <td>
+                                <div>{{computer.os?.name}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Système d'exploitation fourni</div>
+                              </td>
+                              <td>
+                                <div>{{computer.is_os_included}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Processeur et chipset</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Processeur</div>
+                              </td>
+                              <td>
+                                <div>{{computer.cpus?.name}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Chipset</div>
+                              </td>
+                              <td>
+                                <div>{{computer.chipsets?.name}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Graphismes</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Chipset graphique</div>
+                              </td>
+                              <td>
+                                <div>{{computer.graphics?.model}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Affichage</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Type de dalle</div>
+                              </td>
+                              <td>
+                                <div>{{computer.display?.type}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Taille d'écran</div>
+                              </td>
+                              <td>
+                                <div>{{computer.display?.size}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Résolution</div>
+                              </td>
+                              <td>
+                                <div>{{computer.display?.resolution}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Taux de rafraichissement</div>
+                              </td>
+                              <td>
+                                <div>{{computer.display?.refresh_rate}}</div>
+                              </td>
+                            </tr>
+
+
+                            <tr>
+                              <td>
+                                <div><h5>Stockage</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Disque dur</div>
+                              </td>
+                              <td>
+                                <div>{{computer.disks?.model}}</div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <div><h5>Communication</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Wi-Fi</div>
+                              </td>
+                              <td>
+                                <div>{{computer.is_wifi_included}}</div>
+                              </td>
+                            </tr>
+
+
+                            <tr>
+                              <td>
+                                <div><h5>Multimédia</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Webcam</div>
+                              </td>
+                              <td>
+                                <div>{{computer.is_webcam_included}}</div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <div><h5>Equipement</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Type d'activité</div>
+                              </td>
+                              <td>
+                                <div>{{computer.activity?.name}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Norme du clavier</div>
+                              </td>
+                              <td>
+                                <div>{{computer.keyboards?.type}}</div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <div><h5>Connectique</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Connecteur(s) disponible(s)</div>
+                              </td>
+                              <td>
+                                <div>{{computer.connector_avalaible}}</div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <div><h5>Garanties</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Garantie commerciale</div>
+                              </td>
+                              <td>
+                                <div>{{computer.garanty_year}} an(s)</div>
+                              </td>
+                            </tr>
+                          </tbody></table>
+                        </mz-collapsible-item-body>
+                      </mz-collapsible-item>
+                      <mz-collapsible-item>
+                        <mz-collapsible-item-header>
+                          <i mz-icon-mdi [icon]="'star-outline'"></i>Avis
+                        </mz-collapsible-item-header>
+                        <mz-collapsible-item-body>
+                          Aucun avis pour le moment. Soyez le premier à donner votre avis sur ce produit.
+                        </mz-collapsible-item-body>
+                      </mz-collapsible-item>
+                      <mz-collapsible-item>
+                        <mz-collapsible-item-header>
+                          <i mz-icon-mdi [icon]="'basket'"></i>Prix
+                        </mz-collapsible-item-header>
+                        <mz-collapsible-item-body>
+                          <table class="responsive-table bordered striped" style="border: 1px solid #d0d0d0;">
+                            <tr>
+                              <td style="text-align: center;">
+                                <img src="http://www.ldlc.com/v3/img/general/logo-ldlc-anim.gif" style="max-height: 64px;"/>
+                              </td>
+                              <td style="text-align: center;">
+                                <h5 class="header" style="display: inline;">2 099,95€</h5>
+                                <a class="waves-effect waves-light btn amber darken-4">Voir l'offre</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </mz-collapsible-item-body>
+                      </mz-collapsible-item>
+                    </mz-collapsible>
+                  </div>
+                  <div class="card-action">
+                    <a class="waves-effect waves-light btn amber darken-4"><i mz-icon-mdi [icon]="'star-outline'"></i> Donner votre avis</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -316,5 +318,4 @@
       </div>
     </div>
   </div>
-</div>
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>

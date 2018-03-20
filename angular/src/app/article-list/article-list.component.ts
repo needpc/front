@@ -47,7 +47,7 @@ export class ArticleListComponent implements OnInit {
         this.filter1 = 'gaming';
       }
 
-      for(var i = 0; i < this.preResults.length; i++) {
+      for (var i = 0; i < this.preResults.length; i++) {
         if (this.preResults[i].display.size == String(this.SharedDatatest[1]).replace(/[^0-9]+/, '') && this.preResults[i].activity.name == this.filter1) {
           this.results.push(this.preResults[i]);
         }
@@ -55,7 +55,7 @@ export class ArticleListComponent implements OnInit {
       this.count = this.results.length;
       this.countComputers();
       var array;
-      for(var i = 0; i < this.SharedDatatest.length; i++) {
+      for (var i = 0; i < this.SharedDatatest.length; i++) {
         array = this.SharedDatatest[i];
         $('.optgroup-option').each(function(index) {
           if($(this).text() == array) {
