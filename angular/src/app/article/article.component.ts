@@ -53,48 +53,70 @@ export class ArticleComponent implements OnInit {
 
     this.dailyForecast().subscribe(res => {
 
+      // Default options
+      Chart.defaults.global.defaultFontFamily = 'Montserrat';
+      Chart.defaults.global.legend.position = 'left';
+
       // first chart
       this.chart = new Chart('canvas', {
-        type: 'doughnut',
-        data: {
-          labels: ["Gaming", "Bureautique", "Multimédia"],
-          datasets: [
-            {
-              data: [20, 15, 40],
-              backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
-            }
-          ]
+      type: 'doughnut',
+      data: {
+        labels: ["Gaming", "Bureautique", "Multimédia"],
+        datasets: [
+          {
+            data: [20, 15, 40],
+            backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
+          }
+        ]
+      },
+      options: {
+        cutoutPercentage: 80,
+        animation: {
+          animateScale: true
         }
-      });
-
-      // second chart
-      this.chart2 = new Chart('canvas2', {
-        type: 'doughnut',
-        data: {
-          labels: ["Gaming", "Bureautique", "Multimédia"],
-          datasets: [
-            {
-              data: [82, 8, 10],
-              backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
-            }
-          ]
-        }
-      });
-
-      // third chart
-      this.chart3 = new Chart('canvas3', {
-        type: 'doughnut',
-        data: {
-          labels: ["Gaming", "Bureautique", "Multimédia"],
-          datasets: [
-            {
-              data: [50, 30, 20],
-              backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
-            }
-          ]
-        }
-      });
-
+      }
     });
+
+    // second chart
+    this.chart2 = new Chart('canvas2', {
+    type: 'doughnut',
+    data: {
+      labels: ["Gaming", "Bureautique", "Multimédia"],
+      datasets: [
+        {
+          data: [82, 8, 10],
+          backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
+        }
+      ]
+    },
+    options: {
+      cutoutPercentage: 80,
+      animation: {
+        animateScale: true
+      }
+    }
+  });
+
+  // third chart
+  this.chart3 = new Chart('canvas3', {
+  type: 'doughnut',
+  data: {
+    labels: ["Gaming", "Bureautique", "Multimédia"],
+    datasets: [
+      {
+        data: [50, 30, 20],
+        backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
+      }
+    ]
+  },
+  options: {
+    cutoutPercentage: 80,
+    animation: {
+      animateScale: true
+    }
   }
+});
+
+});
+}
 }

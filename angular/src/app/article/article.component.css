@@ -17,3 +17,7 @@
   padding-left: 25px;
   padding-right: 25px;
 }
+.container .row {
+    margin-left: 0;
+    margin-right: 0;
+}
