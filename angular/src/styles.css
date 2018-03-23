@@ -105,9 +105,12 @@ nav .input-field label i {
 }
 .nav-wrapper .input-field input[type=search] {
   height: 32px!important;
-  padding-top: 5px!important;
+  padding-top: 12px!important;
   color: #444;
 }
 .bot30 {
   margin-bottom: 30px;
+}
+.autocomplete-content {
+  position: absolute!important;
 }
