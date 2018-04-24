@@ -28,12 +28,13 @@ export class ArticleComponent implements OnInit {
     if (this.textMode == "Mode expert") {
       this.expertMode = false;
       this.simpleMode = true;
-      this.textMode = " Mode simplifié"
+      this.textMode = " Mode simplifié";
+      $('#simpleMode').height($('#simpleMode').children().height());
     }
     else {
       this.expertMode = true;
       this.simpleMode = false;
-      this.textMode = "Mode expert"
+      this.textMode = "Mode expert";
     }
   }
 
@@ -77,6 +78,8 @@ export class ArticleComponent implements OnInit {
       }
     });
 
+    $('#simpleMode').height($('#simpleMode').children().height());
+
     // second chart
     this.chart2 = new Chart('canvas2', {
     type: 'doughnut',
@@ -84,7 +87,7 @@ export class ArticleComponent implements OnInit {
       labels: ["Gaming", "Bureautique", "Multimédia"],
       datasets: [
         {
-          data: [82, 8, 10],
+          data: [10, 40, 50],
           backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
         }
       ]
@@ -104,7 +107,7 @@ export class ArticleComponent implements OnInit {
     labels: ["Gaming", "Bureautique", "Multimédia"],
     datasets: [
       {
-        data: [50, 30, 20],
+        data: [30, 30, 40],
         backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
       }
     ]

@@ -20,24 +20,7 @@
             </div>
             <div class="col s12">
               <div class="col s12">
-                <div id="simpleMode" [hidden]="simpleMode">
-                  <div class="col s12 l4">
-                    <div *ngIf="chart">
-                      <canvas id="canvas">{{chart}}</canvas>
-                    </div>
-                  </div>
-                  <div class="col s12 l4">
-                    <div *ngIf="chart2">
-                      <canvas id="canvas2">{{chart2}}</canvas>
-                    </div>
-                  </div>
-                  <div class="col s12 l4">
-                    <div *ngIf="chart3">
-                      <canvas id="canvas3">{{chart3}}</canvas>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-stacked" id="expertMode" [hidden]="expertMode">
+                <div class="card-stacked" id="expertMode" >
                   <div class="card-content">
                     <mz-collapsible
                     [mode]="'expandable'"
@@ -48,7 +31,27 @@
                         <i mz-icon-mdi [icon]="'laptop'"></i>Composants
                       </mz-collapsible-item-header>
                       <mz-collapsible-item-body>
-                        <table class="responsive-table bordered striped" style="border: 1px solid #d0d0d0;">
+                        <div id="simpleMode" [hidden]="simpleMode">
+                          <div class="col s12 l4">
+                            <h4 class="text-left">Carte graphique</h4>
+                            <div *ngIf="chart">
+                              <canvas id="canvas">{{chart}}</canvas>
+                            </div>
+                          </div>
+                          <div class="col s12 l4">
+                            <h4 class="text-left">Processeur</h4>
+                            <div *ngIf="chart2">
+                              <canvas id="canvas2">{{chart2}}</canvas>
+                            </div>
+                          </div>
+                          <div class="col s12 l4">
+                          <h4 class="text-left">RAM</h4>
+                            <div *ngIf="chart3">
+                              <canvas id="canvas3">{{chart3}}</canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <table class="responsive-table bordered striped" style="border: 1px solid #d0d0d0;" [hidden]="expertMode">
                           <tbody>
                             <tr>
                               <td>

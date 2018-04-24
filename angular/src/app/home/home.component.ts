@@ -59,17 +59,17 @@ export class HomeComponent implements OnInit {
 
 // Initialise les options par défaut
 initOptions() {
-this.http.get('https://127.0.0.1:4433/api/v1/ask').subscribe(data => {
-  // Read the result field from the JSON response.
-  this.jsonChoiceData = data['data'];
-  console.log(this.jsonChoiceData);
-  this.options = this.jsonChoiceData[this.i].reponses;
-  var obj = this.options;
-  this.options = Object.keys(obj).map(function (key) { return obj[key]; });
-  this.options.sort();
-  // Question de base form dynamique
-  this.question = this.jsonChoiceData[0].question;
-});
+// this.http.get('https://127.0.0.1:4433/api/v1/ask').subscribe(data => {
+//   // Read the result field from the JSON response.
+//   this.jsonChoiceData = data['data'];
+//   console.log(this.jsonChoiceData);
+//   this.options = this.jsonChoiceData[this.i].reponses;
+//   var obj = this.options;
+//   this.options = Object.keys(obj).map(function (key) { return obj[key]; });
+//   this.options.sort();
+//   // Question de base form dynamique
+//   this.question = this.jsonChoiceData[0].question;
+// });
 }
 
 constructor(private http: HttpClient, private _myService: myService) {
