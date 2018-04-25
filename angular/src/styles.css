@@ -90,7 +90,7 @@ nav .button-collapse i {
     width: 90%!important;
     max-height: none!important;
   }
-  .input-field label {
+  #searchIconNav {
     top: -20px!important;
   }
   input[type=search]:not(.browser-default) {
