@@ -35,7 +35,7 @@ export class ArticleListComponent implements OnInit {
   }
 
   getAllComputers() {
-    this.http.get('https://127.0.0.1:4433/api/v1/search/computers/').subscribe(data => {
+    this.http.get('https://127.0.0.1/api/v1/search/computers/').subscribe(data => {
       // Read the result field from the JSON response.
       this.preResults = data['data'];
       this.results = [];

@@ -61,7 +61,7 @@
                             </tr>
                             <tr>
                               <td>
-                                <div>Désignation</div>
+                                <div>Modèle</div>
                               </td>
                               <td>
                                 <div>{{computer.model}}</div>
@@ -77,14 +77,6 @@
                             </tr>
                             <tr>
                               <td>
-                                <div>Modèle</div>
-                              </td>
-                              <td>
-                                <div><span>{{computer.model}}</span></div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
                                 <div><h5>Système d'exploitation</h5></div>
                               </td>
                               <td></td>
@@ -94,15 +86,7 @@
                                 <div>Système d'exploitation</div>
                               </td>
                               <td>
-                                <div>{{computer.os?.name}}</div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <div>Système d'exploitation fourni</div>
-                              </td>
-                              <td>
-                                <div>{{computer.is_os_included}}</div>
+                                <div>{{computer.computers_o?.name}}</div>
                               </td>
                             </tr>
                             <tr>
@@ -116,7 +100,7 @@
                                 <div>Processeur</div>
                               </td>
                               <td>
-                                <div>{{computer.cpus?.name}}</div>
+                                <div>{{computer.computers_cpu?.name}}</div>
                               </td>
                             </tr>
                             <tr>
@@ -124,7 +108,7 @@
                                 <div>Chipset</div>
                               </td>
                               <td>
-                                <div>{{computer.chipsets?.name}}</div>
+                                <div>{{computer.computers_chipset?.name}}</div>
                               </td>
                             </tr>
                             <tr>
@@ -138,7 +122,37 @@
                                 <div>Chipset graphique</div>
                               </td>
                               <td>
-                                <div>{{computer.graphics?.model}}</div>
+                                <div>{{computer.computers_gpu?.name}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Mémoire</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Mémoire vive</div>
+                              </td>
+                              <td>
+                                <div>{{computer.memory_size}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Mémoire maximum</div>
+                              </td>
+                              <td>
+                                <div>{{computer.memory_max_size}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Type de mémoire</div>
+                              </td>
+                              <td>
+                                <div>{{computer.memory_type}}</div>
                               </td>
                             </tr>
                             <tr>
@@ -179,8 +193,6 @@
                                 <div>{{computer.display?.refresh_rate}}</div>
                               </td>
                             </tr>
-
-
                             <tr>
                               <td>
                                 <div><h5>Stockage</h5></div>
@@ -223,7 +235,7 @@
                                 <div>Webcam</div>
                               </td>
                               <td>
-                                <div>{{computer.is_webcam_included}}</div>
+                                <div>{{computer.webcam}}</div>
                               </td>
                             </tr>
 
@@ -262,21 +274,6 @@
                               </td>
                               <td>
                                 <div>{{computer.connector_avalaible}}</div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>
-                                <div><h5>Garanties</h5></div>
-                              </td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <div>Garantie commerciale</div>
-                              </td>
-                              <td>
-                                <div>{{computer.garanty_year}} an(s)</div>
                               </td>
                             </tr>
                           </tbody></table>
