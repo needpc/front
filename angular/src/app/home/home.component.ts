@@ -31,8 +31,8 @@ export class HomeComponent implements OnInit {
       if (this.jsonChoiceData[this.i] != undefined) {
         this.question = this.jsonChoiceData[this.i].question;
         this.options = [];
-        for (var z = 0; z < this.jsonChoiceData[this.i].computers_quests_resps.length; z++) {
-          this.options.push(this.jsonChoiceData[this.i].computers_quests_resps[z].resp);
+        for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
+          this.options.push(this.jsonChoiceData[this.i].responses[z].resp);
         }
         // Tri le tableau de réponses
         this.options.sort();
@@ -47,8 +47,8 @@ export class HomeComponent implements OnInit {
     if (this.jsonChoiceData[this.i] != undefined) {
       this.question = this.jsonChoiceData[this.i].question;
       this.options = [];
-      for (var z = 0; z < this.jsonChoiceData[this.i].computers_quests_resps.length; z++) {
-        this.options.push(this.jsonChoiceData[this.i].computers_quests_resps[z].resp);
+      for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
+        this.options.push(this.jsonChoiceData[this.i].responses[z].resp);
       }
       // Tri le tableau de réponses
       this.options.sort();
@@ -72,8 +72,8 @@ this.http.get('https://127.0.0.1/api/v1/ask').subscribe(data => {
   this.jsonChoiceData = data['data'];
   console.log(this.jsonChoiceData);
   this.options = [];
-  for (var z = 0; z < this.jsonChoiceData[this.i].computers_quests_resps.length; z++) {
-    this.options.push(this.jsonChoiceData[this.i].computers_quests_resps[z].resp);
+  for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
+    this.options.push(this.jsonChoiceData[this.i].responses[z].resp);
   }
   // Tri le tableau de réponses
   this.options.sort();
