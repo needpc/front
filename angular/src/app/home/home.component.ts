@@ -10,6 +10,7 @@ import { myService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
   options = [];
+  objOption = {};
   finalArray = [];
   SharedData: Object[];
   i = 0;
@@ -31,9 +32,12 @@ export class HomeComponent implements OnInit {
       if (this.jsonChoiceData[this.i] != undefined) {
         this.question = this.jsonChoiceData[this.i].question;
         this.options = [];
+        this.objOption = {};
         for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
           this.options.push(this.jsonChoiceData[this.i].responses[z].resp);
+          this.objOption[this.jsonChoiceData[this.i].responses[z].resp] = this.jsonChoiceData[this.i].responses[z].indice;
         }
+        console.log(this.objOption);
         // Tri le tableau de réponses
         this.options.sort();
         // Question de base form dynamique
@@ -47,14 +51,18 @@ export class HomeComponent implements OnInit {
     if (this.jsonChoiceData[this.i] != undefined) {
       this.question = this.jsonChoiceData[this.i].question;
       this.options = [];
+      this.objOption = {};
       for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
         this.options.push(this.jsonChoiceData[this.i].responses[z].resp);
+        this.objOption[this.jsonChoiceData[this.i].responses[z].resp] = this.jsonChoiceData[this.i].responses[z].indice;
       }
+      console.log(this.objOption);
       // Tri le tableau de réponses
       this.options.sort();
       // Question de base form dynamique
       this.question = this.jsonChoiceData[this.i].quest;
     }
+
     else {
       this.hideElement = true;
       this.hideButton = false;
@@ -67,13 +75,15 @@ export class HomeComponent implements OnInit {
 
 // Initialise les options par défaut
 initOptions() {
-this.http.get('https://127.0.0.1/api/v1/ask').subscribe(data => {
+this.http.get('http://127.0.0.1/api/v1/ask').subscribe(data => {
   // Read the result field from the JSON response.
   this.jsonChoiceData = data['data'];
   console.log(this.jsonChoiceData);
   this.options = [];
+  this.objOption = {};
   for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
     this.options.push(this.jsonChoiceData[this.i].responses[z].resp);
+    this.objOption[this.jsonChoiceData[this.i].responses[z].resp] = this.jsonChoiceData[this.i].responses[z].indice;
   }
   // Tri le tableau de réponses
   this.options.sort();
