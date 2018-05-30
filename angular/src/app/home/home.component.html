@@ -19,7 +19,7 @@
 						<mz-collapsible-item-body>
 							<mz-select-container [hidden]="hideElement">
 								<select mz-select #reponses>
-									<option *ngFor="let option of options" [value]="option">{{option}}</option>
+									<option *ngFor="let option of objectKeys(objOption)" [value]="objOption[option]">{{option}}</option>
 								</select>
 							</mz-select-container>
 							<p [innerHTML]="recap"></p>
