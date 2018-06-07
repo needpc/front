@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { myService } from '../data.service';
+import { CookieService } from 'ngx-cookie-service';
 
 import * as filter from '../filter.json';
 
@@ -16,9 +16,7 @@ export class ArticleListComponent implements OnInit {
   filters: Object[];
   jsonFilter = (<any>filter);
   count: any;
-  preResults: any;
   results: string[];
-  SharedDatatest: Object[];
   filter1: any;
   noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
 
@@ -35,11 +33,9 @@ export class ArticleListComponent implements OnInit {
   }
 
   getAllComputers() {
-    this.http.get('http://127.0.0.1/api/v1/search/computers?activity=1').subscribe(data => {
-    // this.http.get('http://127.0.0.1/api/v1/search/computers?activity='+SharedDatatest[0]).subscribe(data => {
+    // this.http.get('http://127.0.0.1:81/api/v1/search/computers?activity=1').subscribe(data => {
+    this.http.get('http://127.0.0.1:81/api/v1/search/computers?activity='+this.cookieService.get('cookie0')).subscribe(data => {
       // Read the result field from the JSON response.
-      this.preResults = data['data'];
-      // this.results = [];
       this.results = data['data'];
 
       this.count = this.results.length;
@@ -47,11 +43,9 @@ export class ArticleListComponent implements OnInit {
     });
   }
 
-  constructor(private http: HttpClient, private _myService: myService) {
-  }
+  constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   async ngOnInit() {
-    this.SharedDatatest = await this._myService.getData();
     this.filters = this.jsonFilter;
     this.getAllComputers();
   }

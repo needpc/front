@@ -18,7 +18,7 @@ export class AppComponent {
   }
 
   getComputerList() {
-    this.http.get('http://127.0.0.1/api/v1/search/computers/').subscribe(data => {
+    this.http.get('http://127.0.0.1:81/api/v1/search/computers/').subscribe(data => {
       // Read the result field from the JSON response.
       this.results = data['data'];
       this.computerList = {};
