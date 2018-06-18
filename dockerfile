@@ -1,6 +1,6 @@
 FROM node:9.11.1-alpine
 
-MAINTAINER Aurelien PERRIER <a.perrier89@gmail.com>
+LABEL MAINTAINER="Aurelien PERRIER <a.perrier89@gmail.com>"
 
 WORKDIR /srv/app
 COPY angular .
