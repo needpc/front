@@ -8,32 +8,37 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppComponent {
   // Autocomplete
-  autocomplete: { data: { [key: string]: string } };
-  computersList: any;
+  autocomplete: { data: { [key: string]: string }, limit: number };
+  computerList: any;
   results: any;
   array: any;
-  // Initialisation du autocomplete
+  myJson: any;
 
   constructor(private http: HttpClient) {
   }
 
   getComputerList() {
-    this.http.get('https://127.0.0.1:4433/api/v1/search/computers/').subscribe(data => {
+    this.http.get('http://127.0.0.1:81/api/v1/search/computers/').subscribe(data => {
       // Read the result field from the JSON response.
       this.results = data['data'];
+      this.computerList = {};
+      for (var i = 0; i < this.results.length; i++) {
+        var objModel = this.results[i].model;
+        var objPic = this.results[i].picture;
+        this.computerList[objModel] = objPic;
+      }
+      this.setAutocomplete();
     });
   }
 
   ngOnInit() {
-    // this.getComputerList();
-    this.computersList = {'Aurore Ci5P-8-S5': 'https://media.ldlc.com/ld/products/00/04/45/56/LD0004455603_2.jpg'};
-    this.setAutocomplete();
+    this.getComputerList();
   }
 
   // Set du autocomplete
   setAutocomplete() {
   this.autocomplete = {
-    data: this.computersList,
+    data: this.computerList, limit: 5
   };
 }
 }

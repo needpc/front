@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleListComponent } from './article-list/article-list.component';
-import { myService } from './data.service';
+import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,10 @@ import { myService } from './data.service';
     RouterModule.forRoot(ROUTES),
     BrowserModule,
     HttpClientModule,
+    NgHttpLoaderModule,
     HttpModule
   ],
-  providers: [myService],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

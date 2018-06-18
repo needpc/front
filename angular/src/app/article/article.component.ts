@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-article',
@@ -9,14 +10,38 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ArticleComponent implements OnInit {
   computer: any;
+  chart = [];
+  chart2 = [];
+  chart3 = [];
+  expertMode = true;
+  simpleMode = false;
+  textMode = "Mode expert";
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
+  }
+
+  dailyForecast() {
+    return this.http.get("http://samples.openweathermap.org/data/2.5/history/city?q=Warren,OH&appid=b6907d289e10d714a6e88b30761fae22");
+  }
+
+  toggleMode(event) {
+    if (this.textMode == "Mode expert") {
+      this.expertMode = false;
+      this.simpleMode = true;
+      this.textMode = " Mode simplifié";
+      $('#simpleMode').height($('#simpleMode').children().height());
+    }
+    else {
+      this.expertMode = true;
+      this.simpleMode = false;
+      this.textMode = "Mode expert";
+    }
   }
 
   getAll() {
     this.computer = [];
     this.route.params.subscribe(params => {
-      this.http.get('https://127.0.0.1:4433/api/v1/computers/'+params['id']).subscribe(data => {
+      this.http.get('http://127.0.0.1:81/api/v1/search/computers/'+params['id']).subscribe(data => {
         // Read the result field from the JSON response.
         this.computer = data['data'][0];
         console.log(this.computer);
@@ -26,11 +51,75 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit() {
     this.getAll();
-  }
 
-  public imageSources: string[] = [
-    'http://media.ldlc.com/ld/products/00/04/20/04/LD0004200464_2.jpg',
-    'http://media.ldlc.com/ld/products/00/04/13/97/LD0004139737_2_0004187178_0004329357.jpg',
-    'http://media.ldlc.com/ld/products/00/04/13/97/LD0004139737_2_0004187178_0004329357.jpg'
-  ];
+    this.dailyForecast().subscribe(res => {
+
+      // Default options
+      Chart.defaults.global.defaultFontFamily = 'Montserrat';
+      Chart.defaults.global.legend.position = 'left';
+
+      // first chart
+      this.chart = new Chart('canvas', {
+      type: 'doughnut',
+      data: {
+        labels: ["Gaming", "Bureautique", "Multimédia"],
+        datasets: [
+          {
+            data: [20, 15, 40],
+            backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
+          }
+        ]
+      },
+      options: {
+        cutoutPercentage: 80,
+        animation: {
+          animateScale: true
+        }
+      }
+    });
+
+    $('#simpleMode').height($('#simpleMode').children().height());
+
+    // second chart
+    this.chart2 = new Chart('canvas2', {
+    type: 'doughnut',
+    data: {
+      labels: ["Gaming", "Bureautique", "Multimédia"],
+      datasets: [
+        {
+          data: [10, 40, 50],
+          backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
+        }
+      ]
+    },
+    options: {
+      cutoutPercentage: 80,
+      animation: {
+        animateScale: true
+      }
+    }
+  });
+
+  // third chart
+  this.chart3 = new Chart('canvas3', {
+  type: 'doughnut',
+  data: {
+    labels: ["Gaming", "Bureautique", "Multimédia"],
+    datasets: [
+      {
+        data: [30, 30, 40],
+        backgroundColor: ["#36A2EB", "#FFCE56", "#FF6384"],
+      }
+    ]
+  },
+  options: {
+    cutoutPercentage: 80,
+    animation: {
+      animateScale: true
+    }
+  }
+});
+
+});
+}
 }
