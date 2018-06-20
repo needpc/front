@@ -1,13 +1,16 @@
-FROM node:9.11.1-alpine
+FROM alpine:3.7
 
 LABEL MAINTAINER="Aurelien PERRIER <a.perrier89@gmail.com>"
 
-WORKDIR /srv/app
-COPY angular .
+RUN apk add --no-cache nginx
+RUN mkdir -p /run/nginx \
+    && touch /run/nginx/nginx.pid
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
 
-RUN npm install
-RUN npm install -g @angular/cli
+WORKDIR /var/www/frontend/src
+COPY dist .
 
-EXPOSE 4200
+EXPOSE 80
 
-CMD ["ng", "serve", "--public-host", "https://www.needpc.fr", "--host", "0.0.0.0"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
