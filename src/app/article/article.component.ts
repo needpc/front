@@ -41,7 +41,7 @@ export class ArticleComponent implements OnInit {
   getAll() {
     this.computer = [];
     this.route.params.subscribe(params => {
-      this.http.get('https://api.needpc.fr/api/v1/search/computers/'+params['id']).subscribe(data => {
+      this.http.get('https://api.needpc.fr/v1/search/computers/'+params['id']).subscribe(data => {
         // Read the result field from the JSON response.
         this.computer = data['data'][0];
         console.log(this.computer);

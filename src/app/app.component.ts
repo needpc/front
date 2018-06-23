@@ -18,7 +18,7 @@ export class AppComponent {
   }
 
   getComputerList() {
-    this.http.get('https://api.needpc.fr/api/v1/search/computers/').subscribe(data => {
+    this.http.get('https://api.needpc.fr/v1/search/computers/').subscribe(data => {
       // Read the result field from the JSON response.
       this.results = data['data'];
       this.computerList = {};
