@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {FormControl, FormGroup, ReactiveFormsModule, FormsModule} from '@angular/forms';
-import {NgSelectModule, NgOption} from '@ng-select/ng-select';
+import { FormControl, FormGroup, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NgSelectModule, NgOption } from '@ng-select/ng-select';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +10,7 @@ import {NgSelectModule, NgOption} from '@ng-select/ng-select';
 })
 export class AppComponent {
   computerSearch = [];
-  selectedCity: any;
-  selectedCityIds: string[];
-  selectedCityName = 'Vilnius';
-  selectedCityId: number;
-  selectedUserIds: number[];
+  selectedArticleId: number;
 
   computerList: any;
   results: any;
