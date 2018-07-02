@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {FormControl, FormGroup, ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {NgSelectModule, NgOption} from '@ng-select/ng-select';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // Autocomplete
-  autocomplete: { data: { [key: string]: string }, limit: number };
+  computerSearch = [];
+  selectedCity: any;
+  selectedCityIds: string[];
+  selectedCityName = 'Vilnius';
+  selectedCityId: number;
+  selectedUserIds: number[];
+
   computerList: any;
   results: any;
   array: any;
@@ -18,27 +25,15 @@ export class AppComponent {
   }
 
   getComputerList() {
-    this.http.get('https://api.needpc.fr/v1/search/computers/').subscribe(data => {
+    this.http.get('http://127.0.0.1:81/api/v1/search/computers/').subscribe(data => {
+      // this.http.get('https://api.needpc.fr/v1/search/computers/').subscribe(data => {
       // Read the result field from the JSON response.
       this.results = data['data'];
-      this.computerList = {};
-      for (var i = 0; i < this.results.length; i++) {
-        var objModel = this.results[i].model;
-        var objPic = this.results[i].picture;
-        this.computerList[objModel] = objPic;
-      }
-      this.setAutocomplete();
+      this.computerSearch = this.results;
     });
   }
 
   ngOnInit() {
     this.getComputerList();
   }
-
-  // Set du autocomplete
-  setAutocomplete() {
-  this.autocomplete = {
-    data: this.computerList, limit: 5
-  };
-}
 }

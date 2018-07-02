@@ -5,25 +5,47 @@
 		<a id="logo-container" [routerLink]="'/home'" class="brand-logo"><img src="assets/img/logo.png" height="64"/></a>
 		<ul class="right hide-on-med-and-down">
 			<li>
-				<form style="margin-top: 5px;">
+				<div style="width: 350px;">
 					<div class="input-field">
-						<mz-input-container>
-							<input autocomplete="off" mz-input
-							[autocomplete]="autocomplete"
-							id="autocomplete-input"
-							type="search"
-							class="pc-searchbar"
-							id="search">
-						</mz-input-container>
-						<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
-					</div>
-				</form>
-			</li>
-			<!-- <li><a (click)="registerModal.open()">Inscription</a></li> -->
-			<!-- <li><a (click)="loginModal.open()">Login</a></li> -->
-		</ul>
-		<a href="#" class="button-collapse" style="color: #444;" [id]="'btn-sidenav'"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
-	</div>
+						<ng-select [items]="computerSearch"
+						[virtualScroll]="true"
+						bindLabel="model"
+						bindValue="id"
+						placeholder="Rechercher ..."
+						[(ngModel)]="selectedCityId">
+
+						<ng-template ng-label-tmp let-item="item">
+							<a href="article/{{item.id}}" class="centerFlex">
+								{{item.model}}
+							</a>
+						</ng-template>
+
+						<ng-template ng-option-tmp let-item="item" let-index="index">
+							<a href="article/{{item.id}}" class="centerFlex">
+								<img [src]="item.picture" class="imgSearch"/>
+								{{item.model}}
+							</a>
+						</ng-template>
+					</ng-select>
+
+					<!-- <a href="article/{{selectedCityId}}" id="goSearch" hidden></a> -->
+					<!-- <mz-input-container>
+					<input autocomplete="off" mz-input
+					[autocomplete]="autocomplete"
+					id="autocomplete-input"
+					type="search"
+					class="pc-searchbar"
+					id="search">
+				</mz-input-container>
+				<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label> -->
+			</div>
+		</div>
+	</li>
+	<!-- <li><a (click)="registerModal.open()">Inscription</a></li> -->
+	<!-- <li><a (click)="loginModal.open()">Login</a></li> -->
+</ul>
+<a href="#" class="button-collapse" style="color: #444;" [id]="'btn-sidenav'"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
+</div>
 </nav>
 
 <!-- Mobile menu -->
@@ -32,11 +54,11 @@
 [collapseButtonId]="'btn-sidenav'">
 <mz-sidenav-subheader>Menu</mz-sidenav-subheader>
 <!-- <mz-sidenav-link>
-	<a (click)="loginModal.open()">Login</a>
+<a (click)="loginModal.open()">Login</a>
 </mz-sidenav-link>
 <mz-sidenav-divider></mz-sidenav-divider>
 <mz-sidenav-link>
-	<a (click)="registerModal.open()">Inscription</a>
+<a (click)="registerModal.open()">Inscription</a>
 </mz-sidenav-link>
 <mz-sidenav-divider></mz-sidenav-divider> -->
 <mz-sidenav-link>
@@ -134,33 +156,9 @@
 
 <!-- Footer -->
 <footer class="page-footer grey darken-4">
-	<div class="container">
-		<div class="row">
-			<div class="col m6 s12">
-				<h5 class="white-text">Biographie</h5>
-				<p class="grey-text text-lighten-4">Nous sommes une petite équipe de développeurs et nous avons décidé de vous simplifier la vie en vous proposant une plateforme vous permettant de trouver votre bonheur (informatique).</p>
-			</div>
-			<div class="col m6 s12">
-				<h5 class="white-text">Contact</h5>
-				<!-- Email -->
-				<mz-input-container>
-					<input style="color: white;" mz-input [validate]="true" [dataError]="'Email non valide'" [dataSuccess]="'Email valide'" id="email-input" label="Email" type="email">
-				</mz-input-container>
-				<!-- Objet -->
-				<mz-input-container>
-					<input style="color: white;" mz-input id="object-input" label="Objet" type="text">
-				</mz-input-container>
-				<!-- Message -->
-				<mz-textarea-container>
-					<textarea style="color: white;" mz-textarea id="message-input" label="Message"></textarea>
-				</mz-textarea-container>
-				<button mz-button class="amber darken-4">Envoyer</button>
-			</div>
-		</div>
-	</div>
 	<div class="footer-copyright">
-		<div class="container">
-			Made by <a class="white-text" href="#">Need PC</a>
+		<div class="container text-center">
+			Made by <a class="white-text" [routerLink]="'/home'">Need PC</a>
 		</div>
 	</div>
 </footer>
