@@ -14,7 +14,6 @@ import { HomeComponent } from './home/home.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
 import { CookieService } from 'ngx-cookie-service';
-import { Select2Module } from 'ng2-select2';
 
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
