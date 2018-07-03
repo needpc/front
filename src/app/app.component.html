@@ -5,28 +5,30 @@
 		<a id="logo-container" [routerLink]="'/home'" class="brand-logo"><img src="assets/img/logo.png" height="64"/></a>
 		<ul class="right hide-on-med-and-down">
 			<li>
-				<div style="width: 350px;">
+				<div style="width: 300px;">
 					<div class="input-field">
 						<ng-select [items]="computerSearch"
 						[virtualScroll]="true"
 						bindLabel="model"
 						bindValue="id"
-						placeholder="Rechercher ..."
+						notFoundText="Aucun ordinateur trouvé"
+						placeholder="Rechercher un ordinateur"
 						[(ngModel)]="selectedArticleId">
 
 						<ng-template ng-label-tmp let-item="item">
-							<a href="article/{{item.id}}" class="centerFlex">
+							<a href="article/{{item.id}}">
 								{{item.model}}
 							</a>
 						</ng-template>
 
 						<ng-template ng-option-tmp let-item="item" let-index="index">
-							<a href="article/{{item.id}}" class="centerFlex">
+							<a href="article/{{item.id}}">
 								<img [src]="item.picture" class="imgSearch"/>
 								{{item.model}}
 							</a>
 						</ng-template>
 					</ng-select>
+					<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
 
 					<!-- <a href="article/{{selectedCityId}}" id="goSearch" hidden></a> -->
 					<!-- <mz-input-container>

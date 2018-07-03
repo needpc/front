@@ -14,9 +14,10 @@ import { HomeComponent } from './home/home.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
 import { CookieService } from 'ngx-cookie-service';
-
+import { Globals } from './globals';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
+import { NgxGaugeModule } from 'ngx-gauge';
 
 @NgModule({
   declarations: [
@@ -35,9 +36,13 @@ import { FormsModule } from '@angular/forms';
     NgHttpLoaderModule,
     HttpModule,
     NgSelectModule,
-    FormsModule
+    FormsModule,
+    NgxGaugeModule
   ],
-  providers: [CookieService],
+  providers: [
+    CookieService,
+    Globals
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

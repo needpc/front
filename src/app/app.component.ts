@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormControl, FormGroup, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgSelectModule, NgOption } from '@ng-select/ng-select';
+import { Globals } from './globals'
 
 @Component({
   selector: 'app-root',
@@ -17,12 +18,11 @@ export class AppComponent {
   array: any;
   myJson: any;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private globals: Globals) {
   }
 
   getComputerList() {
-    // this.http.get('http://127.0.0.1:81/api/v1/search/computers/').subscribe(data => {
-    this.http.get('https://api.needpc.fr/v1/search/computers/').subscribe(data => {
+    this.http.get(this.globals.urlRequest+'search/computers/').subscribe(data => {
     // Read the result field from the JSON response.
     this.results = data['data'];
     this.computerSearch = this.results;

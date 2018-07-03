@@ -129,6 +129,13 @@ nav .input-field label i {
   padding-top: 12px!important;
   color: #444;
 }
+nav .input-field label {
+  top: 19px!important;
+  right: 10px!important;
+  -webkit-transform: translateY(0px)!important;
+  transform: translateY(0px)!important;
+  left: initial!important;
+}
 .bot30 {
   margin-bottom: 30px;
 }
@@ -159,6 +166,7 @@ nav .input-field label i {
   width: 48px;
   height: 48px;
   margin-right: 15px;
+  vertical-align: middle;
 }
 .ng-placeholder {
   padding-left: 15px;
@@ -166,7 +174,21 @@ nav .input-field label i {
 .ng-select .ng-select-container .ng-value-container .ng-input>input {
   border: 1px solid rgba(0, 0, 0, 0.125)!important;
   border-radius: 3px!important;
+  padding-left: 15px;
 }
 .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
-  padding-right: 2px;
+  padding-right: 17px;
+}
+.ng-dropdown-panel .scroll-host {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  color: #333;
+  text-align: left;
+}
+.ng-option-disabled {
+  padding-left: 15px;
+}
+.simpleModeTitle {
+  font-size: 1.25rem;
 }

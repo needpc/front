@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { Globals } from '../globals';
 
 import * as filter from '../filter.json';
 
@@ -34,7 +35,7 @@ export class ArticleListComponent implements OnInit {
 
   getAllComputers() {
     // this.http.get('https://api.needpc.fr/v1/search/computers?activity=1').subscribe(data => {
-    this.http.get('https://api.needpc.fr/v1/search/computers?activity='+this.cookieService.get('cookie0')).subscribe(data => {
+    this.http.get(this.globals.urlRequest+'search/computers?activity='+this.cookieService.get('cookie0')).subscribe(data => {
       // Read the result field from the JSON response.
       this.results = data['data'];
 
@@ -43,7 +44,7 @@ export class ArticleListComponent implements OnInit {
     });
   }
 
-  constructor(private http: HttpClient, private cookieService: CookieService) {}
+  constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
 
   async ngOnInit() {
     this.filters = this.jsonFilter;

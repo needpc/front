@@ -2,6 +2,7 @@ import {Http} from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-home',
@@ -15,13 +16,10 @@ export class HomeComponent implements OnInit {
   jsonChoiceData: any;
   hideElement = false;
   hideButton = true;
-
   // Titre du site
   title = 'NEED PC';
-
   // Phrase de résumé
   recap = '';
-
   question: any;
 
   // Fonction update questions réponses
@@ -63,14 +61,13 @@ export class HomeComponent implements OnInit {
         this.hideButton = false;
         this.question = "Résumé";
         this.recap = "Cliquez sur le bouton pour lancer la recherche associée à vos critères.";
-        // this.recap = "Vous avez un budget entre "+this.finalArray[4].toLowerCase()+", vous désirez un ordinateur portable doté d'un écran de "+this.finalArray[2]+" et vous vous servez de votre ordinateur pour "+this.finalArray[0].toLowerCase()+".";
       }
     }
   }
 
   // Initialise les options par défaut
   initOptions() {
-    this.http.get('https://api.needpc.fr/v1/ask').subscribe(data => {
+    this.http.get(this.globals.urlRequest+'ask').subscribe(data => {
       // Read the result field from the JSON response.
       this.jsonChoiceData = data['data'];
       this.objOption = {};
@@ -84,7 +81,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  constructor(private http: HttpClient, private cookieService: CookieService) {
+  constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {
   }
 
   // Initialisation du autocomplete
