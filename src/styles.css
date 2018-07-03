@@ -136,6 +136,22 @@ nav .input-field label {
   transform: translateY(0px)!important;
   left: initial!important;
 }
+.ng-dropdown-panel .scroll-host {
+  margin-top: -12px;
+}
+#sidenav .input-field label {
+  top: 15px!important;
+  right: 20px!important;
+  -webkit-transform: translateY(0px)!important;
+  transform: translateY(0px)!important;
+  left: initial!important;
+}
+#sidenav .input-field {
+  padding: 15px;
+}
+#sidenav .ng-dropdown-panel .scroll-host {
+  margin-top: -6px;
+}
 .bot30 {
   margin-bottom: 30px;
 }

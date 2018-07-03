@@ -29,24 +29,13 @@
 						</ng-template>
 					</ng-select>
 					<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
-
-					<!-- <a href="article/{{selectedCityId}}" id="goSearch" hidden></a> -->
-					<!-- <mz-input-container>
-					<input autocomplete="off" mz-input
-					[autocomplete]="autocomplete"
-					id="autocomplete-input"
-					type="search"
-					class="pc-searchbar"
-					id="search">
-				</mz-input-container>
-				<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label> -->
+				</div>
 			</div>
-		</div>
-	</li>
-	<!-- <li><a (click)="registerModal.open()">Inscription</a></li> -->
-	<!-- <li><a (click)="loginModal.open()">Login</a></li> -->
-</ul>
-<a href="#" class="button-collapse" style="color: #444;" [id]="'btn-sidenav'"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
+		</li>
+		<!-- <li><a (click)="registerModal.open()">Inscription</a></li> -->
+		<!-- <li><a (click)="loginModal.open()">Login</a></li> -->
+	</ul>
+	<a href="#" class="button-collapse" style="color: #444;" [id]="'btn-sidenav'"><i mz-icon-mdi [icon]="'menu'" [size]="'36px'"></i></a>
 </div>
 </nav>
 
@@ -66,17 +55,30 @@
 <mz-sidenav-link>
 	<form style="margin-top: 5px;">
 		<div class="input-field">
-			<mz-input-container>
-				<input autocomplete="off" mz-input
-				[autocomplete]="autocomplete"
-				id="autocomplete-input"
-				type="search"
-				class="pc-searchbar"
-				id="search2">
-			</mz-input-container>
-			<label class="label-icon" for="search" id="searchIconNav"><i mz-icon-mdi [icon]="'magnify'"></i></label>
-		</div>
-	</form>
+			<ng-select [items]="computerSearch"
+			[virtualScroll]="true"
+			bindLabel="model"
+			bindValue="id"
+			notFoundText="Aucun ordinateur trouvé"
+			placeholder="Rechercher un ordinateur"
+			[(ngModel)]="selectedArticleId">
+
+			<ng-template ng-label-tmp let-item="item">
+				<a href="article/{{item.id}}">
+					{{item.model}}
+				</a>
+			</ng-template>
+
+			<ng-template ng-option-tmp let-item="item" let-index="index">
+				<a href="article/{{item.id}}">
+					<img [src]="item.picture" class="imgSearch"/>
+					{{item.model}}
+				</a>
+			</ng-template>
+		</ng-select>
+		<label class="label-icon" for="search"><i mz-icon-mdi [icon]="'magnify'"></i></label>
+	</div>
+</form>
 </mz-sidenav-link>
 </mz-sidenav>
 
