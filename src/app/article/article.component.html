@@ -37,7 +37,8 @@
                             [value]="gaugeGraphicVal"
                             [label]="gaugeGraphic"
                             [thick]="15"
-                            cap="round"
+                            [cap]="capRound"
+                            [foregroundColor]="foregroundColorGraphic"
                             [append]="gaugeAppendText">
                           </ngx-gauge>
                         </div>
@@ -46,7 +47,8 @@
                           [value]="gaugeProcVal"
                           [label]="gaugeProc"
                           [thick]="15"
-                          cap="round"
+                          [cap]="capRound"
+                          [foregroundColor]="foregroundColorProc"
                           [append]="gaugeAppendText">
                         </ngx-gauge>
                       </div>
@@ -55,7 +57,8 @@
                         [value]="gaugeRAMVal"
                         [label]="gaugeRAM"
                         [thick]="15"
-                        cap="round"
+                        [cap]="capRound"
+                        [foregroundColor]="foregroundColorRAM"
                         [append]="gaugeAppendText">
                       </ngx-gauge>
                     </div>

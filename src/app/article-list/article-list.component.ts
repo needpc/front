@@ -20,6 +20,7 @@ export class ArticleListComponent implements OnInit {
   results: string[];
   filter1: any;
   noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
+  activity: any;
 
   countComputers() {
     if (this.count == 1) {
@@ -29,14 +30,13 @@ export class ArticleListComponent implements OnInit {
       this.count = this.count + ' résultats correspondent à vos critères :';
     }
     else if (this.count == 0) {
-      this.count = 'Aucun résultat pour vos critères.';
+      this.count = 'Aucun résultat ne correspond à vos critères.';
     }
   }
 
   getAllComputers() {
-    // this.http.get('https://api.needpc.fr/v1/search/computers?activity=1').subscribe(data => {
-    this.http.get(this.globals.urlRequest+'search/computers?activity='+this.cookieService.get('cookie0')).subscribe(data => {
-      // Read the result field from the JSON response.
+    // this.http.get(this.globals.urlRequest+'search/computers?activity='+this.cookieService.get('cookie0')).subscribe(data => {
+    this.http.get(this.globals.urlRequest+'search/computers?activity=1').subscribe(data => {
       this.results = data['data'];
 
       this.count = this.results.length;

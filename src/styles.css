@@ -208,3 +208,6 @@ nav .input-field label {
 .simpleModeTitle {
   font-size: 1.25rem;
 }
+.reading-label {
+  pointer-events: none!important;
+}

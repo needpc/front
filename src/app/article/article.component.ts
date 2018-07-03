@@ -26,6 +26,10 @@ export class ArticleComponent implements OnInit {
   gaugeProc = "Processeur";
   gaugeRAM = "RAM";
   gaugeAppendText = "%";
+  foregroundColorGraphic="#009D92";
+  foregroundColorProc="#FFA700";
+  foregroundColorRAM="#1144AA";
+  capRound="round";
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private globals: Globals) {
   }
@@ -55,7 +59,7 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(function(){ $('#simpleMode').height($('#simpleMode').children().height()); }, 100);
-    
+
     this.getAll();
   }
 }
