@@ -3,13 +3,22 @@
     <div class="row">
       <div class="col s12">
         <h4 class="header text-orange bot30">{{count}}</h4>
-        <!-- <mz-select-container class="top15">
+        <mz-select-container class="top15">
           <select multiple mz-select id="filter" [label]="'Filtres'" [placeholder]="'Affinez votre recherche'">
-            <optgroup *ngFor="let filter of filters" label="{{filter.filterName}}">
-              <option *ngFor="let item of filter.option" value="{{item.title}}">{{item.title}}</option>
+            <optgroup label="{{OptionQ1}}">
+              <option *ngFor="let item of OptionR1" value="{{item.indice}}" [selected]="item.indice == cookie1">{{item.resp}}</option>
+            </optgroup>
+            <optgroup label="{{OptionQ2}}">
+              <option *ngFor="let item of OptionR2" value="{{item.indice}}" [selected]="item.indice == cookie2">{{item.resp}}</option>
+            </optgroup>
+            <optgroup label="{{OptionQ3}}">
+              <option *ngFor="let item of OptionR3" value="{{item.indice}}" [selected]="item.indice == cookie3">{{item.resp}}</option>
+            </optgroup>
+            <optgroup label="{{OptionQ4}}">
+              <option *ngFor="let item of OptionR4" value="{{item.indice}}" [selected]="item.indice == cookie4">{{item.resp}}</option>
             </optgroup>
           </select>
-        </mz-select-container> -->
+        </mz-select-container>
       </div>
       <div class="col s12">
         <div class="row">
