@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormControl, FormGroup, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgSelectModule, NgOption } from '@ng-select/ng-select';
-import { Globals } from './globals'
+import { Globals } from './globals';
 
 @Component({
   selector: 'app-root',
