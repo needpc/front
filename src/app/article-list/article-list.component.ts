@@ -64,20 +64,23 @@ export class ArticleListComponent implements OnInit {
     }
 
     getAllComputers() {
-      // this.http.get(this.globals.urlRequest+'search/computers?activity='+this.cookieService.get('cookie0')).subscribe(data => {
-      this.http.get(this.globals.urlRequest+'search/computers?activity=1').subscribe(
-      data => {
-        this.results = data['data'];
+      this.http.get(this.globals.urlRequest+'search/computers?activity='+this.cookieService.get('cookie0')+'&cpuscore='+this.cookieService.get('cookie1')+'&screensize='+this.cookieService.get('cookie2')+'&gpuscore='+this.cookieService.get('cookie3')+'&pricing='+this.cookieService.get('cookie4')).subscribe(
+        data => {
+          this.results = data['data'];
+          this.count = this.results.length;
+          this.countComputers();
+        });
+      }
 
-        this.count = this.results.length;
-        this.countComputers();
-      });
+      updateList(value, n) {
+        this.cookieService.set('cookie'+n, value);
+        this.getAllComputers();
+      }
+
+      constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
+
+      async ngOnInit() {
+        this.initOptions();
+        this.getAllComputers();
+      }
     }
-
-    constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
-
-    async ngOnInit() {
-      this.initOptions();
-      this.getAllComputers();
-    }
-  }

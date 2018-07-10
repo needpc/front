@@ -48,18 +48,18 @@ export class ArticleComponent implements OnInit {
     }
   }
 
-  getAll() {
+  getPC() {
     this.computer = [];
     this.route.params.subscribe(params => {
       this.http.get(this.globals.urlRequest+'search/computers/'+params['id']).subscribe(data => {
         this.computer = data['data'][0];
+        this.gaugeGraphicVal = this.computer.gpu.score;
       });
     });
   }
 
   ngOnInit() {
     setTimeout(function(){ $('#simpleMode').height($('#simpleMode').children().height()); }, 100);
-
-    this.getAll();
+    this.getPC();
   }
 }
