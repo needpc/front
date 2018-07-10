@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   objectKeys = Object.keys;
   objOption = {};
   i = 0;
+  e = 0;
   jsonChoiceData: any;
   hideElement = false;
   hideButton = true;
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
   // Phrase de résumé
   recap = '';
   question: any;
+  valueResp: any;
 
   // Fonction update questions réponses
   nextOption(value, param) {
@@ -29,15 +31,14 @@ export class HomeComponent implements OnInit {
         this.i = this.i - 1;
         this.cookieService.set('cookie'+this.i, value);
         if (this.jsonChoiceData[this.i] != undefined) {
-          this.question = this.jsonChoiceData[this.i].question;
           this.objOption = {};
+
+          // Question de base form dynamique
+          this.question = this.jsonChoiceData[this.i].quest;
 
           for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
             this.objOption[this.jsonChoiceData[this.i].responses[z].resp] = this.jsonChoiceData[this.i].responses[z].indice;
           }
-
-          // Question de base form dynamique
-          this.question = this.jsonChoiceData[this.i].quest;
         }
       }
     }
@@ -45,15 +46,14 @@ export class HomeComponent implements OnInit {
       this.cookieService.set('cookie'+this.i, value);
       this.i = this.i + 1;
       if (this.jsonChoiceData[this.i] != undefined) {
-        this.question = this.jsonChoiceData[this.i].question;
         this.objOption = {};
+
+        // Question de base form dynamique
+        this.question = this.jsonChoiceData[this.i].quest;
 
         for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
           this.objOption[this.jsonChoiceData[this.i].responses[z].resp] = this.jsonChoiceData[this.i].responses[z].indice;
         }
-
-        // Question de base form dynamique
-        this.question = this.jsonChoiceData[this.i].quest;
       }
 
       else {
@@ -72,12 +72,36 @@ export class HomeComponent implements OnInit {
       this.jsonChoiceData = data['data'];
       this.objOption = {};
 
+      // Question de base form dynamique
+      this.question = this.jsonChoiceData[this.i].quest;
+
       for (var z = 0; z < this.jsonChoiceData[this.i].responses.length; z++) {
         this.objOption[this.jsonChoiceData[this.i].responses[z].resp] = this.jsonChoiceData[this.i].responses[z].indice;
       }
+    });
+  }
+
+  initOptSpec() {
+    this.http.get(this.globals.urlRequest+'ask?rank=2').subscribe(data => {
+      if (this.cookieService.get('cookie'+this.i) == "2") {
+        this.e = 0;
+      }
+      else if (this.cookieService.get('cookie'+this.i) == "3") {
+        this.e = 1;
+      }
+      else if (this.cookieService.get('cookie'+this.i) == "4") {
+        this.e = 2;
+      }
+      // Read the result field from the JSON response.
+      this.jsonChoiceData = data['data'];
+      this.objOption = {};
 
       // Question de base form dynamique
-      this.question = this.jsonChoiceData[this.i].quest;
+      this.question = this.jsonChoiceData[this.e].quest;
+
+      for (var z = 0; z < this.jsonChoiceData[this.e].responses.length; z++) {
+        this.objOption[this.jsonChoiceData[this.e].responses[z].resp] = this.jsonChoiceData[this.e].responses[z].indice;
+      }
     });
   }
 
