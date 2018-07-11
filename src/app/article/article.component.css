@@ -28,7 +28,7 @@
 }
 @media only screen and (max-width: 993px) {
   .card.horizontal {
-      text-align: center!important;
+    text-align: center!important;
   }
   .card-image img {
     margin: auto;
@@ -44,4 +44,11 @@
 }
 h5 {
   font-size: 1.25rem;
+}
+.mousePointer {
+  cursor: pointer;
+}
+.histoPrix {
+  float: right;
+  margin-top: 15px;
 }

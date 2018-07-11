@@ -1,4 +1,4 @@
-import { MaterializeModule } from 'ng2-materialize';
+import { MaterializeModule } from 'ngx-materialize';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

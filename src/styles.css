@@ -14,35 +14,35 @@ html {
 body {
   font-family: 'Montserrat', sans-serif!important;
 }
-.modal .modal-content {
-  padding: 0!important;
+/* .modal .modal-content {
+padding: 0!important;
 }
 .modalTitle {
-  text-transform: uppercase;
-  color: #ffffff;
-  width: 100%;
+text-transform: uppercase;
+color: #ffffff;
+width: 100%;
 }
 .imgModal {
-  position: absolute;
-  margin-top: -32px;
-  margin-left: -64px;
-}
-#loginModal h4, #registerModal h4 {
-  padding: 32px;
-  text-align: center;
-  background: #ff6f00;
+position: absolute;
+margin-top: -32px;
+margin-left: -64px;
+} */
+/* #loginModal h4, #registerModal h4 {
+padding: 32px;
+text-align: center;
+background: #ff6f00;
 }
 #loginModal p, #registerModal p {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.modal {
-  width: 50%!important;
-  max-height: 100%!important;
-  position: absolute!important;
-}
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+} */
+/* .modal {
+width: 50%!important;
+max-height: 100%!important;
+position: absolute!important;
+} */
 @media (max-width: 300px) {
   html {
     font-size: 50%!important;
@@ -66,10 +66,10 @@ body {
     font-size: 80%!important;
   }
 }
-.modal .modal-footer {
-  padding: 0!important;
-  height: 0px!important;
-}
+/* .modal .modal-footer {
+padding: 0!important;
+height: 0px!important;
+} */
 .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
   vertical-align: inherit;
 }
@@ -86,10 +86,10 @@ nav .button-collapse i {
   line-height: 64px!important;
 }
 @media (max-width: 992px) {
-  .modal {
-    width: 90%!important;
-    max-height: none!important;
-  }
+  /* .modal {
+  width: 90%!important;
+  max-height: none!important;
+  } */
   #searchIconNav {
     top: -20px!important;
   }
@@ -210,4 +210,8 @@ nav .input-field label {
 }
 .reading-label {
   pointer-events: none!important;
+}
+canvas {
+  width: 100% !important;
+  height: auto !important;
 }

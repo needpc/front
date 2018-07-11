@@ -76,7 +76,15 @@
                           <div>Modèle</div>
                         </td>
                         <td>
-                          <div>{{computer.model}}</div>
+                          <div>{{computer.model || "N/A"}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>Poids</div>
+                        </td>
+                        <td>
+                          <div>{{computer.weight || "N/A"}}kg</div>
                         </td>
                       </tr>
                       <tr>
@@ -90,7 +98,7 @@
                           <div>Système d'exploitation</div>
                         </td>
                         <td>
-                          <div>{{computer.os?.name}}</div>
+                          <div>{{computer.os?.name || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -104,7 +112,7 @@
                           <div>Processeur</div>
                         </td>
                         <td>
-                          <div>{{computer.cpu?.name}}</div>
+                          <div>{{computer.cpu?.name || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -112,7 +120,7 @@
                           <div>Chipset</div>
                         </td>
                         <td>
-                          <div>{{computer.chipset?.name}}</div>
+                          <div>{{computer.chipset?.name || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -126,7 +134,7 @@
                           <div>Chipset graphique</div>
                         </td>
                         <td>
-                          <div>{{computer.gpu?.name}}</div>
+                          <div>{{computer.gpu?.name || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -140,7 +148,7 @@
                           <div>Mémoire vive</div>
                         </td>
                         <td>
-                          <div>{{computer.memory_size}}</div>
+                          <div>{{computer.memory_size || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -148,7 +156,7 @@
                           <div>Mémoire maximum</div>
                         </td>
                         <td>
-                          <div>{{computer.memory_max_size}}</div>
+                          <div>{{computer.memory_max_size || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -156,7 +164,7 @@
                           <div>Type de mémoire</div>
                         </td>
                         <td>
-                          <div>{{computer.memory_type}}</div>
+                          <div>{{computer.memory_type || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -170,7 +178,7 @@
                           <div>Type de dalle</div>
                         </td>
                         <td>
-                          <div>{{computer.screen_type}}</div>
+                          <div>{{computer.screen_type || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -178,7 +186,7 @@
                           <div>Taille d'écran</div>
                         </td>
                         <td>
-                          <div>{{computer.screen_size}}</div>
+                          <div>{{computer.screen_size || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -186,7 +194,7 @@
                           <div>Résolution</div>
                         </td>
                         <td>
-                          <div>{{computer.screen_resolution}}</div>
+                          <div>{{computer.screen_resolution || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -194,7 +202,7 @@
                           <div>Format</div>
                         </td>
                         <td>
-                          <div>{{computer.screen_format}}</div>
+                          <div>{{computer.screen_format || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -202,39 +210,9 @@
                           <div>Taux de rafraichissement</div>
                         </td>
                         <td>
-                          <div>{{computer.screen_refresh_rate}}</div>
+                          <div>{{computer.screen_refresh_rate || "N/A"}}</div>
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                          <div><h5>Stockage</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Disque dur</div>
-                        </td>
-                        <td>
-                          <div>{{computer.disks?.model}}</div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <div><h5>Communication</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Wi-Fi</div>
-                        </td>
-                        <td>
-                          <div>{{computer.network}}</div>
-                        </td>
-                      </tr>
-
 
                       <tr>
                         <td>
@@ -247,7 +225,10 @@
                           <div>Webcam</div>
                         </td>
                         <td>
-                          <div>{{computer.webcam}}</div>
+                          <div *ngIf="computer.webcam == true; else no">
+                            Oui
+                          </div>
+                          <ng-template #no>Non</ng-template>
                         </td>
                       </tr>
 
@@ -262,7 +243,7 @@
                           <div>Type d'activité</div>
                         </td>
                         <td>
-                          <div>{{computer.activity?.name}}</div>
+                          <div>{{computer.activity?.name || "N/A"}}</div>
                         </td>
                       </tr>
                       <tr>
@@ -270,7 +251,29 @@
                           <div>Norme du clavier</div>
                         </td>
                         <td>
-                          <div>{{computer.keyboards?.type}}</div>
+                          <div>{{computer.keyboard_type}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>Pavé numérique</div>
+                        </td>
+                        <td>
+                          <div *ngIf="computer.keyboard_numpad == true; else no">
+                            Oui
+                          </div>
+                          <ng-template #no>Non</ng-template>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>Lumière sur le clavier</div>
+                        </td>
+                        <td>
+                          <div *ngIf="computer.keyboard_light == true; else no">
+                            Oui
+                          </div>
+                          <ng-template #no>Non</ng-template>
                         </td>
                       </tr>
                     </tbody></table>
@@ -290,11 +293,36 @@
                   </mz-collapsible-item-header>
                   <mz-collapsible-item-body>
                     <div class="row">
-                      <div class="col s12 l6">
-                        <img src="http://www.ldlc.com/v3/img/general/logo-ldlc-anim.gif" style="max-height: 64px;"/>
-                      </div>
-                      <div class="col s12 l6">
-                        <a class="waves-effect waves-light btn amber darken-4">Voir l'offre (dernier prix connu : 2 099,95€)</a>
+                      <div class="col s12">
+                        <mz-modal #chartModal [options]="modalOptions">
+                          <mz-modal-header>
+                            <h4>Historique des prix</h4>
+                          </mz-modal-header>
+                          <mz-modal-content>
+                            <canvas id="histoChart"></canvas>
+                          </mz-modal-content>
+                          <mz-modal-footer>
+                            <button mz-button [flat]="true" mz-modal-close>Fermer</button>
+                          </mz-modal-footer>
+                        </mz-modal>
+
+                        <table class="bordered striped" style="border: 1px solid #d0d0d0;" >
+                          <thead>
+                            <tr>
+                              <th>Marchand</th>
+                              <th>URL</th>
+                              <th>Dernier prix connu</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let p of pricing">
+                              <td>{{p.computers_trader?.name}}</td>
+                              <td><a href="{{p.url}}" target="_blank">{{p.url}}</a></td>
+                              <td>{{p.last_price}}€</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <button class="waves-effect waves-light btn amber darken-4 histoPrix" mz-button (click)="chartModal.openModal()">Voir historique des prix</button>
                       </div>
                     </div>
                   </mz-collapsible-item-body>
