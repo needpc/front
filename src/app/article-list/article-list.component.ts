@@ -14,7 +14,7 @@ declare var $ :any;
 export class ArticleListComponent implements OnInit {
   count: any;
   results: string[];
-  noImg = "https://www.dia.org/sites/default/files/No_Img_Avail.jpg";
+  noImg = "assets/img/No_Img_Avail.jpg";
   activity: any;
 
   jsonChoiceData: any;
@@ -32,22 +32,29 @@ export class ArticleListComponent implements OnInit {
   cookie3 = this.cookieService.get('cookie3');
   cookie4 = this.cookieService.get('cookie4');
 
-  initOptions() {
-    this.http.get(this.globals.urlRequest+'ask').subscribe(
+  initOptions(rank, id) {
+    this.http.get(this.globals.urlRequest+'ask?rank='+rank+'&'+this.cookieService.get('cookie0')+'&activity=1').subscribe(
       data => {
         this.jsonChoiceData = data['data'];
 
-        this.OptionQ1 = this.jsonChoiceData[1].quest;
-        this.OptionR1 = this.jsonChoiceData[1].responses;
-
-        this.OptionQ2 = this.jsonChoiceData[2].quest;
-        this.OptionR2 = this.jsonChoiceData[2].responses;
-
-        this.OptionQ3 = this.jsonChoiceData[3].quest;
-        this.OptionR3 = this.jsonChoiceData[3].responses;
-
-        this.OptionQ4 = this.jsonChoiceData[4].quest;
-        this.OptionR4 = this.jsonChoiceData[4].responses;
+        if (this.jsonChoiceData != "") {
+          if (id == 1) {
+            this.OptionQ1 = this.jsonChoiceData[0].quest;
+            this.OptionR1 = this.jsonChoiceData[0].responses;
+          }
+          if (id == 2) {
+            this.OptionQ2 = this.jsonChoiceData[0].quest;
+            this.OptionR2 = this.jsonChoiceData[0].responses;
+          }
+          if (id == 3) {
+            this.OptionQ3 = this.jsonChoiceData[0].quest;
+            this.OptionR3 = this.jsonChoiceData[0].responses;
+          }
+          if (id == 4) {
+            this.OptionQ4 = this.jsonChoiceData[0].quest;
+            this.OptionR4 = this.jsonChoiceData[0].responses;
+          }
+        }
       });
     }
 
@@ -64,7 +71,7 @@ export class ArticleListComponent implements OnInit {
     }
 
     getAllComputers() {
-      this.http.get(this.globals.urlRequest+'search/computers?activity='+this.cookieService.get('cookie0')+'&cpuscore='+this.cookieService.get('cookie1')+'&screensize='+this.cookieService.get('cookie2')+'&gpuscore='+this.cookieService.get('cookie3')+'&pricing='+this.cookieService.get('cookie4')).subscribe(
+      this.http.get(this.globals.urlRequest+'search/computers?'+this.cookieService.get('cookie0')+'&'+this.cookieService.get('cookie1')+'&'+this.cookieService.get('cookie2')+'&'+this.cookieService.get('cookie3')+'&'+this.cookieService.get('cookie4')).subscribe(
         data => {
           this.results = data['data'];
           this.count = this.results.length;
@@ -80,7 +87,10 @@ export class ArticleListComponent implements OnInit {
       constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
 
       async ngOnInit() {
-        this.initOptions();
+        this.initOptions(2, 1);
+        this.initOptions(3, 2);
+        this.initOptions(4, 3);
+        this.initOptions(5, 4);
         this.getAllComputers();
       }
     }

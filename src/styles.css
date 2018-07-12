@@ -8,7 +8,7 @@
 }
 html {
   font-family: 'Montserrat', sans-serif!important;
-  font-size: 62.5%!important;
+  font-size: 80%!important;
   background-color: #fafafa
 }
 body {
@@ -43,7 +43,7 @@ width: 50%!important;
 max-height: 100%!important;
 position: absolute!important;
 } */
-@media (max-width: 300px) {
+/* @media (max-width: 300px) {
   html {
     font-size: 50%!important;
   }
@@ -65,7 +65,7 @@ position: absolute!important;
   html {
     font-size: 80%!important;
   }
-}
+} */
 /* .modal .modal-footer {
 padding: 0!important;
 height: 0px!important;
@@ -153,7 +153,7 @@ nav .input-field label {
   margin-top: -6px;
 }
 .bot30 {
-  margin-bottom: 30px;
+  margin-bottom: 0.75rem;
 }
 .autocomplete-content {
   position: absolute!important;
@@ -214,4 +214,13 @@ nav .input-field label {
 canvas {
   width: 100% !important;
   height: auto !important;
+}
+#expertMode .collapsible-body {
+  padding: 0!important;
+}
+#expertMode .card-content {
+    padding: 0px!important;
+}
+#expertMode .card-action {
+    padding: 0px!important;
 }

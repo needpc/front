@@ -19,14 +19,11 @@ export class ArticleComponent implements OnInit {
   gaugeType = "full";
   gaugeGraphicVal = 0;
   gaugeProcVal = 0;
-  gaugeRAMVal = 0;
   gaugeGraphic = "Carte graphique";
   gaugeProc = "Processeur";
-  gaugeRAM = "RAM";
   gaugeAppendText = "%";
   foregroundColorGraphic="#009D92";
   foregroundColorProc="#FFA700";
-  foregroundColorRAM="#1144AA";
   capRound="round";
 
   canvas: any;
@@ -78,7 +75,7 @@ toggleMode(event) {
     this.expertMode = false;
     this.simpleMode = true;
     this.textMode = " Mode simplifié";
-    $('#simpleMode').height($('#simpleMode').children().height());
+    $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
   }
   else {
     this.expertMode = true;
@@ -143,7 +140,23 @@ getPrice() {
 }
 
 ngAfterViewInit() {
-  setTimeout(function(){ $('#simpleMode').height($('#simpleMode').children().height()); }, 100);
+  $(window).resize(function() {
+    if ($(window).width() < 993) {
+      $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
+    }
+    else {
+      $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
+    }
+  });
+
+  $(document).ready(function() {
+    if ($(window).width() < 993) {
+      $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
+    }
+    else {
+      $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
+    }
+  });
 }
 
 ngOnInit() {

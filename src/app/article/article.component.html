@@ -32,7 +32,7 @@
                       </mz-collapsible-item-header>
                       <mz-collapsible-item-body>
                         <div id="simpleMode" [hidden]="simpleMode" class="text-center">
-                          <div class="col s12 l4">
+                          <div class="col s12 l6">
                             <ngx-gauge [type]="gaugeType"
                             [value]="gaugeGraphicVal"
                             [label]="gaugeGraphic"
@@ -42,7 +42,7 @@
                             [append]="gaugeAppendText">
                           </ngx-gauge>
                         </div>
-                        <div class="col s12 l4">
+                        <div class="col s12 l6">
                           <ngx-gauge [type]="gaugeType"
                           [value]="gaugeProcVal"
                           [label]="gaugeProc"
@@ -52,16 +52,6 @@
                           [append]="gaugeAppendText">
                         </ngx-gauge>
                       </div>
-                      <div class="col s12 l4">
-                        <ngx-gauge [type]="gaugeType"
-                        [value]="gaugeRAMVal"
-                        [label]="gaugeRAM"
-                        [thick]="15"
-                        [cap]="capRound"
-                        [foregroundColor]="foregroundColorRAM"
-                        [append]="gaugeAppendText">
-                      </ngx-gauge>
-                    </div>
                   </div>
                   <table class="bordered striped" style="border: 1px solid #d0d0d0;" [hidden]="expertMode">
                     <tbody>
@@ -306,7 +296,7 @@
                           </mz-modal-footer>
                         </mz-modal>
 
-                        <table class="bordered striped" style="border: 1px solid #d0d0d0;" >
+                        <table class="bordered striped" style="border: 1px solid #d0d0d0; margin-top: 0.75rem;">
                           <thead>
                             <tr>
                               <th>Marchand</th>
@@ -317,12 +307,12 @@
                           <tbody>
                             <tr *ngFor="let p of pricing">
                               <td>{{p.computers_trader?.name}}</td>
-                              <td><a href="{{p.url}}" target="_blank">{{p.url}}</a></td>
+                              <td><a href="{{p.url}}" target="_blank">{{computer.model}}</a></td>
                               <td>{{p.last_price}}€</td>
                             </tr>
                           </tbody>
                         </table>
-                        <button class="waves-effect waves-light btn amber darken-4 histoPrix" mz-button (click)="chartModal.openModal()">Voir historique des prix</button>
+                        <button class="waves-effect waves-light btn amber darken-4 histoPrix" mz-button (click)="chartModal.openModal()">Historique des prix</button>
                       </div>
                     </div>
                   </mz-collapsible-item-body>
@@ -330,7 +320,7 @@
               </mz-collapsible>
             </div>
             <div class="card-action">
-              <a class="waves-effect waves-light btn amber darken-4"><i mz-icon-mdi [icon]="'star-outline'"></i> Donner votre avis</a>
+              <a class="waves-effect waves-light btn amber darken-4" id="donnerAvis"><i mz-icon-mdi [icon]="'star-outline'"></i> Donner votre avis</a>
             </div>
           </div>
         </div>

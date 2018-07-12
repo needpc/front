@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   jsonChoiceData: any;
   hideElement = false;
   hideButton = true;
+  hideButtonBefore = true;
   // Titre du site
   title = 'NEED PC';
   // Phrase de résumé
@@ -26,11 +27,18 @@ export class HomeComponent implements OnInit {
   // Fonction update questions réponses
   changeOption(value, param) {
   if (param == 'previous') {
+    if (this.e == 2) {
+      this.hideButtonBefore = true;
+    }
     if (this.e > 0) {
       this.e = this.e - 1;
       if (this.e == 1) {
         this.cookieService.set('cookie'+(this.e - 1), "");
         this.initOptSpec(this.e, this.cookieService.get('cookie0'));
+      }
+      else if (this.e > 1) {
+        this.cookieService.set('cookie'+(this.e - 1), value);
+        this.initOptSpec(this.e, this.cookieService.get('cookie0')+"&activity=1");
       }
       else {
         this.cookieService.set('cookie'+(this.e - 1), value);
@@ -39,9 +47,17 @@ export class HomeComponent implements OnInit {
     }
   }
   else {
-    this.cookieService.set('cookie'+(this.e - 1), value);
-    this.e = this.e + 1;
-    this.initOptSpec(this.e, this.cookieService.get('cookie0'));
+    this.hideButtonBefore = false;
+    if (this.e > 1) {
+      this.cookieService.set('cookie'+(this.e - 1), value);
+      this.e = this.e + 1;
+      this.initOptSpec(this.e, this.cookieService.get('cookie0')+"&activity=1");
+    }
+    else {
+      this.cookieService.set('cookie'+(this.e - 1), value);
+      this.e = this.e + 1;
+      this.initOptSpec(this.e, this.cookieService.get('cookie0'));
+    }
   }
 }
 
@@ -52,7 +68,7 @@ this.initOptSpec(1, "");
 
 // Set les questions réponses en fonction de l'activité et de la position
 initOptSpec(id, activity) {
-this.http.get(this.globals.urlRequest+'ask?rank='+id+'&activity='+activity).subscribe(
+this.http.get(this.globals.urlRequest+'ask?rank='+id+'&'+activity).subscribe(
   data => {
     // Read the result field from the JSON response.
     this.jsonChoiceData = data['data'];
