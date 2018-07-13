@@ -17,8 +17,8 @@ export class ArticleComponent implements OnInit {
   textMode = "Mode expert";
 
   gaugeType = "full";
-  gaugeGraphicVal = 0;
-  gaugeProcVal = 0;
+  gaugeGraphicVal: number = 0;
+  gaugeProcVal: number = 0;
   gaugeGraphic = "Carte graphique";
   gaugeProc = "Processeur";
   gaugeAppendText = "%";
@@ -90,6 +90,7 @@ getPC() {
     this.http.get(this.globals.urlRequest+'search/computers/'+params['id']).subscribe(data => {
       this.computer = data['data'][0];
       this.gaugeGraphicVal = this.computer.gpu.score;
+      this.gaugeProcVal = Number(((this.computer.cpu.score / 35000) * 100).toFixed(1));
     });
   });
 }
