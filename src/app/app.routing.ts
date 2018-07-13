@@ -7,6 +7,6 @@ export const ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'article/:id', component: ArticleComponent },
   { path: 'articleList', component: ArticleListComponent },
-  // redirect to home when route does not exists (must be last route)
+  // redirige sur la home quand la route n'existe pas
   { path: '**', redirectTo: 'home' },
 ];

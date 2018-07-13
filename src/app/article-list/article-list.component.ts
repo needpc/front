@@ -17,6 +17,7 @@ export class ArticleListComponent implements OnInit {
   noImg = "assets/img/No_Img_Avail.jpg";
   activity: any;
 
+  // Filtres
   jsonChoiceData: any;
   OptionQ1: any;
   OptionR1: any;
@@ -27,11 +28,13 @@ export class ArticleListComponent implements OnInit {
   OptionQ4: any;
   OptionR4: any;
 
+  // Liste des cookies
   cookie1 = this.cookieService.get('cookie1');
   cookie2 = this.cookieService.get('cookie2');
   cookie3 = this.cookieService.get('cookie3');
   cookie4 = this.cookieService.get('cookie4');
 
+  // Initialise les filtres
   initOptions(rank, id) {
     this.http.get(this.globals.urlRequest+'ask?rank='+rank+'&'+this.cookieService.get('cookie0')+'&activity=1').subscribe(
       data => {
@@ -58,6 +61,7 @@ export class ArticleListComponent implements OnInit {
       });
     }
 
+    // Compte le nombre de résultats
     countComputers() {
       if (this.count == 1) {
         this.count = this.count + ' résultat correspond à vos critères :';
@@ -70,6 +74,7 @@ export class ArticleListComponent implements OnInit {
       }
     }
 
+    // Récupère tous les ordinateurs
     getAllComputers() {
       this.http.get(this.globals.urlRequest+'search/computers?'+this.cookieService.get('cookie0')+'&'+this.cookieService.get('cookie1')+'&'+this.cookieService.get('cookie2')+'&'+this.cookieService.get('cookie3')+'&'+this.cookieService.get('cookie4')).subscribe(
         data => {

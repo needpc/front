@@ -1,3 +1,5 @@
+// Classe contenant les variables globales
+
 import { Injectable } from "@angular/core";
 
 @Injectable()

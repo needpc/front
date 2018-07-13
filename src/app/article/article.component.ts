@@ -16,6 +16,7 @@ export class ArticleComponent implements OnInit {
   simpleMode = false;
   textMode = "Mode expert";
 
+  // Variables gauge
   gaugeType = "full";
   gaugeGraphicVal: number = 0;
   gaugeProcVal: number = 0;
@@ -26,6 +27,7 @@ export class ArticleComponent implements OnInit {
   foregroundColorProc="#FFA700";
   capRound="round";
 
+  // Variables chartjs
   canvas: any;
   ctx: any;
   labelChart = [];
@@ -35,133 +37,140 @@ export class ArticleComponent implements OnInit {
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private globals: Globals) {}
 
+  // Options du modal
   public modalOptions: Materialize.ModalOptions = {
-    dismissible: false, // Modal can be dismissed by clicking outside of the modal
-    opacity: .5, // Opacity of modal background
-    inDuration: 300, // Transition in duration
-    outDuration: 200, // Transition out duration
-    startingTop: '100%', // Starting top style attribute
-    endingTop: '10%', // Ending top style attribute
-    ready: (modal, trigger) => { // Callback for Modal open. Modal and trigger parameters available.
-    this.initChart();
-  }
-};
-
-initChart() {
-  this.canvas = document.getElementById('histoChart');
-  this.ctx = this.canvas.getContext('2d');
-  this.myChart = new Chart(this.ctx, {
-    type: 'bar',
-    data: {
-      labels: this.labelChart,
-      datasets: this.datasetChart
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      },
-      responsive: false,
-      display: true
+    dismissible: false,
+    opacity: .5,
+    inDuration: 300,
+    outDuration: 200,
+    startingTop: '100%',
+    endingTop: '10%',
+    ready: (modal, trigger) => {
+      this.initChart();
     }
-  });
-}
+  };
 
-toggleMode(event) {
-  if (this.textMode == "Mode expert") {
-    this.expertMode = false;
-    this.simpleMode = true;
-    this.textMode = " Mode simplifié";
-    $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
-  }
-  else {
-    this.expertMode = true;
-    this.simpleMode = false;
-    this.textMode = "Mode expert";
-  }
-}
-
-getPC() {
-  this.computer = [];
-  this.route.params.subscribe(params => {
-    this.http.get(this.globals.urlRequest+'search/computers/'+params['id']).subscribe(data => {
-      this.computer = data['data'][0];
-      this.gaugeGraphicVal = this.computer.gpu.score;
-      this.gaugeProcVal = Number(((this.computer.cpu.score / 35000) * 100).toFixed(1));
-    });
-  });
-}
-
-getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-getPrice() {
-  this.pricing = [];
-  this.route.params.subscribe(params => {
-    this.http.get(this.globals.urlRequest+'search/price/'+params['id']).subscribe(data => {
-      this.pricing = data['data'];
-      this.labelChart = [];
-      this.dataChart = [];
-      this.datasetChart = [];
-      var result: any;
-      var resultData: any;
-      var resultTraders: any;
-
-      for (var z = 0; z < this.pricing.length; z++) {
-        result = Object.keys(this.pricing[z].pricing);
-        resultData = Object.values(this.pricing[z].pricing);
-        resultTraders = this.pricing[z].computers_trader;
-
-        for (var i = 0; i < result.length; i++) {
-          this.labelChart.push(result[i].split('T')[0]);
-        }
-
-        for (var i = 0; i < resultData.length; i++) {
-          this.dataChart.push(resultData[i]);
-        }
-
-        this.datasetChart.push({
-          label: resultTraders.name,
-          data: this.dataChart,
-          backgroundColor: this.getRandomColor(),
-          borderWidth: 1
-        });
+  // Initialise chartsjs historique des prix
+  initChart() {
+    this.canvas = document.getElementById('histoChart');
+    this.ctx = this.canvas.getContext('2d');
+    this.myChart = new Chart(this.ctx, {
+      type: 'bar',
+      data: {
+        labels: this.labelChart,
+        datasets: this.datasetChart
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        },
+        responsive: false,
+        display: true
       }
     });
-  });
-}
+  }
 
-ngAfterViewInit() {
-  $(window).resize(function() {
-    if ($(window).width() < 993) {
-      $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
-    }
-    else {
+  // Change entre les modes expert et simplifié
+  toggleMode(event) {
+    if (this.textMode == "Mode expert") {
+      this.expertMode = false;
+      this.simpleMode = true;
+      this.textMode = " Mode simplifié";
       $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
     }
-  });
-
-  $(document).ready(function() {
-    if ($(window).width() < 993) {
-      $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
-    }
     else {
-      $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
+      this.expertMode = true;
+      this.simpleMode = false;
+      this.textMode = "Mode expert";
     }
-  });
-}
+  }
 
-ngOnInit() {
-  this.getPC();
-  this.getPrice();
-}
+  // Liste les informations du pc et récupère les scores du processeur ainsi que la carte graphique
+  getPC() {
+    this.computer = [];
+    this.route.params.subscribe(params => {
+      this.http.get(this.globals.urlRequest+'search/computers/'+params['id']).subscribe(data => {
+        this.computer = data['data'][0];
+        this.gaugeGraphicVal = this.computer.gpu.score;
+        this.gaugeProcVal = Number(((this.computer.cpu.score / 35000) * 100).toFixed(1));
+      });
+    });
+  }
+
+  // Génère des couleurs aléatoires pour l'historique des prix
+  getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  // Récupère l'historique des prix
+  getPrice() {
+    this.pricing = [];
+    this.route.params.subscribe(params => {
+      this.http.get(this.globals.urlRequest+'search/price/'+params['id']).subscribe(data => {
+        this.pricing = data['data'];
+        this.labelChart = [];
+        this.dataChart = [];
+        this.datasetChart = [];
+        var result: any;
+        var resultData: any;
+        var resultTraders: any;
+
+        for (var z = 0; z < this.pricing.length; z++) {
+          result = Object.keys(this.pricing[z].pricing);
+          resultData = Object.values(this.pricing[z].pricing);
+          resultTraders = this.pricing[z].computers_trader;
+
+          for (var i = 0; i < result.length; i++) {
+            this.labelChart.push(result[i].split('T')[0]);
+          }
+
+          for (var i = 0; i < resultData.length; i++) {
+            this.dataChart.push(resultData[i]);
+          }
+
+          this.datasetChart.push({
+            label: resultTraders.name,
+            data: this.dataChart,
+            backgroundColor: this.getRandomColor(),
+            borderWidth: 1
+          });
+        }
+      });
+    });
+  }
+
+  // Permet de changer la taille de la div contenant les graphiques
+  ngAfterViewInit() {
+    $(window).resize(function() {
+      if ($(window).width() < 993) {
+        $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
+      }
+      else {
+        $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
+      }
+    });
+
+    $(document).ready(function() {
+      if ($(window).width() < 993) {
+        $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
+      }
+      else {
+        $('#simpleMode').height($('#simpleMode div:nth-child(1)').height());
+      }
+    });
+  }
+
+  // Initialise les fonctions de récupération
+  ngOnInit() {
+    this.getPC();
+    this.getPrice();
+  }
 }

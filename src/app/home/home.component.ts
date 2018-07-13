@@ -17,9 +17,7 @@ export class HomeComponent implements OnInit {
   hideElement = false;
   hideButton = true;
   hideButtonBefore = true;
-  // Titre du site
   title = 'NEED PC';
-  // Phrase de résumé
   recap = '';
   question: any;
   valueResp: any;
@@ -70,7 +68,6 @@ this.initOptSpec(1, "");
 initOptSpec(id, activity) {
 this.http.get(this.globals.urlRequest+'ask?rank='+id+'&'+activity).subscribe(
   data => {
-    // Read the result field from the JSON response.
     this.jsonChoiceData = data['data'];
     this.objOption = {};
 
@@ -93,9 +90,8 @@ this.http.get(this.globals.urlRequest+'ask?rank='+id+'&'+activity).subscribe(
 
 constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
 
-// Initialisation du autocomplete
 ngOnInit() {
-this.cookieService.deleteAll();
-this.initOptions();
+  this.cookieService.deleteAll();
+  this.initOptions();
 }
 }
