@@ -44,27 +44,27 @@ max-height: 100%!important;
 position: absolute!important;
 } */
 /* @media (max-width: 300px) {
-  html {
-    font-size: 50%!important;
-  }
+html {
+font-size: 50%!important;
+}
 }
 
 @media (min-width: 500px) {
-  html {
-    font-size: 60%!important;
-  }
+html {
+font-size: 60%!important;
+}
 }
 
 @media (min-width: 700px) {
-  html {
-    font-size: 70%!important;
-  }
+html {
+font-size: 70%!important;
+}
 }
 
 @media (min-width: 1200px) {
-  html {
-    font-size: 80%!important;
-  }
+html {
+font-size: 80%!important;
+}
 } */
 /* .modal .modal-footer {
 padding: 0!important;
@@ -219,8 +219,42 @@ canvas {
   padding: 0!important;
 }
 #expertMode .card-content {
-    padding: 0px!important;
+  padding: 0px!important;
 }
 #expertMode .card-action {
-    padding: 0px!important;
+  padding: 0px!important;
+}
+#disqus_thread {
+  padding: 15px!important;
+}
+
+.cf:before,
+.cf:after {
+  content: ' ';
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.progress-wrapper {
+  position: relative;
+  margin: 20px auto;
+  font-size: 40px;
+}
+
+.current {
+  position: absolute;
+  color: inherit;
+  font-weight: 100;
+  line-height: 1;
+}
+round-progress {
+  margin: auto;
+}
+.back {
+  position: fixed;
+  top: 5px;
+  right: 5px;
 }

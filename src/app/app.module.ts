@@ -18,6 +18,8 @@ import { Globals } from './globals';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { NgxGaugeModule } from 'ngx-gauge';
+import { DisqusModule } from "ngx-disqus";
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { NgxGaugeModule } from 'ngx-gauge';
     HttpModule,
     NgSelectModule,
     FormsModule,
+    RoundProgressModule,
+    DisqusModule.forRoot('needpctest'),
     NgxGaugeModule
   ],
   providers: [

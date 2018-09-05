@@ -32,302 +32,322 @@
                       </mz-collapsible-item-header>
                       <mz-collapsible-item-body>
                         <div id="simpleMode" [hidden]="simpleMode" class="text-center">
-                          <div class="col s12 l6">
-                            <ngx-gauge [type]="gaugeType"
-                            [value]="gaugeGraphicVal"
-                            [label]="gaugeGraphic"
-                            [thick]="15"
-                            [cap]="capRound"
-                            [foregroundColor]="foregroundColorGraphic"
-                            [append]="gaugeAppendText">
-                          </ngx-gauge>
+                          <div class="col s12">
+                            <h3>Gaming</h3>
+                            <span>(score exprimé en points, basé sur le benchmark de <a href="https://www.notebookcheck.net/Mobile-Graphics-Cards-Benchmark-List.844.0.html" target="_blank">Notebookcheck</a>)</span>
+                          </div>
+                          <div class="col s12 l6" style="text-align: -webkit-center;">
+                            <div class="progress-wrapper">
+                              <div class="current" [ngStyle]="getOverlayStyle()">{{gaugeGraphicVal}} / 100</div>
+                              <round-progress
+                              [current]="gaugeGraphicVal"
+                              [max]="100"
+                              [color]="'#009D92'"
+                              [background]="'#eaeaea'"
+                              [radius]="125"
+                              [stroke]="15"
+                              [semicircle]="false"
+                              [rounded]="true"
+                              [clockwise]="true"
+                              [responsive]="false"
+                              [duration]="800"
+                              [animation]="'easeInOutQuart'"
+                              [animationDelay]="500"></round-progress>
+                            </div>
+                          </div>
+                          <div class="col s12 l6" style="text-align: -webkit-center;">
+                            <div class="progress-wrapper">
+                              <div class="current" [ngStyle]="getOverlayStyle()">{{gaugeProcVal}} / 100</div>
+                              <round-progress
+                              [current]="gaugeProcVal"
+                              [max]="100"
+                              [color]="'#6200ee'"
+                              [background]="'#eaeaea'"
+                              [radius]="125"
+                              [stroke]="15"
+                              [semicircle]="false"
+                              [rounded]="true"
+                              [clockwise]="true"
+                              [responsive]="false"
+                              [duration]="800"
+                              [animation]="'easeInOutQuart'"
+                              [animationDelay]="500"></round-progress>
+                            </div>
+                          </div>
                         </div>
-                        <div class="col s12 l6">
-                          <ngx-gauge [type]="gaugeType"
-                          [value]="gaugeProcVal"
-                          [label]="gaugeProc"
-                          [thick]="15"
-                          [cap]="capRound"
-                          [foregroundColor]="foregroundColorProc"
-                          [append]="gaugeAppendText">
-                        </ngx-gauge>
-                      </div>
-                  </div>
-                  <table class="bordered striped" style="border: 1px solid #d0d0d0;" [hidden]="expertMode">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div><h5>Informations générales</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Modèle</div>
-                        </td>
-                        <td>
-                          <div>{{computer.model || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Poids</div>
-                        </td>
-                        <td>
-                          <div>{{computer.weight || "N/A"}}kg</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div><h5>Système d'exploitation</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Système d'exploitation</div>
-                        </td>
-                        <td>
-                          <div>{{computer.os?.name || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div><h5>Processeur et chipset</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Processeur</div>
-                        </td>
-                        <td>
-                          <div>{{computer.cpu?.name || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Chipset</div>
-                        </td>
-                        <td>
-                          <div>{{computer.chipset?.name || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div><h5>Graphismes</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Chipset graphique</div>
-                        </td>
-                        <td>
-                          <div>{{computer.gpu?.name || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div><h5>Mémoire</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Mémoire vive</div>
-                        </td>
-                        <td>
-                          <div>{{computer.memory_size || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Mémoire maximum</div>
-                        </td>
-                        <td>
-                          <div>{{computer.memory_max_size || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Type de mémoire</div>
-                        </td>
-                        <td>
-                          <div>{{computer.memory_type || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div><h5>Affichage</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Type de dalle</div>
-                        </td>
-                        <td>
-                          <div>{{computer.screen_type || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Taille d'écran</div>
-                        </td>
-                        <td>
-                          <div>{{computer.screen_size || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Résolution</div>
-                        </td>
-                        <td>
-                          <div>{{computer.screen_resolution || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Format</div>
-                        </td>
-                        <td>
-                          <div>{{computer.screen_format || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Taux de rafraichissement</div>
-                        </td>
-                        <td>
-                          <div>{{computer.screen_refresh_rate || "N/A"}}</div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <div><h5>Multimédia</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Webcam</div>
-                        </td>
-                        <td>
-                          <div *ngIf="computer.webcam == true; else no">
-                            Oui
-                          </div>
-                          <ng-template #no>Non</ng-template>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <div><h5>Equipement</h5></div>
-                        </td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Type d'activité</div>
-                        </td>
-                        <td>
-                          <div>{{computer.activity?.name || "N/A"}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Norme du clavier</div>
-                        </td>
-                        <td>
-                          <div>{{computer.keyboard_type}}</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Pavé numérique</div>
-                        </td>
-                        <td>
-                          <div *ngIf="computer.keyboard_numpad == true; else no">
-                            Oui
-                          </div>
-                          <ng-template #no>Non</ng-template>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div>Lumière sur le clavier</div>
-                        </td>
-                        <td>
-                          <div *ngIf="computer.keyboard_light == true; else no">
-                            Oui
-                          </div>
-                          <ng-template #no>Non</ng-template>
-                        </td>
-                      </tr>
-                    </tbody></table>
-                  </mz-collapsible-item-body>
-                </mz-collapsible-item>
-                <mz-collapsible-item>
-                  <mz-collapsible-item-header>
-                    <i mz-icon-mdi [icon]="'star-outline'"></i>Avis
-                  </mz-collapsible-item-header>
-                  <mz-collapsible-item-body>
-                    Aucun avis pour le moment. Soyez le premier à donner votre avis sur ce produit.
-                  </mz-collapsible-item-body>
-                </mz-collapsible-item>
-                <mz-collapsible-item>
-                  <mz-collapsible-item-header>
-                    <i mz-icon-mdi [icon]="'basket'"></i>Prix
-                  </mz-collapsible-item-header>
-                  <mz-collapsible-item-body>
-                    <div class="row">
-                      <div class="col s12">
-                        <mz-modal #chartModal [options]="modalOptions">
-                          <mz-modal-header>
-                            <h4>Historique des prix</h4>
-                          </mz-modal-header>
-                          <mz-modal-content>
-                            <canvas id="histoChart"></canvas>
-                          </mz-modal-content>
-                          <mz-modal-footer>
-                            <button mz-button [flat]="true" mz-modal-close>Fermer</button>
-                          </mz-modal-footer>
-                        </mz-modal>
-
-                        <table class="bordered striped" style="border: 1px solid #d0d0d0; margin-top: 0.75rem;">
-                          <thead>
-                            <tr>
-                              <th>Marchand</th>
-                              <th>URL</th>
-                              <th>Dernier prix connu</th>
-                            </tr>
-                          </thead>
+                        <table class="bordered striped" style="border: 1px solid #d0d0d0;" [hidden]="expertMode">
                           <tbody>
-                            <tr *ngFor="let p of pricing">
-                              <td>{{p.computers_trader?.name}}</td>
-                              <td><a href="{{p.url}}" target="_blank">{{computer.model}}</a></td>
-                              <td>{{p.last_price}}€</td>
+                            <tr>
+                              <td>
+                                <div><h5>Informations générales</h5></div>
+                              </td>
+                              <td></td>
                             </tr>
-                          </tbody>
-                        </table>
-                        <button class="waves-effect waves-light btn amber darken-4 histoPrix" mz-button (click)="chartModal.openModal()">Historique des prix</button>
-                      </div>
-                    </div>
-                  </mz-collapsible-item-body>
-                </mz-collapsible-item>
-              </mz-collapsible>
-            </div>
-            <div class="card-action">
-              <a class="waves-effect waves-light btn amber darken-4" id="donnerAvis"><i mz-icon-mdi [icon]="'star-outline'"></i> Donner votre avis</a>
+                            <tr>
+                              <td>
+                                <div>Modèle</div>
+                              </td>
+                              <td>
+                                <div>{{computer.model || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Poids</div>
+                              </td>
+                              <td>
+                                <div>{{computer.weight || "N/A"}}kg</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Système d'exploitation</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Système d'exploitation</div>
+                              </td>
+                              <td>
+                                <div>{{computer.os?.name || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Processeur et chipset</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Processeur</div>
+                              </td>
+                              <td>
+                                <div>{{computer.cpu?.name || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Chipset</div>
+                              </td>
+                              <td>
+                                <div>{{computer.chipset?.name || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Graphismes</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Chipset graphique</div>
+                              </td>
+                              <td>
+                                <div>{{computer.gpu?.name || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Mémoire</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Mémoire vive</div>
+                              </td>
+                              <td>
+                                <div>{{computer.memory_size || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Mémoire maximum</div>
+                              </td>
+                              <td>
+                                <div>{{computer.memory_max_size || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Type de mémoire</div>
+                              </td>
+                              <td>
+                                <div>{{computer.memory_type || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div><h5>Affichage</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Type de dalle</div>
+                              </td>
+                              <td>
+                                <div>{{computer.screen_type || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Taille d'écran</div>
+                              </td>
+                              <td>
+                                <div>{{computer.screen_size || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Résolution</div>
+                              </td>
+                              <td>
+                                <div>{{computer.screen_resolution || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Format</div>
+                              </td>
+                              <td>
+                                <div>{{computer.screen_format || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Taux de rafraichissement</div>
+                              </td>
+                              <td>
+                                <div>{{computer.screen_refresh_rate || "N/A"}}</div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <div><h5>Multimédia</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Webcam</div>
+                              </td>
+                              <td>
+                                <div *ngIf="computer.webcam == true; else no">
+                                  Oui
+                                </div>
+                                <ng-template #no>Non</ng-template>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <div><h5>Equipement</h5></div>
+                              </td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Type d'activité</div>
+                              </td>
+                              <td>
+                                <div>{{computer.activity?.name || "N/A"}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Norme du clavier</div>
+                              </td>
+                              <td>
+                                <div>{{computer.keyboard_type}}</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Pavé numérique</div>
+                              </td>
+                              <td>
+                                <div *ngIf="computer.keyboard_numpad == true; else no">
+                                  Oui
+                                </div>
+                                <ng-template #no>Non</ng-template>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div>Lumière sur le clavier</div>
+                              </td>
+                              <td>
+                                <div *ngIf="computer.keyboard_light == true; else no">
+                                  Oui
+                                </div>
+                                <ng-template #no>Non</ng-template>
+                              </td>
+                            </tr>
+                          </tbody></table>
+                        </mz-collapsible-item-body>
+                      </mz-collapsible-item>
+                      <mz-collapsible-item>
+                        <mz-collapsible-item-header>
+                          <i mz-icon-mdi [icon]="'star-outline'"></i>Avis
+                        </mz-collapsible-item-header>
+                        <mz-collapsible-item-body>
+                          <disqus [identifier]="pageId"></disqus>
+                          <!-- Aucun avis pour le moment. Soyez le premier à donner votre avis sur ce produit. -->
+                        </mz-collapsible-item-body>
+                      </mz-collapsible-item>
+                      <mz-collapsible-item>
+                        <mz-collapsible-item-header>
+                          <i mz-icon-mdi [icon]="'basket'"></i>Prix
+                        </mz-collapsible-item-header>
+                        <mz-collapsible-item-body>
+                          <div class="row">
+                            <div class="col s12">
+                              <mz-modal #chartModal [options]="modalOptions">
+                                <mz-modal-header>
+                                  <h4>Historique des prix</h4>
+                                </mz-modal-header>
+                                <mz-modal-content>
+                                  <canvas id="histoChart"></canvas>
+                                </mz-modal-content>
+                                <mz-modal-footer>
+                                  <button mz-button [flat]="true" mz-modal-close>Fermer</button>
+                                </mz-modal-footer>
+                              </mz-modal>
+
+                              <table class="bordered striped" style="border: 1px solid #d0d0d0; margin-top: 0.75rem;">
+                                <thead>
+                                  <tr>
+                                    <th>Marchand</th>
+                                    <th>URL</th>
+                                    <th>Dernier prix connu</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let p of pricing">
+                                    <td>{{p.computers_trader?.name}}</td>
+                                    <td><a href="{{p.url}}" target="_blank">{{computer.model}}</a></td>
+                                    <td>{{p.last_price}}€</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <button class="waves-effect waves-light btn amber darken-4 histoPrix" mz-button (click)="chartModal.openModal()">Historique des prix</button>
+                            </div>
+                          </div>
+                        </mz-collapsible-item-body>
+                      </mz-collapsible-item>
+                    </mz-collapsible>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-</div>
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
