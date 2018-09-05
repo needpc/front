@@ -1,10 +1,10 @@
-# NeedPC Frontend
+# NeedPC Frontend [![Build Status](https://travis-ci.org/needpc/front.svg?branch=master)](https://travis-ci.org/needpc/front)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Docker
 
-To build the Docker image : `make`
+To build the Docker image : `make build`
 To launch : `make run`
 
 ## Running unit tests
