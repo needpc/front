@@ -7,7 +7,7 @@ TAGS=latest 0.0.5
 TAG_RUN=latest
 IMAGE=quay.io/needpc/needpc-frontend
 
-all: build
+all: build run test stop clean
 
 push:
 	@echo "Push image in registry ..."
@@ -28,6 +28,10 @@ build:
 	@./node_modules/.bin/ng build
 	@echo "Build Docker image ..."
 	@$(foreach TAG,$(TAGS), docker build . -t $(IMAGE):$(TAG);)
+
+test:
+	@echo "Test app ..."
+	@curl -I --silent --show-error --fail http://localhost
 	
 clean: 
 	@echo "Delete Angular Website ..."
