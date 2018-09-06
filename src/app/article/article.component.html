@@ -291,15 +291,7 @@
                           </tbody></table>
                         </mz-collapsible-item-body>
                       </mz-collapsible-item>
-                      <mz-collapsible-item>
-                        <mz-collapsible-item-header>
-                          <i mz-icon-mdi [icon]="'star-outline'"></i>Avis
-                        </mz-collapsible-item-header>
-                        <mz-collapsible-item-body>
-                          <disqus [identifier]="pageId"></disqus>
-                          <!-- Aucun avis pour le moment. Soyez le premier à donner votre avis sur ce produit. -->
-                        </mz-collapsible-item-body>
-                      </mz-collapsible-item>
+
                       <mz-collapsible-item>
                         <mz-collapsible-item-header>
                           <i mz-icon-mdi [icon]="'basket'"></i>Prix
@@ -341,6 +333,7 @@
                         </mz-collapsible-item-body>
                       </mz-collapsible-item>
                     </mz-collapsible>
+                    <disqus [identifier]="pageId"></disqus>
                   </div>
                 </div>
               </div>
