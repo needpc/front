@@ -16,6 +16,7 @@ export class ArticleListComponent implements OnInit {
   results: string[];
   noImg = "assets/img/No_Img_Avail.jpg";
   activity: any;
+  pricing: any;
 
   // Filtres
   jsonChoiceData: any;
@@ -81,6 +82,8 @@ export class ArticleListComponent implements OnInit {
           this.results = data['data'];
           this.count = this.results.length;
           this.countComputers();
+
+          console.log(this.results);
         });
       }
 

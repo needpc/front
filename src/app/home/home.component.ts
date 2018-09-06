@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
       }
       else if (this.e > 1) {
         this.cookieService.set('cookie'+(this.e - 1), value);
-        this.initOptSpec(this.e, this.cookieService.get('cookie0')+"&activity=1");
+        this.initOptSpec(this.e, this.cookieService.get('cookie0'));
       }
       else {
         this.cookieService.set('cookie'+(this.e - 1), value);
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     if (this.e > 1) {
       this.cookieService.set('cookie'+(this.e - 1), value);
       this.e = this.e + 1;
-      this.initOptSpec(this.e, this.cookieService.get('cookie0')+"&activity=1");
+      this.initOptSpec(this.e, this.cookieService.get('cookie0'));
     }
     else {
       this.cookieService.set('cookie'+(this.e - 1), value);
@@ -66,32 +66,57 @@ this.initOptSpec(1, "");
 
 // Set les questions réponses en fonction de l'activité et de la position
 initOptSpec(id, activity) {
-this.http.get(this.globals.urlRequest+'ask?rank='+id+'&'+activity).subscribe(
-  data => {
-    this.jsonChoiceData = data['data'];
-    this.objOption = {};
+if (activity != "") {
+  this.http.get(this.globals.urlRequest+'ask?rank='+id+'&'+activity+"&activity=1").subscribe(
+    data => {
+      this.jsonChoiceData = data['data'];
+      this.objOption = {};
 
-    if (this.jsonChoiceData[0] != undefined) {
-      // Question de base form dynamique
-      this.question = this.jsonChoiceData[0].quest;
+      if (this.jsonChoiceData[0] != undefined) {
+        // Question de base form dynamique
+        this.question = this.jsonChoiceData[0].quest;
 
-      for (var z = 0; z < this.jsonChoiceData[0].responses.length; z++) {
-        this.objOption[this.jsonChoiceData[0].responses[z].resp] = this.jsonChoiceData[0].responses[z].indice;
+        for (var z = 0; z < this.jsonChoiceData[0].responses.length; z++) {
+          this.objOption[this.jsonChoiceData[0].responses[z].resp] = this.jsonChoiceData[0].responses[z].indice;
+        }
       }
-    }
-    else {
-      this.hideElement = true;
-      this.hideButton = false;
-      this.question = "Résumé";
-      this.recap = "Cliquez sur le bouton pour lancer la recherche associée à vos critères.";
-    }
-  });
-}
+      else {
+        this.hideElement = true;
+        this.hideButton = false;
+        this.question = "Résumé";
+        this.recap = "Cliquez sur le bouton pour lancer la recherche associée à vos critères.";
+      }
+    });
+  }
+  else {
+    this.http.get(this.globals.urlRequest+'ask?rank='+id).subscribe(
+      data => {
+        this.jsonChoiceData = data['data'];
+        this.objOption = {};
 
-constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
+        if (this.jsonChoiceData[0] != undefined) {
+          // Question de base form dynamique
+          this.question = this.jsonChoiceData[0].quest;
 
-ngOnInit() {
-  this.cookieService.deleteAll();
-  this.initOptions();
-}
+          for (var z = 0; z < this.jsonChoiceData[0].responses.length; z++) {
+            this.objOption[this.jsonChoiceData[0].responses[z].resp] = this.jsonChoiceData[0].responses[z].indice;
+          }
+        }
+        else {
+          this.hideElement = true;
+          this.hideButton = false;
+          this.question = "Résumé";
+          this.recap = "Cliquez sur le bouton pour lancer la recherche associée à vos critères.";
+        }
+      });
+    }
+
+  }
+
+  constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
+
+  ngOnInit() {
+    this.cookieService.deleteAll();
+    this.initOptions();
+  }
 }
