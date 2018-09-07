@@ -2,7 +2,7 @@ import { MaterializeModule } from 'ngx-materialize';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ScrollToModule} from 'ng2-scroll-to';
+import { ScrollToModule } from 'ng2-scroll-to';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,14 +19,16 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { NgxGaugeModule } from 'ngx-gauge';
 import { DisqusModule } from "ngx-disqus";
-import {RoundProgressModule} from 'angular-svg-round-progressbar';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
     HomeComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    AboutUsComponent
   ],
   imports: [
     MaterializeModule.forRoot(),

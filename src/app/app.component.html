@@ -160,6 +160,36 @@
 
 <!-- Footer -->
 <footer class="page-footer grey darken-4">
+	<div class="container">
+		<div class="row">
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text">Liens utiles</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" [routerLink]="'/about-us'">À propos de nous</a></li>
+				</ul>
+			</div>
+			<div class="col l6 s12">
+				<h5 class="white-text">Contact</h5>
+				<form>
+					<div class="row mb0">
+						<div class="input-field col s12">
+							<input id="emailContact" type="text" class="validate">
+							<label for="emailContact">Email</label>
+						</div>
+					</div>
+
+					<div class="row mb0">
+						<div class="input-field col s12">
+							<textarea id="messageContact" type="text" class="materialize-textarea validate"></textarea>
+							<label for="messageContact">Message</label>
+						</div>
+					</div>
+					<button mz-button type="submit" class="amber darken-4 btn waves-effect waves-light">Envoyer</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<div class="footer-copyright">
 		<div class="container text-center">
 			Made by <a class="white-text" [routerLink]="'/home'">Need PC</a>
