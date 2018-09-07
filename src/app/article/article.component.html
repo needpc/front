@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col s12">
         <h4 class="header text-orange">{{computer.model}}</h4>
-        <i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i> 0 avis
+        <!-- <i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i> 0 avis -->
         <div class="card horizontal">
           <div class="row" style="width: 100%;">
             <div class="col l4 s12">
@@ -291,15 +291,7 @@
                           </tbody></table>
                         </mz-collapsible-item-body>
                       </mz-collapsible-item>
-                      <mz-collapsible-item>
-                        <mz-collapsible-item-header>
-                          <i mz-icon-mdi [icon]="'star-outline'"></i>Avis
-                        </mz-collapsible-item-header>
-                        <mz-collapsible-item-body>
-                          <disqus [identifier]="pageId"></disqus>
-                          <!-- Aucun avis pour le moment. Soyez le premier à donner votre avis sur ce produit. -->
-                        </mz-collapsible-item-body>
-                      </mz-collapsible-item>
+
                       <mz-collapsible-item>
                         <mz-collapsible-item-header>
                           <i mz-icon-mdi [icon]="'basket'"></i>Prix
@@ -341,6 +333,7 @@
                         </mz-collapsible-item-body>
                       </mz-collapsible-item>
                     </mz-collapsible>
+                    <disqus [identifier]="pageId"></disqus>
                   </div>
                 </div>
               </div>
