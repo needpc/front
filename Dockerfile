@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 LABEL MAINTAINER="Aurelien PERRIER <a.perrier89@gmail.com>"
 

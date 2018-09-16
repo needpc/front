@@ -1,23 +1,11 @@
-# GPE
+# NeedPC Frontend [![Build Status](https://travis-ci.org/needpc/front.svg?branch=master)](https://travis-ci.org/needpc/front)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Docker
 
-To build this app : `docker build -t front .`
-To launch : `docker run -p 4200:4200 -d front:latest`
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+To build the Docker image : `make build`
+To launch : `make run`
 
 ## Running unit tests
 
