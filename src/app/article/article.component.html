@@ -2,8 +2,6 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
-        <h4 class="header text-orange">{{computer.model}}</h4>
-        <!-- <i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i><i mz-icon-mdi [icon]="'star-outline'"></i> 0 avis -->
         <div class="card horizontal">
           <div class="row" style="width: 100%;">
             <div class="col l4 s12">
@@ -12,11 +10,11 @@
               </div>
             </div>
             <div class="col l8 s12">
-              <h4 class="header">Description</h4>
-              <p>
-                Profitez de bonnes performances et gagnez en confort avec le PC portable {{computer.model}} ! Équipé d'un grand écran mat de {{computer.display?.size}} pouces, ce PC portable vous offre un excellent confort visuel, pour travailler confortablement ou profiter agréablement du divertissement numérique mobile.
+              <h4 class="header text-orange padl10 padr10">{{computer.model}}</h4>
+              <p class="padl10 padr10 justify">
+                Profitez de la mobilité et gagnez en confort avec le PC portable {{computer.model}} ! Équipé d'un écran {{computer.screen_size}} pouces, ce PC portable vous offre un excellent confort visuel, pour travailler confortablement ou profiter agréablement du divertissement numérique mobile.
               </p>
-              <button mz-button class="amber darken-4" id="modeToggle" (click)="toggleMode($event)"><i mz-icon-mdi [icon]="'ninja'" [align]="'center'"></i> {{textMode}}</button>
+              <button mz-button class="amber darken-4 mb10 ml10" id="modeToggle" (click)="toggleMode($event)"><i mz-icon-mdi [icon]="'ninja'" [align]="'center'"></i> {{textMode}}</button>
             </div>
             <div class="col s12">
               <div class="col s12">
@@ -33,7 +31,7 @@
                       <mz-collapsible-item-body>
                         <div id="simpleMode" [hidden]="simpleMode" class="text-center">
                           <div class="col s12">
-                            <h3>Gaming</h3>
+                            <h4>{{computer.activity?.name}}</h4>
                             <span>(score exprimé en points, basé sur le benchmark de <a href="https://www.notebookcheck.net/Mobile-Graphics-Cards-Benchmark-List.844.0.html" target="_blank">Notebookcheck</a>)</span>
                           </div>
                           <div class="col s12 l6" style="text-align: -webkit-center;">
@@ -42,7 +40,7 @@
                               <round-progress
                               [current]="gaugeGraphicVal"
                               [max]="100"
-                              [color]="'#009D92'"
+                              [color]="'#6200ee'"
                               [background]="'#eaeaea'"
                               [radius]="125"
                               [stroke]="15"
@@ -61,7 +59,7 @@
                               <round-progress
                               [current]="gaugeProcVal"
                               [max]="100"
-                              [color]="'#6200ee'"
+                              [color]="'#009D92'"
                               [background]="'#eaeaea'"
                               [radius]="125"
                               [stroke]="15"
@@ -301,7 +299,7 @@
                             <div class="col s12">
                               <mz-modal #chartModal [options]="modalOptions">
                                 <mz-modal-header>
-                                  <h4>Historique des prix</h4>
+                                  <h5>Historique des prix</h5>
                                 </mz-modal-header>
                                 <mz-modal-content>
                                   <canvas id="histoChart"></canvas>
