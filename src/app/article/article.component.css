@@ -55,3 +55,6 @@ h5 {
   float: right;
   margin-top: 15px;
 }
+td, th {
+  border: 1px solid #d0d0d0;
+}

@@ -91,8 +91,8 @@ this.computer = [];
 this.route.params.subscribe(params => {
   this.http.get(this.globals.urlRequest+'search/computers/'+params['id']).subscribe(data => {
     this.computer = data['data'][0];
-    this.gaugeGraphicVal = this.computer.gpu.score;
-    this.gaugeProcVal = Number(((this.computer.cpu.score / 35000) * 100).toFixed(1));
+    this.gaugeGraphicVal = this.computer.gpu.score * 10;
+    this.gaugeProcVal = Number(((this.computer.cpu.score / 35000) * 100).toFixed(1)) * 100;
 
     this.pricing = [];
     this.pricing = data['data'][0].prices;

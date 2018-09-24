@@ -1,6 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-[hidden], template {
-  display: none!important;
+.pad10 {
+  padding-top: 10px;
+}
+.padl10 {
+  padding-left: 10px;
+}
+.padr10 {
+  padding-right: 10px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.justify {
+  text-align: justify!important;
 }
 #spinner {
   opacity: 1!important;
@@ -14,62 +29,6 @@ html {
 body {
   font-family: 'Montserrat', sans-serif!important;
 }
-/* .modal .modal-content {
-padding: 0!important;
-}
-.modalTitle {
-text-transform: uppercase;
-color: #ffffff;
-width: 100%;
-}
-.imgModal {
-position: absolute;
-margin-top: -32px;
-margin-left: -64px;
-} */
-/* #loginModal h4, #registerModal h4 {
-padding: 32px;
-text-align: center;
-background: #ff6f00;
-}
-#loginModal p, #registerModal p {
-padding-left: 50px;
-padding-right: 50px;
-padding-top: 50px;
-padding-bottom: 50px;
-} */
-/* .modal {
-width: 50%!important;
-max-height: 100%!important;
-position: absolute!important;
-} */
-/* @media (max-width: 300px) {
-html {
-font-size: 50%!important;
-}
-}
-
-@media (min-width: 500px) {
-html {
-font-size: 60%!important;
-}
-}
-
-@media (min-width: 700px) {
-html {
-font-size: 70%!important;
-}
-}
-
-@media (min-width: 1200px) {
-html {
-font-size: 80%!important;
-}
-} */
-/* .modal .modal-footer {
-padding: 0!important;
-height: 0px!important;
-} */
 .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
   vertical-align: inherit;
 }
@@ -86,10 +45,6 @@ nav .button-collapse i {
   line-height: 64px!important;
 }
 @media (max-width: 992px) {
-  /* .modal {
-  width: 90%!important;
-  max-height: none!important;
-  } */
   #searchIconNav {
     top: -20px!important;
   }
@@ -257,4 +212,29 @@ round-progress {
   position: fixed;
   top: 5px;
   right: 5px;
+}
+.btn, .btn-large, .btn-flat {
+  padding: 0 0.75rem!important;
+  display: inline-flex!important;
+  align-items: center!important;
+  text-transform: initial!important;
+}
+/* Fonts responsive */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3.2rem!important;
+  }
+  h5 {
+    font-size: 1.3rem!important;
+  }
+}
+[hidden], template {
+  display: none!important;
+}
+.collapsible-body {
+  padding: 1.25rem!important;
+}
+.nav-wrapper {
+  padding-left: 10px!important;
+  padding-right: 10px!important;
 }
