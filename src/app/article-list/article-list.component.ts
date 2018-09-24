@@ -77,7 +77,8 @@ export class ArticleListComponent implements OnInit {
 
     // Récupère tous les ordinateurs
     getAllComputers() {
-      this.http.get(this.globals.urlRequest+'search/computers?'+this.cookieService.get('cookie0')+'&'+this.cookieService.get('cookie1')+'&'+this.cookieService.get('cookie2')+'&'+this.cookieService.get('cookie3')+'&'+this.cookieService.get('cookie4')).subscribe(
+    this.http.get(this.globals.urlRequest+'search/computers?'+this.cookieService.get('cookie1')+'&'+this.cookieService.get('cookie2')+'&'+this.cookieService.get('cookie3')+'&'+this.cookieService.get('cookie4')).subscribe(
+      // this.http.get(this.globals.urlRequest+'search/computers?'+this.cookieService.get('cookie0')+'&'+this.cookieService.get('cookie1')+'&'+this.cookieService.get('cookie2')+'&'+this.cookieService.get('cookie3')+'&'+this.cookieService.get('cookie4')).subscribe(
         data => {
           this.results = data['data'];
           this.count = this.results.length;

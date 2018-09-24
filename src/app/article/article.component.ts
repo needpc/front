@@ -184,14 +184,16 @@ $(window).resize(function() {
   }
 });
 
-$(document).ready(function() {
-  if ($(window).width() < 993) {
-    $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(3)').height());
-  }
-  else {
-    $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height());
-  }
-});
+setTimeout(function() {
+  $(document).ready(function() {
+    if ($(window).width() < 993) {
+      $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(3)').height());
+    }
+    else {
+      $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height());
+    }
+  });
+}, 0);
 }
 
 semicircle: boolean = false;
