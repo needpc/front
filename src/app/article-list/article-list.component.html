@@ -34,10 +34,21 @@
             </optgroup>
           </select>
         </mz-select-container>
+
+        <mz-select-container class="col s12">
+          <select mz-select [label]="''" [placeholder]="''" [(ngModel)]="selectedValueTri" (change)="updateTri($event.target.value)">
+            <optgroup label="Tri">
+              <option value="ascPrice">Prix croissants</option>
+              <option value="descPrice">Prix décroissants</option>
+              <option value="ascBrand">Marques de A à Z</option>
+              <option value="descBrand">Marques de Z à A</option>
+            </optgroup>
+          </select>
+        </mz-select-container>
       </div>
       <div class="col s12">
         <div class="row">
-          <div *ngFor="let computer of results" class="col l4 s12">
+          <div *ngFor="let computer of results | paginate: { itemsPerPage: 10, currentPage: p }" class="col l4 s12">
             <div class="card">
               <div class="card-image">
                 <div class="priceComputer">
@@ -51,9 +62,10 @@
               </div>
             </div>
           </div>
+          <pagination-controls previousLabel="Précédent" nextLabel="Suivant" class="col s12 text-center" (pageChange)="p = $event"></pagination-controls>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 <router-outlet></router-outlet>
