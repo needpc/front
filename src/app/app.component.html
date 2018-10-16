@@ -11,6 +11,7 @@
 						[virtualScroll]="true"
 						bindLabel="model"
 						bindValue="id"
+						(open)="getComputerList()"
 						notFoundText="Aucun ordinateur trouvé"
 						placeholder="Rechercher un ordinateur"
 						[(ngModel)]="selectedArticleId">

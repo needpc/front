@@ -21,6 +21,7 @@ import { NgxGaugeModule } from 'ngx-gauge';
 import { DisqusModule } from "ngx-disqus";
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { AboutUsComponent } from './about-us/about-us.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     FormsModule,
     RoundProgressModule,
     DisqusModule.forRoot('needpctest'),
-    NgxGaugeModule
+    NgxGaugeModule,
+    NgxPaginationModule
   ],
   providers: [
     CookieService,
