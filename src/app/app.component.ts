@@ -37,6 +37,5 @@ export class AppComponent {
       }
       window.scrollTo(0, 0)
     });
-    this.getComputerList();
   }
 }
