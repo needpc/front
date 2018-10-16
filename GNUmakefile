@@ -3,7 +3,7 @@
 #        Author: Aurelien PERRIER      #
 ########################################
 
-TAGS=latest 0.0.5
+TAGS=latest 0.0.6
 TAG_RUN=latest
 IMAGE=quay.io/needpc/needpc-frontend
 
