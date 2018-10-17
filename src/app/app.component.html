@@ -171,22 +171,25 @@
 			</div>
 			<div class="col l6 s12">
 				<h5 class="white-text">Contact</h5>
-				<form>
+
+				<form (submit)="onSubmit();" action="https://formspree.io/tessie_a@etna-alternance.net" method="POST">
 					<div class="row mb0">
 						<div class="input-field col s12">
-							<input id="emailContact" type="text" class="validate">
+							<input id="emailContact" type="email" name="email" class="validate">
 							<label for="emailContact">Email</label>
 						</div>
 					</div>
 
 					<div class="row mb0">
 						<div class="input-field col s12">
-							<textarea id="messageContact" type="text" class="materialize-textarea validate"></textarea>
+							<textarea id="messageContact" type="text" name="message" class="materialize-textarea"></textarea>
 							<label for="messageContact">Message</label>
 						</div>
 					</div>
+
 					<button mz-button type="submit" class="amber darken-4 btn waves-effect waves-light">Envoyer</button>
 				</form>
+
 			</div>
 		</div>
 	</div>

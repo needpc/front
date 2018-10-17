@@ -193,7 +193,7 @@ setTimeout(function() {
       $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height());
     }
   });
-}, 0);
+}, 100);
 }
 
 semicircle: boolean = false;
@@ -214,6 +214,7 @@ getOverlayStyle() {
 
 // Initialise les fonctions de récupération
 ngOnInit() {
+$('spinner').show();
 this.getPC();
 }
 }
