@@ -58,3 +58,8 @@ h5 {
 td, th {
   border: 1px solid #d0d0d0;
 }
+#activityName {
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+}

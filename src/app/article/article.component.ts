@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { Chart } from 'chart.js';
 import { Globals } from '../globals';
 
@@ -11,6 +12,7 @@ import { Globals } from '../globals';
 })
 export class ArticleComponent implements OnInit {
   computer: any;
+  activityName: any;
   pricing: any;
   expertMode = true;
   simpleMode = false;
@@ -31,7 +33,7 @@ export class ArticleComponent implements OnInit {
   datasetChart = [];
   myChart: any;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute, private globals: Globals) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute, private globals: Globals, private cookieService: CookieService) {}
 
   // Options du modal
   public modalOptions: Materialize.ModalOptions = {
@@ -91,6 +93,18 @@ this.computer = [];
 this.route.params.subscribe(params => {
   this.http.get(this.globals.urlRequest+'search/computers/'+params['id']).subscribe(data => {
     this.computer = data['data'][0];
+    if (this.cookieService.get('cookie0') == "activity=3") {
+      this.activityName = "Bureautique";
+      // $('#activityName').append('<i class="fab fa-chrome" style="margin-left: 5px; color: #ff6f00;"></i>');
+    }
+    if (this.cookieService.get('cookie0') == "activity=4") {
+      this.activityName = "Multimédia";
+      // $('#activityName').prepend('<i class="far fa-file-video" style="margin-left: 5px; color: #ff6f00;"></i>');
+    }
+    if (this.cookieService.get('cookie0') == "activity=2") {
+      this.activityName = "Gaming";
+      // $('#activityName').prepend('<i class="fas fa-gamepad" style="margin-left: 5px; color: #ff6f00;"></i>');
+    }
     this.gaugeGraphicVal = this.computer.gpu.score * 10;
     this.gaugeProcVal = Number(((this.computer.cpu.score / 35000) * 100).toFixed(1)) * 100;
 
@@ -180,20 +194,18 @@ $(window).resize(function() {
     $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(3)').height());
   }
   else {
-    $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height());
+    $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
   }
 });
 
 setTimeout(function() {
-  $(document).ready(function() {
-    if ($(window).width() < 993) {
-      $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(3)').height());
-    }
-    else {
-      $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height());
-    }
-  });
-}, 100);
+  if ($(window).width() < 993) {
+    $('#simpleMode').height($('#simpleMode div:nth-child(2)').height() + $('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(3)').height());
+  }
+  else {
+    $('#simpleMode').height($('#simpleMode div:nth-child(1)').height() + $('#simpleMode div:nth-child(2)').height());
+  }
+}, 1500);
 }
 
 semicircle: boolean = false;
