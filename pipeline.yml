@@ -1,0 +1,23 @@
+name: Frontend
+stages:
+- name: clone
+  steps:
+  - sourceCodeConfig:
+      branch: master
+      branchCondition: only
+      url: https://github.com/needpc/front.git
+- name: build
+  steps:
+  - runScriptConfig:
+      image: node:10.11.0-alpine
+      isShell: true
+      shellScript: |-
+        npm install
+        ./node_modules/.bin/ng build
+- name: publish
+  steps:
+  - publishImageConfig:
+      buildContext: .
+      dockerfilePath: ./Dockerfile
+      tag: quay.io/needpc/needpc-frontend:${CICD_GIT_TAG}
+triggerWebhookTag: true
