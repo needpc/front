@@ -195,7 +195,7 @@ canvas {
 
 .progress-wrapper {
   position: relative;
-  margin: 20px auto;
+  margin: 10px auto;
   font-size: 40px;
 }
 
@@ -267,4 +267,17 @@ round-progress {
 .pagination-next a {
   border-radius: 3px!important;
   width: auto;
+}
+#main-section .collapsible-header {
+  border-radius: 6px 6px 0 0!important;
+}
+#main-section .collapsible-body {
+  border-radius: 0 0 6px 6px !important;
+}
+#main-section .collapsible {
+  border: none;
+}
+#expertMode mz-collapsible-item-header {
+    display: flex!important;
+    align-items: center!important;
 }
