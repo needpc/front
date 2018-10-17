@@ -67,6 +67,7 @@ this.initOptSpec(1, "");
 // Set les questions réponses en fonction de l'activité et de la position
 initOptSpec(id, activity) {
 if (activity != "") {
+  $('spinner').hide();
   this.http.get(this.globals.urlRequest+'ask?rank='+id+'&'+activity+"&activity=1").subscribe(
     data => {
       this.jsonChoiceData = data['data'];
@@ -89,6 +90,7 @@ if (activity != "") {
     });
   }
   else {
+    $('spinner').hide();
     this.http.get(this.globals.urlRequest+'ask?rank='+id).subscribe(
       data => {
         this.jsonChoiceData = data['data'];

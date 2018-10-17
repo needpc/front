@@ -161,6 +161,7 @@ export class ArticleListComponent implements OnInit {
       constructor(private http: HttpClient, private cookieService: CookieService, private globals: Globals) {}
 
       async ngOnInit() {
+        $('spinner').show();
         this.selectedValueTri = "ascPrice";
         this.initOptions(2, 1);
         this.initOptions(3, 2);

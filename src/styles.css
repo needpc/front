@@ -238,7 +238,7 @@ round-progress {
   padding-left: 10px!important;
   padding-right: 10px!important;
 }
-.current {
+.ngx-pagination .current {
   position: relative!important;
 }
 .ngx-pagination .current {

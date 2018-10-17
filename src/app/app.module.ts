@@ -21,7 +21,7 @@ import { NgxGaugeModule } from 'ngx-gauge';
 import { DisqusModule } from "ngx-disqus";
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { AboutUsComponent } from './about-us/about-us.component';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
