@@ -105,8 +105,8 @@ this.route.params.subscribe(params => {
       this.activityName = "Gaming";
       // $('#activityName').prepend('<i class="fas fa-gamepad" style="margin-left: 5px; color: #ff6f00;"></i>');
     }
-    this.gaugeGraphicVal = this.computer.gpu.score * 10;
-    this.gaugeProcVal = Number(((this.computer.cpu.score / 35000) * 100).toFixed(1)) * 100;
+    this.gaugeGraphicVal = this.computer.gpu.score;
+    this.gaugeProcVal = this.computer.cpu.score;
 
     this.pricing = [];
     this.pricing = data['data'][0].prices;
