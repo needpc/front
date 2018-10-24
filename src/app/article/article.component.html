@@ -41,7 +41,7 @@
                             [html]="true"
                             [delay]="0"><i mz-icon-mdi [icon]="'gpu'" [align]="'center'" style="margin-right: 5px;"></i>Carte graphique*</h5>
                             <div class="progress-wrapper">
-                              <div class="current" [ngStyle]="getOverlayStyle()">{{gaugeGraphicVal}} / 100</div>
+                              <div class="current" [ngStyle]="getOverlayStyle()" id="firstProgressText">{{gaugeGraphicVal}} / 100</div>
                               <round-progress
                               [current]="gaugeGraphicVal"
                               [max]="100"
@@ -65,7 +65,7 @@
                             [html]="true"
                             [delay]="0"><i class="fas fa-microchip" style="margin-right: 5px;"></i>Processeur*</h5>
                             <div class="progress-wrapper">
-                              <div class="current" [ngStyle]="getOverlayStyle()">{{gaugeProcVal}} / 100</div>
+                              <div class="current" [ngStyle]="getOverlayStyle()" id="secondProgressText">{{gaugeProcVal}} / 100</div>
                               <round-progress
                               [current]="gaugeProcVal"
                               [max]="100"

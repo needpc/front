@@ -95,18 +95,21 @@ this.route.params.subscribe(params => {
     this.computer = data['data'][0];
     if (this.cookieService.get('cookie0') == "activity=3") {
       this.activityName = "Bureautique";
-      // $('#activityName').append('<i class="fab fa-chrome" style="margin-left: 5px; color: #ff6f00;"></i>');
     }
     if (this.cookieService.get('cookie0') == "activity=4") {
       this.activityName = "Multimédia";
-      // $('#activityName').prepend('<i class="far fa-file-video" style="margin-left: 5px; color: #ff6f00;"></i>');
     }
     if (this.cookieService.get('cookie0') == "activity=2") {
       this.activityName = "Gaming";
-      // $('#activityName').prepend('<i class="fas fa-gamepad" style="margin-left: 5px; color: #ff6f00;"></i>');
     }
     this.gaugeGraphicVal = this.computer.gpu.score;
     this.gaugeProcVal = this.computer.cpu.score;
+    if (this.gaugeProcVal == 0) {
+      $('#secondProgressText').text("N/A");
+    }
+    if (this.gaugeGraphicVal == 0) {
+      $('#firstProgressText').text("N/A");
+    }
 
     this.pricing = [];
     this.pricing = data['data'][0].prices;
