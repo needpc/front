@@ -296,6 +296,16 @@
                                 <ng-template #no>Non</ng-template>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <div>Connecteurs disponibles</div>
+                              </td>
+                              <td>
+                                <div>
+                                  {{computer.connector_available || "N/A"}}
+                                </div>
+                              </td>
+                            </tr>
                           </tbody></table>
                         </mz-collapsible-item-body>
                       </mz-collapsible-item>
